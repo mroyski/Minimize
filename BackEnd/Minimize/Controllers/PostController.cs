@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Minimize.Models;
+using Minimize.Repositories;
 
 namespace Minimize.Controllers
 {
@@ -11,5 +13,17 @@ namespace Minimize.Controllers
     [ApiController]
     public class PostController : ControllerBase
     {
+        PostRepository postRepo;
+
+        public PostController(PostRepository postRepo)
+        {
+            this.postRepo = postRepo;
+        }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<Post>> GetAll()
+        {
+            return postRepo.GetAll();
+        }
     }
 }
