@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Minimize.Models;
+
 
 namespace Minimize.Repositories
 {
@@ -12,6 +14,11 @@ namespace Minimize.Repositories
         public PostRepository(MinimizeContext db)
         {
             this.db = db;
+        }
+
+        public IEnumerable<Post> GetAll()
+        {
+            return db.Posts.ToList();
         }
     }
 }
