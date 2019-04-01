@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Minimize.Models;
+using Minimize.Repositories;
 
 namespace Minimize.Controllers
 {
@@ -12,9 +13,9 @@ namespace Minimize.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        CategoryController categoryRepo;
+        CategoryRepository categoryRepo;
 
-        public CategoryController(CategoryController categoryRepo)
+        public CategoryController(CategoryRepository categoryRepo)
         {
             this.categoryRepo = categoryRepo;
         }
@@ -22,7 +23,7 @@ namespace Minimize.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Category>> GetAll()
         {
-            return categoryRepo.GetAll(); 
+            return Ok(categoryRepo.GetAll()); 
         }
     }
 }

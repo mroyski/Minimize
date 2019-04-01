@@ -23,7 +23,7 @@ namespace Minimize.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Post>> GetAll()
         {
-            return postRepo.GetAll();
+            return Ok(postRepo.GetAll());
         }
     }
 }
