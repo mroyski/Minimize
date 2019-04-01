@@ -7,5 +7,11 @@ namespace Minimize.Repositories
 {
     public class PostRepository
     {
+        MinimizeContext db;
+
+        public PostRepository(MinimizeContext db)
+        {
+            this.db = db;
+        }
     }
 }
