@@ -1,6 +1,4 @@
-using Minimize.Controllers;
-using Minimize.Repositories;
-using NSubstitute;
+
 using System;
 using Xunit;
 
@@ -8,14 +6,14 @@ namespace Minimize.Tests
 {
     public class CategoryControllerTests
     {
-        CategoryController underTest;
-        ICategoryRepository repo;
+        //CategoryController underTest;
+        //ICategoryRepository repo;
 
-        public CategoryControllerTests()
-        {
-            repo = Substitute.For<ICategoryRepository>();
-            underTest = new CategoryController(repo);
-        }
+        //public CategoryControllerTests()
+        //{
+        //    repo = Substitute.For<ICategoryRepository>();
+        //    underTest = new CategoryController(repo);
+        //}
 
 
         //[Fact]

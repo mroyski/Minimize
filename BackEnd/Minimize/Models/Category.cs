@@ -10,6 +10,7 @@ namespace Minimize.Models
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public string CategoryDescription { get; set; }
+        public string CategoryImg { get; set; }
 
         public virtual IEnumerable<Post> Posts { get; set; }
     }
