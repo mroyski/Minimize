@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Minimize.Repositories
 {
-    public class CategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         MinimizeContext db;
 
