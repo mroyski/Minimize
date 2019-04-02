@@ -13,9 +13,9 @@ namespace Minimize.Controllers
     [ApiController]
     public class PostController : ControllerBase
     {
-        PostRepository postRepo;
+        IPostRepository postRepo;
 
-        public PostController(PostRepository postRepo)
+        public PostController(IPostRepository postRepo)
         {
             this.postRepo = postRepo;
         }
