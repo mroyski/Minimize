@@ -13,9 +13,9 @@ namespace Minimize.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        CategoryRepository categoryRepo;
+        ICategoryRepository categoryRepo;
 
-        public CategoryController(CategoryRepository categoryRepo)
+        public CategoryController(ICategoryRepository categoryRepo)
         {
             this.categoryRepo = categoryRepo;
         }

@@ -1,12 +1,28 @@
 import React, { Component } from "react";
-import CatDetails from "./CatDetails";
-import CategoryIndex from "./CategoryIndex";
+import Category from "./Category";
 import "./CatDetails.css";
 
 class CatDetails extends Component {
+  constructor() {
+    super();
+    this.state = {
+      categories: []
+    };
+  }
+  componentDidMount() {
+    fetch("https://localhost:44387/api/category")
+      .then(res => res.json())
+      .then(json => this.setState({ categories: json }));
+  }
   render() {
-    return <div className="CatDetails" />;
-    <CatDetails CategoryName={this.CategoryName} />;
+    const listOfCategories = this.state.categories.map(item => (
+      <Category
+        categoryName={item.categoryName}
+        categoryDescription={item.categoryDescription}
+        posts={item.posts}
+      />
+    ));
+    return <ul>{listOfCategories}</ul>;
   }
 }
 
