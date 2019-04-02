@@ -1,7 +1,5 @@
-//using Minimize.Controllers;
-//using Minimize.Repositories;
-//using NSubstitute;
-//using System;
+
+using System;
 using Xunit;
 
 namespace Minimize.Tests
