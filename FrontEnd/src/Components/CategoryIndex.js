@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class CategoryIndex extends Component {
   constructor() {
@@ -16,7 +17,12 @@ class CategoryIndex extends Component {
     const listOfCategories = this.state.categories.map(item => (
       <li>{item.categoryName}</li>
     ));
-    return <ul>{listOfCategories}</ul>;
+    return (
+      <ul>
+        {listOfCategories}
+        <Link to="/category/index">Categories</Link>
+      </ul>
+    );
   }
 }
 
