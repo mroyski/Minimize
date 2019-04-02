@@ -8,6 +8,6 @@ namespace Minimize.Repositories
 {
     public interface IPostRepository
     {
-        IEnumerable<Category> GetAll();
+        IEnumerable<Post> GetAll();
     }
 }

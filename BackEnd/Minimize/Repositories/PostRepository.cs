@@ -7,7 +7,7 @@ using Minimize.Models;
 
 namespace Minimize.Repositories
 {
-    public class PostRepository
+    public class PostRepository : IPostRepository
     {
         MinimizeContext db;
 
