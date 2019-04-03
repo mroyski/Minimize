@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Category extends Component {
   render() {
-    const { categoryName, categoryDescription, posts } = this.props;
+    const { categoryName, categoryDescription, categoryImg, posts } = this.props;
     const listOfPosts = posts.map(post => (
       <Post
         postId={post.postId}
@@ -16,11 +16,10 @@ class Category extends Component {
     ));
     return (
       <div>
-        <Link to="/">
-          <img src="https://cdn.shopify.com/s/files/1/0228/9021/products/IMG_2903_1024x1024.png?v=1540480930" />
-        </Link>
+      
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
+        <img src={categoryImg}/>
         <ul>{listOfPosts}</ul>
       </div>
     );

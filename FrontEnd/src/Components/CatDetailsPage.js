@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Category from "./Category";
-import "./Styles/CatDetails.css";
+// import "./Styles/CatDetails.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class CatDetails extends Component {
+class CatDetailsPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,12 +20,13 @@ class CatDetails extends Component {
       <Category
         categoryName={item.categoryName}
         categoryDescription={item.categoryDescription}
-        posts={item.posts}
         categoryImg={item.categoryImg}
+        posts={item.posts}
+       
       />
     ));
     return <ul>{listOfCategories}</ul>;
   }
 }
 
-export default CatDetails;
+export default CatDetailsPage;
