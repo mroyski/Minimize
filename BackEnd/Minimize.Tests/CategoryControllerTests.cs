@@ -32,16 +32,6 @@ namespace Minimize.Tests
             Assert.Equal(3, result.Value.Count());
         }
 
-        [Fact]
-        public void Get_Should_Return_Expected_Category_By_Id()
-        {
-            var expectedId = 1;
-            var expectedCategory = new Category() { CategoryId = expectedId , CategoryDescription="Test" ,CategoryImg="test IMG" , CategoryName="Testing" , Posts= new List<Post>()};
-            repo.GetById(expectedId).Returns(expectedCategory);
 
-            var model = underTest.Get(expectedId);
-
-            Assert.Equal(expectedCategory, model);
-        }
     }
 }
