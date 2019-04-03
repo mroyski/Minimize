@@ -22,8 +22,10 @@ class CategoryIndex extends Component {
       </Link>
     ));
     return (
-      <div className="Body">
-        <div>{categoryLinks}</div>
+      <div className="CatIndexBody">
+        <ul id="CatIndexUl">
+          <div id="CatLists">{categoryLinks}</div>
+        </ul>
       </div>
     );
   }

@@ -1,3 +1,20 @@
 .Body {
   background-color: blue;
 }
+.Body {
+  margin: 0;
+ }
+ 
+ .CatIndexUl {
+  padding: 0;
+ }
+ 
+ #CatLists {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+ 
+ #CatLists a {
+  padding: 3rem;
+ }

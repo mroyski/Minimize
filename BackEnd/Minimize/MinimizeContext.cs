@@ -38,7 +38,21 @@ namespace Minimize
                 CategoryName = "Furniture",
                 CategoryDescription = "Junk Furniture",
                 CategoryImg = "/Images/Furniture_Icon_1.png"
-            }            
+            },            
+            new Category()
+            {
+                CategoryId = 3,
+                CategoryName = "Tools",
+                CategoryDescription = "Toolbox",
+                CategoryImg = "/Images/Tools_Icon.png"
+            },         
+            new Category()
+            {
+                CategoryId = 4,
+                CategoryName = "Electronics",
+                CategoryDescription = "Computers, phones",
+                CategoryImg = "/Images/electronics_icon.png"
+            }
             );
 
             modelBuilder.Entity<Post>().HasData(
