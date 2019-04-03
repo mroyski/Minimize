@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "./Styles/CategoryIndex.css";
+// import "./App.css";
 
 class CategoryIndex extends Component {
   constructor() {
@@ -15,7 +17,12 @@ class CategoryIndex extends Component {
   }
   render() {
     const listOfCategories = this.state.categories.map(item => (
-      <li>{item.categoryName}</li>
+     <div className="body"> 
+       <li>{item.categoryName}
+       <img src={item.categoryImg}/>
+       </li>
+
+     </div>
     ));
     return (
       <ul>
