@@ -44,7 +44,7 @@ namespace Minimize.Controllers
 
          
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Post post)
+        public  void Put(int id, [FromBody] Post post)
         {
             var model = postRepo.GetById(id);
             postRepo.Update(model);
