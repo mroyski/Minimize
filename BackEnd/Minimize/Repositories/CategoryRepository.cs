@@ -20,5 +20,10 @@ namespace Minimize.Repositories
         {
             return db.Categories.ToList();
         }
+
+        public Category GetById(int id)
+        {
+            return db.Categories.Single(item => item.CategoryId == id);
+        }
     }
 }

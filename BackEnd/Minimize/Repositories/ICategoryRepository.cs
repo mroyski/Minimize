@@ -9,5 +9,7 @@ namespace Minimize.Repositories
     public interface ICategoryRepository
     {
         IEnumerable<Category> GetAll();
+
+        Category GetById(int Id);
     }
 }

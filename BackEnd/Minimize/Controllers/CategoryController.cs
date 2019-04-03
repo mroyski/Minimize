@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Minimize.Models;
 using Minimize.Repositories;
@@ -24,6 +20,13 @@ namespace Minimize.Controllers
         public ActionResult<IEnumerable<Category>> GetAll()
         {
             return Ok(categoryRepo.GetAll()); 
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Category> Get(int id)
+        {
+            var model = categoryRepo.GetById(id);
+            return model;
         }
     }
 }
