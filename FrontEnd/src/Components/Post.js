@@ -8,7 +8,7 @@ class Post extends Component {
       removedItems,
       postDescription,
       postImgPath
-    } = this.props;
+    } = this.props.post;
     return (
       <li>
         <h4>Post Number: {postId}</h4>

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Minimize.Models;
 using Minimize.Repositories;
+using System.Linq;
 
 namespace Minimize.Controllers
 {
@@ -19,7 +20,8 @@ namespace Minimize.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Category>> GetAll()
         {
-            return Ok(categoryRepo.GetAll()); 
+            var model = categoryRepo.GetAll().ToArray();
+            return model;
         }
 
         [HttpGet("{id}")]

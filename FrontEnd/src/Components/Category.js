@@ -10,24 +10,15 @@ class Category extends Component {
       categoryImg,
       posts
     } = this.props;
-    const listOfPosts = posts.map(post => (
-      <Post
-        postId={post.postId}
-        totalItems={post.totalItems}
-        removedItems={post.removedItems}
-        postDescription={post.postDescription}
-        postImgPath={post.postImgPath}
-      />
-    ));
+    console.log(posts);
+    const listOfPosts = posts.map(post => <Post post={post} />);
     return (
-      <li>
+      <div>
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
-        <p>
-          <img src={categoryImg} />
-        </p>
+        <img src={categoryImg} />
         <ul>{listOfPosts}</ul>
-      </li>
+      </div>
     );
   }
 }

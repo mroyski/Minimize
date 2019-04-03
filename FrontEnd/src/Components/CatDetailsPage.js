@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Category from "./Category";
+import Post from "./Post";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class CatDetails extends Component {
   constructor() {
     super();
     this.state = {
-      category: {}
+      category: { posts: [] }
     };
   }
   componentDidMount() {
@@ -15,16 +16,17 @@ class CatDetails extends Component {
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
   }
+
   render() {
     const category = this.state.category;
+
     return (
-      <div>
-        <h2>{category.categoryName}</h2>
-        <p>{category.categoryDescription}</p>
-        <p>
-          <img src={category.categoryImg} />
-        </p>
-      </div>
+      <Category
+        categoryName={category.categoryName}
+        categoryDescription={category.categoryDescription}
+        categoryImg={category.categoryImg}
+        posts={category.posts}
+      />
     );
   }
 }
