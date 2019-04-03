@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./CategoryIndex.css";
+import CatDetailsPage from "./CatDetailsPage";
 
 class CategoryIndex extends Component {
   constructor() {
@@ -15,18 +16,19 @@ class CategoryIndex extends Component {
       .then(json => this.setState({ categories: json }));
   }
   render() {
-    const listOfCategories = this.state.categories.map(item => (
-      <li>
-        {item.categoryName}
-        <img src={item.categoryImg} alt="CategoryImages" />
-      </li>
+    const categoryRoutes = this.state.categories.map(item => (
+      <Route path={`/category/${item.categoryId}`} component={CatDetailsPage} />
+    ));
+
+    const categoryLinks = this.state.categories.map(item => (
+      <Link to={`/category/${item.categoryId}`}>{item.categoryName}</Link>
     ));
     return (
       <div className="Body">
-        <ul>
-          {listOfCategories}
-          <Link to="/category/index">Categories</Link>
-        </ul>
+        <div>{categoryLinks}</div>
+        <Router>
+          <div>{categoryRoutes}</div>
+        </Router>
       </div>
     );
   }
