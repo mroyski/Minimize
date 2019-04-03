@@ -17,7 +17,9 @@ class CategoryIndex extends Component {
   }
   render() {
     const categoryLinks = this.state.categories.map(item => (
-      <Link to={`/category/${item.categoryId}`}>{item.categoryName}</Link>
+      <Link to={`/category/${item.categoryId}`}>
+        <img src={item.categoryImg} />
+      </Link>
     ));
     return (
       <div className="Body">
