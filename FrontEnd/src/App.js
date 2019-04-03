@@ -8,6 +8,7 @@ function AppRouter() {
     <Router>
       <div>
         <Route path="/" exact component={CategoryIndex} />
+        <Route path="/category/:categoryId" component={CatDetailsPage} />
       </div>
     </Router>
   );

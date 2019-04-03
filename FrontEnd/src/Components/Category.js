@@ -20,14 +20,14 @@ class Category extends Component {
       />
     ));
     return (
-      <div>
+      <li>
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
         <p>
           <img src={categoryImg} />
         </p>
         <ul>{listOfPosts}</ul>
-      </div>
+      </li>
     );
   }
 }

@@ -6,24 +6,26 @@ class CatDetails extends Component {
   constructor() {
     super();
     this.state = {
-      categories: []
+      category: {}
     };
   }
   componentDidMount() {
-    fetch("https://localhost:44387/api/category")
+    const { params } = this.props.match;
+    fetch(`https://localhost:44387/api/category/${params.categoryId}`)
       .then(res => res.json())
-      .then(json => this.setState({ categories: json }));
+      .then(json => this.setState({ category: json }));
   }
   render() {
-    const listOfCategories = this.state.categories.map(item => (
-      <Category
-        categoryName={item.categoryName}
-        categoryDescription={item.categoryDescription}
-        posts={item.posts}
-        categoryImg={item.categoryImg}
-      />
-    ));
-    return <ul>{listOfCategories}</ul>;
+    const category = this.state.category;
+    return (
+      <div>
+        <h2>{category.categoryName}</h2>
+        <p>{category.categoryDescription}</p>
+        <p>
+          <img src={category.categoryImg} />
+        </p>
+      </div>
+    );
   }
 }
 

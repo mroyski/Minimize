@@ -11,24 +11,17 @@ class CategoryIndex extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://localhost:44387/api/category")
+    fetch("https://localhost:44387/api/category/")
       .then(res => res.json())
       .then(json => this.setState({ categories: json }));
   }
   render() {
-    const categoryRoutes = this.state.categories.map(item => (
-      <Route path={`/category/${item.categoryId}`} component={CatDetailsPage} />
-    ));
-
     const categoryLinks = this.state.categories.map(item => (
       <Link to={`/category/${item.categoryId}`}>{item.categoryName}</Link>
     ));
     return (
       <div className="Body">
         <div>{categoryLinks}</div>
-        <Router>
-          <div>{categoryRoutes}</div>
-        </Router>
       </div>
     );
   }
