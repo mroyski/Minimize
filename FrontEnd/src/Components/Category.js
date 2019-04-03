@@ -16,11 +16,10 @@ class Category extends Component {
     ));
     return (
       <div>
-        <Link to="/">
-          <img src="https://cdn.shopify.com/s/files/1/0228/9021/products/IMG_2903_1024x1024.png?v=1540480930" />
-        </Link>
+       
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
+        <p>{categoryImg}</p>
         <ul>{listOfPosts}</ul>
       </div>
     );
