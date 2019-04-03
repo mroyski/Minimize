@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "./CategoryIndex.css";
 
 class CategoryIndex extends Component {
   constructor() {
@@ -15,13 +16,18 @@ class CategoryIndex extends Component {
   }
   render() {
     const listOfCategories = this.state.categories.map(item => (
-      <li>{item.categoryName}</li>
+      <li>
+        {item.categoryName}
+        <img src={item.categoryImg} alt="CategoryImages" />
+      </li>
     ));
     return (
-      <ul>
-        {listOfCategories}
-        <Link to="/category/index">Categories</Link>
-      </ul>
+      <div className="Body">
+        <ul>
+          {listOfCategories}
+          <Link to="/category/index">Categories</Link>
+        </ul>
+      </div>
     );
   }
 }
