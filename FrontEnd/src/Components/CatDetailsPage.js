@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Category from "./Category";
-import "./CatDetails.css";
+import "./Styles/CatDetails.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class CatDetails extends Component {
