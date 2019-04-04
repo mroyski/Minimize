@@ -24,7 +24,6 @@ class CatDetails extends Component {
       <Category
         categoryName={category.categoryName}
         categoryDescription={category.categoryDescription}
-        categoryImg={category.categoryImg}
         posts={category.posts}
       />
     );

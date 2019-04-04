@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./CategoryIndex.css";
-import CatDetailsPage from "./CatDetailsPage";
+import CatDetailsPage from "./CategoryDetailsPage";
 
 class CategoryIndex extends Component {
   constructor() {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CategoryIndex from "./Components/CategoryIndex";
-import CatDetailsPage from "./Components/CatDetailsPage";
+import CategoryIndex from "./Components/CategoryIndexPage";
+import CatDetailsPage from "./Components/CategoryDetailsPage";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function AppRouter() {

@@ -10,7 +10,6 @@ class Category extends Component {
       categoryImg,
       posts
     } = this.props;
-    console.log(posts);
     const listOfPosts = posts.map(post => <Post post={post} />);
     return (
       <div>
