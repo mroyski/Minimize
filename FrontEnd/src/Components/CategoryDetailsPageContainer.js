@@ -3,6 +3,7 @@ import Category from "./Category";
 import Post from "./Post";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { GetById } from "./Library/HelperFunctions";
+import CategoryDetailsPage from "./CategoryDetailsPage";
 
 class CatDetails extends Component {
   constructor() {
@@ -19,15 +20,7 @@ class CatDetails extends Component {
   }
 
   render() {
-    const category = this.state.category;
-
-    return (
-      <Category
-        categoryName={category.categoryName}
-        categoryDescription={category.categoryDescription}
-        posts={category.posts}
-      />
-    );
+    return <CategoryDetailsPage category={this.state.category} />;
   }
 }
 

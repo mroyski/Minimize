@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import Category from "./Category";
 
-class CategoryDetailsPage extends Component {
-  render() {
-    return <div />;
-  }
-}
-
-export default CategoryDetailsPage;
+export default props => {
+  return (
+    <Category
+      categoryName={props.categoryName}
+      categoryDescription={props.categoryDescription}
+      posts={props.posts}
+    />
+  );
+};
