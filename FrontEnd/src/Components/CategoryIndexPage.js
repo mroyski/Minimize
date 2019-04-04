@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "./CategoryIndexPage.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './CategoryIndexPage.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GetAll } from './Library/HelperFunctions';
 import {
   faTshirt,
   faTruckMonster,
@@ -10,7 +11,7 @@ import {
   faLaptop,
   faQuestion,
   faTools
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(faTshirt, faTruckMonster, faCouch, faLaptop, faQuestion, faTools);
 
@@ -22,9 +23,7 @@ class CategoryIndex extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://localhost:44387/api/category/")
-      .then(res => res.json())
-      .then(json => this.setState({ categories: json }));
+    GetAll().then(json => this.setState({ categories: json }));
   }
   render() {
     const categoryLinks = this.state.categories.map(item => (
