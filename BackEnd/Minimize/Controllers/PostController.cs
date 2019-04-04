@@ -23,7 +23,39 @@ namespace Minimize.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Post>> GetAll()
         {
-            return Ok(postRepo.GetAll());
+            var model = postRepo.GetAll().ToArray();
+            return model;
+        }
+        [HttpGet("{id}")]
+        public ActionResult<Post> Get(int id)
+        {
+            var model = postRepo.GetById(id);
+            return model;
+             
+        }
+
+         
+        [HttpPost]
+        public void Post([FromBody] Post post)
+        {
+            postRepo.Add(post);
+            
+        }
+
+         
+        [HttpPut("{id}")]
+        public  void Put(int id, [FromBody] Post post)
+        {
+            var model = postRepo.GetById(id);
+            postRepo.Update(model);
+        }
+
+        
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            var model = postRepo.GetById(id);
+            postRepo.Delete(model);
         }
     }
 }
