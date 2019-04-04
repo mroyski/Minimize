@@ -37,21 +37,35 @@ namespace Minimize
                 CategoryId = 2,
                 CategoryName = "Furniture",
                 CategoryDescription = "Junk Furniture",
-                CategoryImg = "/Images/Furniture_Icon_1.png"
-            },            
+                CategoryImg = "couch"
+            },
             new Category()
             {
                 CategoryId = 3,
                 CategoryName = "Tools",
                 CategoryDescription = "Toolbox",
-                CategoryImg = "/Images/Tools_Icon.png"
-            },         
+                CategoryImg = "tools"
+            },
             new Category()
             {
                 CategoryId = 4,
                 CategoryName = "Electronics",
                 CategoryDescription = "Computers, phones",
-                CategoryImg = "/Images/electronics_icon.png"
+                CategoryImg = "laptop"
+            },
+            new Category()
+            {
+                CategoryId = 5,
+                CategoryName = "Toys",
+                CategoryDescription = "Fun stuff",
+                CategoryImg = "truck-monster"
+            },
+            new Category()
+            {
+                CategoryId = 6,
+                CategoryName = "Misc",
+                CategoryDescription = "Other stuff",
+                CategoryImg = "question"
             }
             );
 
@@ -67,16 +81,16 @@ namespace Minimize
                },
                new Post()
                {
-                   PostId =2,
+                   PostId = 2,
                    TotalItems = 15,
                    RemovedItems = 65,
                    PostDescription = "Lickies and Chewies",
                    PostImgPath = "/Images/Junk.jpg",
                    CategoryId = 2
-               }               
+               }
                );
 
-                
+
         }
     }
 }
