@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import CategoryIndex from "./Components/CategoryIndexPage";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";

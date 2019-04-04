@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Post from "./Post";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Category extends Component {
   render() {

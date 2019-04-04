@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./CategoryIndexPage.css";
-import CatDetailsPage from "./CategoryDetailsPage";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTshirt } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faTshirt);
 
 class CategoryIndex extends Component {
   constructor() {
@@ -18,7 +22,7 @@ class CategoryIndex extends Component {
   render() {
     const categoryLinks = this.state.categories.map(item => (
       <Link to={`/category/${item.categoryId}`}>
-        <img src={item.categoryImg} />
+        <FontAwesomeIcon icon={item.categoryImg} />
       </Link>
     ));
     return (
