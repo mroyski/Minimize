@@ -30,7 +30,7 @@ namespace Minimize
                 CategoryId = 1,
                 CategoryName = "Clothing",
                 CategoryDescription = "Clothes",
-                CategoryImg = "/Images/Icon-T-Shirt.png"
+                CategoryImg = "tshirt"
             },
             new Category()
             {

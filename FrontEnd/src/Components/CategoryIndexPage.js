@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "./CategoryIndexPage.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTshirt } from "@fortawesome/free-solid-svg-icons";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './CategoryIndexPage.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTshirt } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faTshirt);
 
@@ -15,7 +15,7 @@ class CategoryIndex extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://localhost:44387/api/category/")
+    fetch('https://localhost:44387/api/category/')
       .then(res => res.json())
       .then(json => this.setState({ categories: json }));
   }
