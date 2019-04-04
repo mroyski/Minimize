@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryIndex from "./Components/CategoryIndexPage";
+import CategoryIndex from "./Components/CategoryIndexPageContainer";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
