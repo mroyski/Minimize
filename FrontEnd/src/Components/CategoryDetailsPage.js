@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Category from "./Category";
 import Post from "./Post";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import GoogleMaps from "./MapContainer";
 
 class CatDetails extends Component {
   constructor() {
@@ -21,11 +22,14 @@ class CatDetails extends Component {
     const category = this.state.category;
 
     return (
-      <Category
-        categoryName={category.categoryName}
-        categoryDescription={category.categoryDescription}
-        posts={category.posts}
-      />
+      <div>
+        <Category
+          categoryName={category.categoryName}
+          categoryDescription={category.categoryDescription}
+          posts={category.posts}
+        />
+        <GoogleMaps />
+      </div>
     );
   }
 }
