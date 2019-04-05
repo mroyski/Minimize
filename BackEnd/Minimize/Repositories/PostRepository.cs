@@ -33,6 +33,8 @@ namespace Minimize.Repositories
         public void Delete(Post post)
         {
 
+            db.Posts.Remove(post);
+            db.SaveChanges();
         }
 
         public void Update(Post post)
