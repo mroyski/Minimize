@@ -64,19 +64,19 @@ class CatDetails extends Component {
   };
 
   onSetTotalItems = e => {
-    setTotalItems(e.target.value);
+    this.setTotalItems(e.target.value);
   };
 
   onSetItemsRemoved = e => {
-    setItemsRemoved(e.target.value);
+    this.setItemsRemoved(e.target.value);
   };
 
   onSetPostDescription = e => {
-    setPostDescription(e.target.value);
+    this.setPostDescription(e.target.value);
   };
 
   onSetImgPath = e => {
-    setImgPath(e.target.value);
+    this.setImgPath(e.target.value);
   };
 
   render() {
@@ -87,6 +87,10 @@ class CatDetails extends Component {
         categoryName={category.categoryName}
         categoryDescription={category.categoryDescription}
         posts={category.posts}
+        totalItems={this.state.totalItems}
+        itemsRemoved={this.state.itemsRemoved}
+        postDescription={this.state.postDescription}
+        postImgPath={this.state.postImgPath}
         onSetTotalItems={this.onSetTotalItemsChange}
         onSetItemsRemoved={this.onSetItemsRemoved}
         onSetPostDescription={this.onSetPostDescription}
