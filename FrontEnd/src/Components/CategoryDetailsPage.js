@@ -21,31 +21,32 @@ class CatDetails extends Component {
       .then(json => this.setState({ category: json }));
   }
 
-  addPost = newCategoryId => {
-    const newPost = {
-      categoryId: newCategoryId,
-      totalItems: this.state.totalItems,
-      removedItems: this.state.removedItems,
-      postImgPath: this.state.postImgPath
-    };
-    fetch("https://localhost:44387/api/post/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(newPost)
-    }).then(res => {
-      if (res.ok) {
-        const addNewPost = [...this.state.category.posts, newPost];
-        const addedNewPost = this.state.category;
-        addedNewPost.posts = addNewPost;
+  // addPost = newCategoryId => {
+  //   const newPost = {
+  //     categoryId: newCategoryId,
+  //     totalItems: this.state.totalItems,
+  //     removedItems: this.state.removedItems,
+  //     postDescription: this.state.postDescription,
+  //     postImgPath: this.state.postImgPath
+  //   };
+  //   fetch("https://localhost:44387/api/post/", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify(newPost)
+  //   }).then(res => {
+  //     if (res.ok) {
+  //       const addNewPost = [...this.state.category.posts, newPost];
+  //       const addedNewPost = this.state.category;
+  //       addedNewPost.posts = addNewPost;
 
-        const updateCategory = this.state.category;
-        updateCategory = addedNewPost;
-        this.setState({ category: updateCategory });
-      }
-    });
-  };
+  //       const updateCategory = this.state.category;
+  //       updateCategory = addedNewPost;
+  //       this.setState({ category: updateCategory });
+  //     }
+  //   });
+  // };
 
   setTotalItems = newTotal => {
     this.setState({ totalItems: newTotal });
@@ -64,7 +65,7 @@ class CatDetails extends Component {
   };
 
   onSetRemovedItems = e => {
-    this.setremovedItems(e.target.value);
+    this.setRemovedItems(e.target.value);
   };
 
   onSetPostDescription = e => {
@@ -83,8 +84,8 @@ class CatDetails extends Component {
         removedItems={this.state.removedItems}
         postDescription={this.state.postDescription}
         postImgPath={this.state.postImgPath}
-        onSetTotalItems={this.onSetTotalItemsChange}
-        onSetremovedItems={this.onSetremovedItems}
+        onSetTotalItems={this.onSetTotalItems}
+        onSetRemovedItems={this.onSetRemovedItems}
         onSetPostDescription={this.onSetPostDescription}
         addPost={this.addPost}
       />
