@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Post extends Component {
-  deleteBook = id => {
+  deletePost = id => {
     fetch(`https://localhost:44387/api/post/${id}`, {
-      method: 'DELETE'
+      method: "DELETE"
     })
       .then(res => {
         if (res.ok) {
-          console.log('Deleting  post');
+          console.log("Deleting  post");
         }
       })
       .catch(err => {
         console.error(err);
       });
   };
+
   render() {
     const {
       postId,

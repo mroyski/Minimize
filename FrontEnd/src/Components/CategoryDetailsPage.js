@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import Category from "./Category";
-import Post from "./Post";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { GetPost } from "./Library/HelperFunctions";
+import Category from "./Category";
 
 class CatDetails extends Component {
   constructor() {
     super();
     this.state = {
-      category: { posts: [] }
+      category: { posts: [] },
+      totalItems: null,
+      itemsRemoved: null,
+      postDescription: "",
+      postImgPath: null
     };
   }
   componentDidMount() {
@@ -16,6 +20,40 @@ class CatDetails extends Component {
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
   }
+
+  // addPost = newCategoryId => {
+  //   const newPost = {
+  //     categoryId: newCategoryId,
+  //     totalItems: this.state.totalItems,
+  //     removedItems: this.state.removedItems,
+  //     postImgPath: this.state.postImgPath
+  //   };
+  //   fetch("https://localhost:44387/api/post/", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify(newPost)
+  //   }).then(res => {
+  //     if (res.ok) {
+  //       const addNewPost = [...this.state.category.posts, newPost];
+  //       const addedNewPost = this.state.category;
+  //       addedNewPost.posts = addNewPost;
+
+  //       const updateCategory = this.state.category;
+  //       updateCategory = addedNewPost;
+  //       this.setState({ category: updateCategory });
+  //     }
+  //   });
+  // };
+
+  setTotalItems = newTotal => {
+    this.setState({ totalItems: newTotal });
+  };
+
+  setItemsRemoved = newRemoved => {
+    this.setState({ itemsRemoved: bewRemoved });
+  };
 
   render() {
     const category = this.state.category;
