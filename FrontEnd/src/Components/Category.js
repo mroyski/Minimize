@@ -4,6 +4,7 @@ import Post from "./Post";
 class Category extends Component {
   render() {
     const {
+      categoryId,
       categoryName,
       categoryDescription,
       posts,
@@ -15,6 +16,7 @@ class Category extends Component {
       onSetPostDescription,
       addPost
     } = this.props;
+    console.log(posts);
     const listOfPosts = posts.map(post => <Post post={post} />);
     return (
       <div>
@@ -48,7 +50,7 @@ class Category extends Component {
                   onChange={onSetPostDescription}
                 />
               </div>
-              <button onClick={addPost}>Post</button>
+              <button onClick={() => addPost(categoryId)}>Post</button>
             </div>
           </div>
           <ul>{listOfPosts}</ul>
