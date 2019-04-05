@@ -8,10 +8,10 @@ class CatDetails extends Component {
     super();
     this.state = {
       category: { posts: [] },
-      totalItems: null,
-      itemsRemoved: null,
+      totalItems: 0,
+      removedItems: 0,
       postDescription: "",
-      postImgPath: null
+      postImgPath: ""
     };
   }
   componentDidMount() {
@@ -21,62 +21,54 @@ class CatDetails extends Component {
       .then(json => this.setState({ category: json }));
   }
 
-  // addPost = newCategoryId => {
-  //   const newPost = {
-  //     categoryId: newCategoryId,
-  //     totalItems: this.state.totalItems,
-  //     removedItems: this.state.removedItems,
-  //     postImgPath: this.state.postImgPath
-  //   };
-  //   fetch("https://localhost:44387/api/post/", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(newPost)
-  //   }).then(res => {
-  //     if (res.ok) {
-  //       const addNewPost = [...this.state.category.posts, newPost];
-  //       const addedNewPost = this.state.category;
-  //       addedNewPost.posts = addNewPost;
+  addPost = newCategoryId => {
+    const newPost = {
+      categoryId: newCategoryId,
+      totalItems: this.state.totalItems,
+      removedItems: this.state.removedItems,
+      postImgPath: this.state.postImgPath
+    };
+    fetch("https://localhost:44387/api/post/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newPost)
+    }).then(res => {
+      if (res.ok) {
+        const addNewPost = [...this.state.category.posts, newPost];
+        const addedNewPost = this.state.category;
+        addedNewPost.posts = addNewPost;
 
-  //       const updateCategory = this.state.category;
-  //       updateCategory = addedNewPost;
-  //       this.setState({ category: updateCategory });
-  //     }
-  //   });
-  // };
+        const updateCategory = this.state.category;
+        updateCategory = addedNewPost;
+        this.setState({ category: updateCategory });
+      }
+    });
+  };
 
   setTotalItems = newTotal => {
     this.setState({ totalItems: newTotal });
   };
 
-  setItemsRemoved = newRemoved => {
-    this.setState({ itemsRemoved: newRemoved });
+  setRemovedItems = newRemoved => {
+    this.setState({ removedItems: newRemoved });
   };
 
   setPostDescription = newInfo => {
     this.setState({ postDescription: newInfo });
   };
 
-  setImgPath = newPath => {
-    this.setState({ postImgPath: newPath });
-  };
-
   onSetTotalItems = e => {
     this.setTotalItems(e.target.value);
   };
 
-  onSetItemsRemoved = e => {
-    this.setItemsRemoved(e.target.value);
+  onSetRemovedItems = e => {
+    this.setremovedItems(e.target.value);
   };
 
   onSetPostDescription = e => {
     this.setPostDescription(e.target.value);
-  };
-
-  onSetImgPath = e => {
-    this.setImgPath(e.target.value);
   };
 
   render() {
@@ -88,13 +80,13 @@ class CatDetails extends Component {
         categoryDescription={category.categoryDescription}
         posts={category.posts}
         totalItems={this.state.totalItems}
-        itemsRemoved={this.state.itemsRemoved}
+        removedItems={this.state.removedItems}
         postDescription={this.state.postDescription}
         postImgPath={this.state.postImgPath}
         onSetTotalItems={this.onSetTotalItemsChange}
-        onSetItemsRemoved={this.onSetItemsRemoved}
+        onSetremovedItems={this.onSetremovedItems}
         onSetPostDescription={this.onSetPostDescription}
-        onSetImgPath={this.onSetImgPath}
+        addPost={this.addPost}
       />
     );
   }

@@ -8,13 +8,12 @@ class Category extends Component {
       categoryDescription,
       posts,
       totalItems,
-      itemsRemoved,
+      removedItems,
       postDescription,
-      postImgPath,
       onSetTotalItems,
-      onSetItemsRemoved,
+      onSetRemovedItems,
       onSetPostDescription,
-      onSetImgPath
+      addPost
     } = this.props;
     const listOfPosts = posts.map(post => <Post post={post} />);
     return (
@@ -23,13 +22,33 @@ class Category extends Component {
           <h2>{categoryName}</h2>
           <p>{categoryDescription}</p>
           <div>
+            <h5>Add New Post</h5>
             <div>
-              <label>Total Items: </label>
-              <input
-                type="text"
-                value={totalItems}
-                onChange={onSetTotalItems}
-              />
+              <div>
+                <label>Total Items: </label>
+                <input
+                  type="text"
+                  value={totalItems}
+                  onChange={onSetTotalItems}
+                />
+              </div>
+              <div>
+                <label>Items Removed: </label>
+                <input
+                  type="text"
+                  value={removedItems}
+                  onChange={onSetRemovedItems}
+                />
+              </div>
+              <div>
+                <label>Description: </label>
+                <input
+                  type="text"
+                  value={postDescription}
+                  onChange={onSetPostDescription}
+                />
+              </div>
+              <button onClick={addPost}>Post</button>
             </div>
           </div>
           <ul>{listOfPosts}</ul>
