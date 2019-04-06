@@ -1,21 +1,23 @@
-import React, { Component } from "react";
-import Post from "./Post";
+import React, { Component } from 'react';
+import Post from './Post';
+import CreatePost from './Library/CreatePost';
 
 class Category extends Component {
   render() {
-    const {
-      categoryName,
-      categoryDescription,
-      categoryImg,
-      posts
-    } = this.props;
-    const listOfPosts = posts.map(post => <Post post={post} />);
+    const { categoryId, categoryName, categoryDescription, posts } = this.props;
+
+    const listOfPosts = posts.map(post => (
+      <Post key={post.postId} post={post} />
+    ));
+
     return (
       <div>
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
-        <img src={categoryImg} />
+
         <ul>{listOfPosts}</ul>
+
+        <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
       </div>
     );
   }

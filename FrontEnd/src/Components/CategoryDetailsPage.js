@@ -1,7 +1,5 @@
-import React, { Component } from "react";
-import Category from "./Category";
-import Post from "./Post";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import Category from './Category';
 
 class CatDetails extends Component {
   constructor() {
@@ -16,15 +14,31 @@ class CatDetails extends Component {
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
   }
-
+  addPost = post => {
+    fetch('https://localhost:44387/api/post', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(post)
+    }).then(res => {
+      if (res.ok) {
+        const currentPosts = [...this.state.category.posts, post];
+        const addNewPost = currentPosts;
+        this.setState({ posts: addNewPost });
+      }
+    });
+  };
   render() {
-    const category = this.state.category;
-
     return (
       <Category
-        categoryName={category.categoryName}
-        categoryDescription={category.categoryDescription}
-        posts={category.posts}
+        categoryId={this.props.match.params.categoryId}
+        categoryName={this.state.category.categoryName}
+        categoryDescription={this.state.category.categoryDescription}
+        posts={this.state.category.posts}
+        totalItems={this.state.totalItems}
+        removedItems={this.state.removedItems}
+        addPost={this.addPost}
       />
     );
   }
