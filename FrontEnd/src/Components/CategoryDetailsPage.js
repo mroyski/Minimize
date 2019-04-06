@@ -29,6 +29,13 @@ class CatDetails extends Component {
       }
     });
   };
+  updatePost = post => {
+    const currentPosts = [...this.state.category.posts, post];
+    console.log(post);
+  };
+  deletePost = post => {
+    console.log(post);
+  };
   render() {
     return (
       <Category
@@ -39,6 +46,7 @@ class CatDetails extends Component {
         totalItems={this.state.totalItems}
         removedItems={this.state.removedItems}
         addPost={this.addPost}
+        editPost={this.updatePost}
       />
     );
   }

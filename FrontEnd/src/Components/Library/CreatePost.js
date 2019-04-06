@@ -11,7 +11,6 @@ export default class CreatePost extends Component {
       postImgPath: this.postImgPath.value,
       categoryId: this.props.categoryId
     };
-
     this.props.addPost(post);
     this.postForm.reset();
   };

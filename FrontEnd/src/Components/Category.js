@@ -4,10 +4,16 @@ import CreatePost from './Library/CreatePost';
 
 class Category extends Component {
   render() {
-    const { categoryId, categoryName, categoryDescription, posts } = this.props;
+    const {
+      categoryId,
+      categoryName,
+      categoryDescription,
+      posts,
+      editPost
+    } = this.props;
 
     const listOfPosts = posts.map(post => (
-      <Post key={post.postId} post={post} />
+      <Post key={post.postId} post={post} editPost={editPost} />
     ));
 
     return (
