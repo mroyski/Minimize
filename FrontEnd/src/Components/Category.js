@@ -16,8 +16,9 @@ class Category extends Component {
       onSetPostDescription,
       addPost
     } = this.props;
-    console.log(posts);
-    const listOfPosts = posts.map(post => <Post post={post} />);
+    const listOfPosts = posts.map(post => (
+      <Post key={post.postId} post={post} />
+    ));
     return (
       <div>
         <div>
@@ -50,7 +51,9 @@ class Category extends Component {
                   onChange={onSetPostDescription}
                 />
               </div>
-              <button onClick={() => addPost(categoryId)}>Post</button>
+              <button type="submit" onClick={() => addPost(categoryId)}>
+                Post
+              </button>
             </div>
           </div>
           <ul>{listOfPosts}</ul>

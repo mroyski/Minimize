@@ -38,9 +38,6 @@ class CatDetails extends Component {
     }).then(res => {
       if (res.ok) {
         const addNewPost = [...this.state.category.posts, newPost];
-        const addedNewPost = this.state.category;
-        addedNewPost.posts = addNewPost;
-
         this.setState({ category: addNewPost });
       }
     });
@@ -73,6 +70,7 @@ class CatDetails extends Component {
   render() {
     return (
       <Category
+        key={this.props.match.params.categoryId}
         categoryId={this.props.match.params.categoryId}
         categoryName={this.state.category.categoryName}
         categoryDescription={this.state.category.categoryDescription}

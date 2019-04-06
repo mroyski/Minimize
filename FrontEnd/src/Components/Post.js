@@ -21,7 +21,8 @@ class Post extends Component {
       totalItems,
       removedItems,
       postDescription,
-      postImgPath
+      postImgPath,
+      deletePost
     } = this.props.post;
     return (
       <li>
