@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Category.css";
 import Post from './Post';
 import CreatePost from './Library/CreatePost';
 
@@ -17,7 +18,7 @@ class Category extends Component {
     ));
 
     return (
-      <div>
+      <div className="Upload">
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
 
