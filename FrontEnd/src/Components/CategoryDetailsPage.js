@@ -27,7 +27,7 @@ class CatDetails extends Component {
         const addNewPost = currentPosts;
         this.setState({ posts: addNewPost });
       }
-    });
+    }).then(window.location.reload());
   };
   updatePost = post => {
     const currentPosts = [...this.state.category.posts, post];

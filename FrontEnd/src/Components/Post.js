@@ -12,7 +12,7 @@ class Post extends Component {
       })
       .catch(err => {
         console.error(err);
-      });
+      }).then(window.location.reload());
   };
   editPost = event => {
     this.props.editPost(event);
