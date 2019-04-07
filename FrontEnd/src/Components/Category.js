@@ -9,6 +9,7 @@ class Category extends Component {
       categoryName,
       categoryDescription,
       posts,
+      AddPost,
       editPost
     } = this.props;
 

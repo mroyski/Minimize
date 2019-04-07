@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import Category from './Category';
 
+
 class CatDetails extends Component {
   constructor() {
     super();
     this.state = {
-      category: { posts: [] }
+      category: { posts: [{}] },
+      totalItems: 0,
+      removedItems: 0,
+      postDescription: "",
+      postImgPath: ""
     };
   }
   componentDidMount() {
@@ -14,6 +19,7 @@ class CatDetails extends Component {
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
   }
+  
   addPost = post => {
     fetch('https://localhost:44387/api/post', {
       method: 'POST',
@@ -39,6 +45,7 @@ class CatDetails extends Component {
   render() {
     return (
       <Category
+
         categoryId={this.props.match.params.categoryId}
         categoryName={this.state.category.categoryName}
         categoryDescription={this.state.category.categoryDescription}

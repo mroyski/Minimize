@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Post extends Component {
   deletePost = id => {
     fetch(`https://localhost:44387/api/post/${id}`, {
-      method: 'DELETE'
+      method: "DELETE"
     })
       .then(res => {
         if (res.ok) {
-          console.log('Deleting  post');
+          console.log("Deleting  post");
         }
       })
       .catch(err => {
@@ -17,13 +17,15 @@ class Post extends Component {
   editPost = event => {
     this.props.editPost(event);
   };
+
   render() {
     const {
       postId,
       totalItems,
       removedItems,
       postDescription,
-      postImgPath
+      postImgPath,
+      deletePost
     } = this.props.post;
     return (
       <li>
