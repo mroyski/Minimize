@@ -1,7 +1,7 @@
-import React from "react";
-import CategoryIndex from "./Components/CategoryIndexPageContainer";
-import CatDetailsPage from "./Components/CategoryDetailsPage";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import CategoryIndex from './Components/CategoryIndexPageContainer';
+import CatDetailsPage from './Components/CategoryDetailsPage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function AppRouter() {
   return (

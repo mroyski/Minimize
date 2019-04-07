@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import Post from "./Post";
+import React, { Component } from 'react';
+import Post from './Post';
+import CreatePost from './Library/CreatePost';
 
 class Category extends Component {
   render() {
@@ -8,56 +9,22 @@ class Category extends Component {
       categoryName,
       categoryDescription,
       posts,
-      totalItems,
-      removedItems,
-      postDescription,
-      onSetTotalItems,
-      onSetRemovedItems,
-      onSetPostDescription,
-      addPost
+      AddPost,
+      editPost
     } = this.props;
+
     const listOfPosts = posts.map(post => (
-      <Post key={post.postId} post={post} />
+      <Post key={post.postId} post={post} editPost={editPost} />
     ));
+
     return (
       <div>
-        <div>
-          <h2>{categoryName}</h2>
-          <p>{categoryDescription}</p>
-          <div>
-            <h5>Add New Post</h5>
-            <div>
-              <div>
-                <label>Total Items: </label>
-                <input
-                  type="text"
-                  value={totalItems}
-                  onChange={onSetTotalItems}
-                />
-              </div>
-              <div>
-                <label>Items Removed: </label>
-                <input
-                  type="text"
-                  value={removedItems}
-                  onChange={onSetRemovedItems}
-                />
-              </div>
-              <div>
-                <label>Description: </label>
-                <input
-                  type="text"
-                  value={postDescription}
-                  onChange={onSetPostDescription}
-                />
-              </div>
-              <button type="submit" onClick={() => addPost(categoryId)}>
-                Post
-              </button>
-            </div>
-          </div>
-          <ul>{listOfPosts}</ul>
-        </div>
+        <h2>{categoryName}</h2>
+        <p>{categoryDescription}</p>
+
+        <ul>{listOfPosts}</ul>
+
+        <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
       </div>
     );
   }

@@ -12,7 +12,10 @@ class Post extends Component {
       })
       .catch(err => {
         console.error(err);
-      });
+      }).then(window.location.reload());
+  };
+  editPost = event => {
+    this.props.editPost(event);
   };
 
   render() {
@@ -32,6 +35,7 @@ class Post extends Component {
         <p>Description: {postDescription}</p>
         <img src={postImgPath} />
         <button onClick={() => this.deletePost(postId)}>Delete</button>
+        <button onClick={() => this.editPost(postId)}>Edit</button>
       </li>
     );
   }
