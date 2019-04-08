@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Post from './Post';
 import CreatePost from './Library/CreatePost';
+import "./Category.css"
 
 class Category extends Component {
   render() {
@@ -18,14 +19,17 @@ class Category extends Component {
     ));
 
     return (
-      <div>
+      <div id="detailContainer">
+        <div className="detailBody">
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
-
+        </div>
+        <div className="postBody">
         <ul>{listOfPosts}</ul>
-
+        </div>
         <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
-      </div>
+        
+        </div>
     );
   }
 }
