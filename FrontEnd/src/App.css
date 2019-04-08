@@ -2,13 +2,12 @@
 
 #navbar {
   display: flex;
-  justify-content: space-between;
   margin: 1rem 2rem;
   font-family: "Raleway", sans-serif;
 }
 
 #navbar img {
-  max-height: 2.5rem;
+  max-height: 2rem;
 }
 
 .nav-links {
@@ -18,4 +17,12 @@
 .link {
   margin: 1rem;
   text-decoration: none;
+  color: black;
+  transition: 0.5s ease;
+}
+
+.link:hover {
+  padding: 0 0.2rem;
+  text-transform: lowercase;
+  transition: 0.5s ease;
 }

@@ -9,16 +9,16 @@ function AppRouter() {
   return (
     <Router>
       <nav id="navbar">
-        <img src="/Images/Logo.png" alt="logo" />
+        <img src="/Images/Logo2.png" alt="logo" />
         <div className="nav-links">
           <Link to={`/`} className="link">
-            goals
+            GOALS
           </Link>
           <Link to={`/`} className="link">
-            history
+            HISTORY
           </Link>
           <Link to={`/`} className="link">
-            badges
+            BADGES
           </Link>
           <Link to={"/profile"} className="link">
             profile
