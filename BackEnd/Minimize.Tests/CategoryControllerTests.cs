@@ -22,9 +22,9 @@ namespace Minimize.Tests
             underTest = new CategoryController(repo);
         }
         [Fact]
-         public void  GetAll_Should_Return_All_Categories()
+        public void GetAll_Should_Return_All_Categories()
         {
-            var expectedmodel = new List<Category>() { new Category() , new Category() , new Category() };
+            var expectedmodel = new List<Category>() { new Category(), new Category(), new Category() };
             repo.GetAll().Returns(expectedmodel);
 
             var result = underTest.GetAll();

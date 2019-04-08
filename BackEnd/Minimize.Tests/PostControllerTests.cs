@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Minimize.Tests
+namespace minimize.tests
 {
-    class PostControllerTests
+    class postcontrollertests
     {
     }
 }
