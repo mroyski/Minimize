@@ -32,18 +32,18 @@ class ProfilePage extends Component {
           <h2>Badges</h2>
           <div className="BadgesList">
             <div className="FirstBadge">
-              <p>First Timer</p>
-              <p>
-                <FontAwesomeIcon icon="medal" id="FABadge" />
-              </p>
-              <p>You posted for the first time</p>
-            </div>
-            <div className="SecondBadge">
               <p>Welcome!</p>
               <p>
                 <FontAwesomeIcon icon="medal" id="FABadge" />
               </p>
               <p>You successfully joined minimize</p>
+            </div>
+            <div className="SecondBadge">
+              <p>First Timer</p>
+              <p>
+                <FontAwesomeIcon icon="medal" id="FABadge" />
+              </p>
+              <p>You made your first post</p>
             </div>
           </div>
         </div>
