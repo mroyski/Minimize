@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Category from "./Category";
 import "./CategoryDetailsPage.css";
 
@@ -45,11 +44,17 @@ class CatDetails extends Component {
   deletePost = post => {
     console.log(post);
   };
-  fileSelect = e => {
-    console.log("/Images/" + e.target.files[0].name);
-  };
-  fileUpload = () => {
-    fetch("http");
+  fileSelect = () => {
+    fetch(
+      "https://www.filestackapi.com/api/store/S3?key=A3wux2cFHQHGgvyu7UcKVz",
+      {
+        method: "POST"
+      }
+    ).then(res => {
+      if (res.ok) {
+        console.log(res);
+      }
+    });
   };
 
   render() {

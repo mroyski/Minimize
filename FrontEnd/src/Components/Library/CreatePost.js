@@ -40,12 +40,11 @@ export default class CreatePost extends Component {
           type="file"
           name="Photo"
           accept="image/*"
-          onChange={this.props.fileSelect}
+          onChange={this.props.fileSelect()}
         />
         <button type="submit" onClick={() => this.onAddPost()}>
           Add Post
         </button>
-        c{" "}
       </form>
     );
   }
