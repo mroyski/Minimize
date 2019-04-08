@@ -23,22 +23,34 @@ class ProfilePage extends Component {
       <Post key={post.postId} post={post} />
     ));
     return (
-      <div>
-        <h1>Your Profile</h1>
+      <div id="ProfileBody">
+        <h1>Profile</h1>
         <div className="ProgressSection">
           <h2>Progress</h2>
         </div>
         <div className="BadgesSection">
           <h2>Badges</h2>
-          <p>First Time Poster!</p>
-          <p>
-            <FontAwesomeIcon icon="medal" />
-          </p>
+          <div className="BadgesList">
+            <div className="FirstBadge">
+              <p>First Timer</p>
+              <p>
+                <FontAwesomeIcon icon="medal" id="FABadge" />
+              </p>
+              <p>You posted for the first time</p>
+            </div>
+            <div className="SecondBadge">
+              <p>Welcome!</p>
+              <p>
+                <FontAwesomeIcon icon="medal" id="FABadge" />
+              </p>
+              <p>You successfully joined minimize</p>
+            </div>
+          </div>
         </div>
         <div className="PostSection">
           <h2>Posts</h2>
         </div>
-        <ul>{listOfPosts}</ul>
+        <ul id="PostList">{listOfPosts}</ul>
       </div>
     );
   }
