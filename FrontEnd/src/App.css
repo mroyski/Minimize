@@ -1,1 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+#navbar img {
+  max-height: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.link {
+  margin: 1rem;
+  text-decoration: none;
+}
