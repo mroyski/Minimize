@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Category from './Category';
+import "./CategoryDetailsPage.css"
 
 
 class CatDetails extends Component {
@@ -44,10 +45,13 @@ class CatDetails extends Component {
   };
   render() {
     return (
+      
+      
       <Category
-
+       
         categoryId={this.props.match.params.categoryId}
         categoryName={this.state.category.categoryName}
+
         categoryDescription={this.state.category.categoryDescription}
         posts={this.state.category.posts}
         totalItems={this.state.totalItems}
@@ -55,6 +59,7 @@ class CatDetails extends Component {
         addPost={this.addPost}
         editPost={this.updatePost}
       />
+     
     );
   }
 }
