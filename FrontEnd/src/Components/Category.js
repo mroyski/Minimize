@@ -21,15 +21,17 @@ class Category extends Component {
     return (
       <div id="detailContainer">
         <div className="detailBody">
-        <h2>{categoryName}</h2>
-        <p>{categoryDescription}</p>
+           <div className="detailName">
+            <h2>{categoryName}</h2>
+           </div>
+            <p>{categoryDescription}</p>
         </div>
         <div className="postBody">
-        <ul>{listOfPosts}</ul>
+          <ul>{listOfPosts}</ul>
         </div>
         <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
         
-        </div>
+      </div>
     );
   }
 }
