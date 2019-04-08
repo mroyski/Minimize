@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactFilestack from "filestack-react";
 import Category from "./Category";
 import "./CategoryDetailsPage.css";
 

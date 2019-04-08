@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactFilestack from "filestack-react";
 
 export default class CreatePost extends Component {
   onAddPost = event => {
@@ -13,9 +14,27 @@ export default class CreatePost extends Component {
     };
     this.props.addPost(post);
     this.postForm.reset();
+    console.log(this.postImgPath);
+  };
+
+  onSuccess = result => {
+    this.setState({
+      postImgPath: result.filesUploaded[0].url
+    });
+  };
+
+  onError = error => {
+    console.error("error", error);
   };
 
   render() {
+    const basicOptions = {
+      accept: "image/*",
+      fromSources: ["local_file_system"],
+      maxSize: 1024 * 1024,
+      maxFiles: 1
+    };
+    const key = "A3wux2cFHQHGgvyu7UcKVz";
     return (
       <form
         ref={input => (this.postForm = input)}
@@ -36,11 +55,11 @@ export default class CreatePost extends Component {
           placeholder="postDescription "
           ref={input => (this.postDescription = input)}
         />
-        <input
-          type="file"
-          name="Photo"
-          accept="image/*"
-          onChange={this.props.fileSelect()}
+        <ReactFilestack
+          apikey={key}
+          options={basicOptions}
+          onSuccess={this.onSuccess}
+          onError={this.onError}
         />
         <button type="submit" onClick={() => this.onAddPost()}>
           Add Post
