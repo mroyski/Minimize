@@ -1,20 +1,38 @@
-.Body {
-  background-color: blue;
-}
-.Body {
+.CatIndexBody {
+  text-align: center;
+  font-size: 5rem;
   margin: 0;
- }
- 
- .CatIndexUl {
   padding: 0;
- }
- 
- #CatLists {
+  text-transform: lowercase;
+}
+
+#MiniTitle {
+  font-size: 4rem;
+  color: rgb(0, 63, 158);
+}
+
+#CatName {
+  font-size: 1rem;
+}
+
+#CatLists {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
- }
- 
- #CatLists a {
+}
+
+#CatLists a {
+  text-align: center;
+  text-decoration: none;
   padding: 3rem;
- }
+  color: rgb(0, 63, 158);
+  transition: 0.3s;
+}
+#CatLists a:hover {
+  color: rgb(185, 0, 161);
+  margin-top: -1rem;
+}
+
+#CatIndexUl {
+  padding: 0;
+}
