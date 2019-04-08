@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Post from './Post';
-import CreatePost from './Library/CreatePost';
+import React, { Component } from "react";
+import Post from "./Post";
+import CreatePost from "./Library/CreatePost";
 
 class Category extends Component {
   render() {
@@ -9,8 +9,8 @@ class Category extends Component {
       categoryName,
       categoryDescription,
       posts,
-      AddPost,
-      editPost
+      editPost,
+      fileSelect
     } = this.props;
 
     const listOfPosts = posts.map(post => (
@@ -24,7 +24,11 @@ class Category extends Component {
 
         <ul>{listOfPosts}</ul>
 
-        <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
+        <CreatePost
+          categoryId={categoryId}
+          addPost={this.props.addPost}
+          fileSelect={fileSelect}
+        />
       </div>
     );
   }

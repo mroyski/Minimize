@@ -8,7 +8,7 @@ export default class CreatePost extends Component {
       totalItems: this.totalItems.value,
       removedItems: this.removedItems.value,
       postDescription: this.postDescription.value,
-      postImgPath: this.postImgPath.value,
+      postImgPath: this.postImgPath,
       categoryId: this.props.categoryId
     };
     this.props.addPost(post);
@@ -36,9 +36,16 @@ export default class CreatePost extends Component {
           placeholder="postDescription "
           ref={input => (this.postDescription = input)}
         />
-        <input type="file" name="Photo" accept="image/*" />
+        <input
+          type="file"
+          name="Photo"
+          accept="image/*"
+          onChange={this.props.fileSelect}
+        />
 
-        <button type="submit">Add Post</button>
+        <button type="submit" onClick={() => this.onAddPost()}>
+          Add Post
+        </button>
       </form>
     );
   }
