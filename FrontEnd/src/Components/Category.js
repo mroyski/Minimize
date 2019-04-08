@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import Post from "./Post";
 import CreatePost from "./Library/CreatePost";
+=======
+import React, { Component } from 'react';
+import Post from './Post';
+import CreatePost from './Library/CreatePost';
+import "./Category.css"
+>>>>>>> master
 
 class Category extends Component {
   render() {
@@ -18,11 +25,14 @@ class Category extends Component {
     ));
 
     return (
-      <div>
+      <div id="detailContainer">
+        <div className="detailBody">
         <h2>{categoryName}</h2>
         <p>{categoryDescription}</p>
-
+        </div>
+        <div className="postBody">
         <ul>{listOfPosts}</ul>
+<<<<<<< HEAD
 
         <CreatePost
           categoryId={categoryId}
@@ -30,6 +40,12 @@ class Category extends Component {
           fileSelect={fileSelect}
         />
       </div>
+=======
+        </div>
+        <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
+        
+        </div>
+>>>>>>> master
     );
   }
 }

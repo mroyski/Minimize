@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import Category from "./Category";
+=======
+import React, { Component } from 'react';
+import Category from './Category';
+import "./CategoryDetailsPage.css"
+
+>>>>>>> master
 
 class CatDetails extends Component {
   constructor() {
@@ -49,9 +56,16 @@ class CatDetails extends Component {
 
   render() {
     return (
+      
+      
       <Category
+<<<<<<< HEAD
+=======
+       
+>>>>>>> master
         categoryId={this.props.match.params.categoryId}
         categoryName={this.state.category.categoryName}
+
         categoryDescription={this.state.category.categoryDescription}
         posts={this.state.category.posts}
         totalItems={this.state.totalItems}
@@ -60,6 +74,7 @@ class CatDetails extends Component {
         editPost={this.updatePost}
         fileSelect={this.fileSelect}
       />
+     
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 class Post extends Component {
   deletePost = id => {
     fetch(`https://localhost:44387/api/post/${id}`, {
@@ -28,8 +29,9 @@ class Post extends Component {
       deletePost
     } = this.props.post;
     return (
-      <li>
-        <h4>Post Number: {this.props.post.postId}</h4>
+      
+      <li >
+        {/* <h4>Post Number: {this.props.post.postId}</h4> */}
         <p>Total Items: {totalItems}</p>
         <p>Removed Items: {removedItems}</p>
         <p>Description: {postDescription}</p>
@@ -37,6 +39,7 @@ class Post extends Component {
         <button onClick={() => this.deletePost(postId)}>Delete</button>
         <button onClick={() => this.editPost(postId)}>Edit</button>
       </li>
+    
     );
   }
 }
