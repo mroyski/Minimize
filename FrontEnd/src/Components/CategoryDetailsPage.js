@@ -28,15 +28,14 @@ class CatDetails extends Component {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(post)
-    })
-      .then(res => {
-        if (res.ok) {
-          const currentPosts = [...this.state.category.posts, post];
-          const addNewPost = currentPosts;
-          this.setState({ posts: addNewPost });
-        }
-      })
-      .then(window.location.reload());
+    }).then(res => {
+      if (res.ok) {
+        const currentPosts = [...this.state.category.posts, post];
+        const addNewPost = currentPosts;
+        this.setState({ posts: addNewPost });
+      }
+    });
+    // .then(window.location.reload());
   };
   updatePost = post => {
     const currentPosts = [...this.state.category.posts, post];
@@ -45,19 +44,16 @@ class CatDetails extends Component {
   deletePost = post => {
     console.log(post);
   };
-  fileSelect = () => {
-    fetch(
-      "https://www.filestackapi.com/api/store/S3?key=A3wux2cFHQHGgvyu7UcKVz",
-      {
-        method: "POST"
-      }
-    ).then(res => {
-      if (res.ok) {
-        console.log(res);
-      }
+
+  onSuccess = result => {
+    this.setState({
+      postImgPath: result.filesUploaded[0].url
     });
   };
 
+  onError = error => {
+    console.error("error", error);
+  };
   render() {
     return (
       <Category
@@ -65,11 +61,11 @@ class CatDetails extends Component {
         categoryName={this.state.category.categoryName}
         categoryDescription={this.state.category.categoryDescription}
         posts={this.state.category.posts}
-        totalItems={this.state.totalItems}
-        removedItems={this.state.removedItems}
+        postImgPath={this.state.postImgPath}
         addPost={this.addPost}
         editPost={this.updatePost}
-        fileSelect={this.fileSelect}
+        onSuccess={this.onSuccess}
+        onError={this.onError}
       />
     );
   }

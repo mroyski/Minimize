@@ -2,29 +2,16 @@ import React, { Component } from "react";
 import ReactFilestack from "filestack-react";
 
 export default class CreatePost extends Component {
-  onAddPost = event => {
-    event.preventDefault();
+  onAddPost = () => {
     const post = {
-      postId: this.props.postId,
       totalItems: this.totalItems.value,
       removedItems: this.removedItems.value,
       postDescription: this.postDescription.value,
-      postImgPath: this.postImgPath,
+      postImgPath: this.props.postImgPath,
       categoryId: this.props.categoryId
     };
     this.props.addPost(post);
     this.postForm.reset();
-    console.log(this.postImgPath);
-  };
-
-  onSuccess = result => {
-    this.setState({
-      postImgPath: result.filesUploaded[0].url
-    });
-  };
-
-  onError = error => {
-    console.error("error", error);
   };
 
   render() {
@@ -40,6 +27,7 @@ export default class CreatePost extends Component {
         ref={input => (this.postForm = input)}
         onSubmit={e => this.onAddPost(e)}
       >
+        <h1>{this.props.postImgPath}</h1>
         <input
           type="text"
           placeholder="totalItems "
@@ -58,8 +46,8 @@ export default class CreatePost extends Component {
         <ReactFilestack
           apikey={key}
           options={basicOptions}
-          onSuccess={this.onSuccess}
-          onError={this.onError}
+          onSuccess={this.props.onSuccess}
+          onError={this.props.onError}
         />
         <button type="submit" onClick={() => this.onAddPost()}>
           Add Post

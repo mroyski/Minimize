@@ -10,7 +10,9 @@ class Category extends Component {
       categoryName,
       categoryDescription,
       posts,
-      editPost
+      editPost,
+      onSuccess,
+      onError
     } = this.props;
 
     const listOfPosts = posts.map(post => (
@@ -26,7 +28,13 @@ class Category extends Component {
         <div className="postBody">
           <ul>{listOfPosts}</ul>
 
-          <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
+          <CreatePost
+            categoryId={categoryId}
+            postImgPath={this.props.postImgPath}
+            addPost={this.props.addPost}
+            onSuccess={onSuccess}
+            onError={onError}
+          />
         </div>
       </div>
     );
