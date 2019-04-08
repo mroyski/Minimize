@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import Category from "./Category";
 import "./CategoryDetailsPage.css";
 
@@ -46,6 +47,9 @@ class CatDetails extends Component {
   };
   fileSelect = e => {
     console.log("/Images/" + e.target.files[0].name);
+  };
+  fileUpload = () => {
+    fetch("http");
   };
 
   render() {
