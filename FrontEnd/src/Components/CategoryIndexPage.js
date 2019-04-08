@@ -22,7 +22,7 @@ export default props => {
   ));
   return (
     <div className="CatIndexBody">
-      <h1 id="MiniTitle">minimize</h1>
+      <h1 id="MiniTitle">Start by picking a category</h1>
       <ul id="CatIndexUl">
         <div id="CatLists">{categoryLinks}</div>
       </ul>

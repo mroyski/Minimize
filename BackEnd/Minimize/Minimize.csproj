@@ -7,6 +7,13 @@
   <ItemGroup>
     <Compile Remove="Migrations\20190405211112_InitialCreate.cs" />
     <Compile Remove="Migrations\20190405211112_InitialCreate.Designer.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Remove="Migrations\20190408143958_CategoryDescription.cs" />
+    <Compile Remove="Migrations\20190408143958_CategoryDescription.Designer.cs" />
+    <Compile Remove="Migrations\20190408150041_MoreCatDetails.cs" />
+    <Compile Remove="Migrations\20190408150041_MoreCatDetails.Designer.cs" />
+>>>>>>> master
   </ItemGroup>
 
   <ItemGroup>

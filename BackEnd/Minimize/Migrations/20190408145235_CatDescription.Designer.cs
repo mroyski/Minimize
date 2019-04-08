@@ -9,8 +9,8 @@ using Minimize;
 namespace Minimize.Migrations
 {
     [DbContext(typeof(MinimizeContext))]
-    [Migration("20190405211112_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190408145235_CatDescription")]
+    partial class CatDescription
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,10 +37,10 @@ namespace Minimize.Migrations
                     b.ToTable("Categories");
 
                     b.HasData(
-                        new { CategoryId = 1, CategoryDescription = "Clothes", CategoryImg = "tshirt", CategoryName = "Clothing" },
-                        new { CategoryId = 2, CategoryDescription = "Junk Furniture", CategoryImg = "couch", CategoryName = "Furniture" },
+                        new { CategoryId = 1, CategoryDescription = " There is no shortage when it comes to clothing donation opportunities. Goodwill and Salvation Army are well-known options, but local shelters and outreach programs may also welcome gently used clothing. Dress for Success is a nonprofit that helps women achieve economic independence by providing professional attire. In some states the Vietnam Veterans of America will come to your home to pick up used clothing.", CategoryImg = "tshirt", CategoryName = "Clothing" },
+                        new { CategoryId = 2, CategoryDescription = " Just want it gone? Listing your furniture in the Craigslist “Free” section will often get you a pickup in an hour or two. If that doesn’t work, you can pay for 1-800-Got-Junk to pick up and responsibly dispose of your stuff. And, of course, you can donate your furniture to The National Furniture Bank, Goodwill, and Salvation Army. DonationTown is also a great listing of nonprofits that will pick your furniture donation up.", CategoryImg = "couch", CategoryName = "Furniture" },
                         new { CategoryId = 3, CategoryDescription = "Toolbox", CategoryImg = "tools", CategoryName = "Tools" },
-                        new { CategoryId = 4, CategoryDescription = "Computers, phones", CategoryImg = "laptop", CategoryName = "Electronics" },
+                        new { CategoryId = 4, CategoryDescription = "Tech hardware is a nasty environmental hazard if disposed of incorrectly. Luckily there are lots of options for responsibly dispatching your old laptops and cellphones into the gadget beyond. If your old phone doesn’t qualify for a buyback credit, all of the major mobile carriers in the US—Sprint, Verizon, T-Mobile, and AT&T—will accept cell phones for recycling or refurbishing. Many have programs that pass the phones along to active duty soldiers or victims of domestic violence.For other items(computers, tablets, Bluetooth headsets, ink / toner, batteries, cameras, etc.),check out the recycling programs at Best Buy, Staples, Office Depot and OfficeMax.Tech vendors like Apple, Dell, HP, Samsung and Sony also have recycling programs for their products. Don’t forget to wipe your personal information off of devices before parting with them.", CategoryImg = "laptop", CategoryName = "Electronics" },
                         new { CategoryId = 5, CategoryDescription = "Fun stuff", CategoryImg = "truck-monster", CategoryName = "Toys" },
                         new { CategoryId = 6, CategoryDescription = "Other stuff", CategoryImg = "question", CategoryName = "Misc" }
                     );
