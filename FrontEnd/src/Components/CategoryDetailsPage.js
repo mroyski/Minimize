@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import Category from "./Category";
-=======
-import React, { Component } from 'react';
-import Category from './Category';
-import "./CategoryDetailsPage.css"
-
->>>>>>> master
+import "./CategoryDetailsPage.css";
 
 class CatDetails extends Component {
   constructor() {
@@ -51,21 +45,14 @@ class CatDetails extends Component {
     console.log(post);
   };
   fileSelect = e => {
-    console.log(e.target);
+    console.log("/Images/" + e.target.files[0].name);
   };
 
   render() {
     return (
-      
-      
       <Category
-<<<<<<< HEAD
-=======
-       
->>>>>>> master
         categoryId={this.props.match.params.categoryId}
         categoryName={this.state.category.categoryName}
-
         categoryDescription={this.state.category.categoryDescription}
         posts={this.state.category.posts}
         totalItems={this.state.totalItems}
@@ -74,7 +61,6 @@ class CatDetails extends Component {
         editPost={this.updatePost}
         fileSelect={this.fileSelect}
       />
-     
     );
   }
 }
