@@ -1,0 +1,16 @@
+h1,
+h2 {
+  text-align: center;
+  color: rgb(0, 63, 158);
+}
+
+.ProgressSection {
+  text-align: center;
+  color: rgb(0, 63, 158);
+}
+
+.BadgesSection {
+  text-align: center;
+  color: rgb(0, 63, 158);
+  border: 2px solid rgb(0, 63, 158);
+}
