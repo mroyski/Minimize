@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Post from "./Post";
+import Chart from "./Chart";
 import "./ProfilePage.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,9 +11,38 @@ class ProfilePage extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      chartData: {}
     };
   }
+
+  componentWillMount() {
+    this.getChartData();
+  }
+
+  getChartData() {
+    // FETCH HERE
+    this.setState({
+      chartData: {
+        labels: [
+          "clothing",
+          "furniture",
+          "tools",
+          "electronics",
+          "toys",
+          "misc"
+        ],
+        datasets: [
+          {
+            label: "items",
+            data: [50, 5, 12, 6, 22, 13],
+            backgroundColor: "rgb(0, 63, 158)"
+          }
+        ]
+      }
+    });
+  }
+
   componentDidMount() {
     fetch(`https://localhost:44387/api/post`)
       .then(res => res.json())
@@ -24,9 +54,9 @@ class ProfilePage extends Component {
     ));
     return (
       <div id="ProfileBody">
-        <h1>Profile</h1>
         <div className="ProgressSection">
           <h2>Progress</h2>
+          <Chart chartData={this.state.chartData} />
         </div>
         <div className="BadgesSection">
           <h2>Badges</h2>
