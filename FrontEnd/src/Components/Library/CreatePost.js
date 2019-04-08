@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class CreatePost extends Component {
   onAddPost = event => {
@@ -36,11 +36,7 @@ export default class CreatePost extends Component {
           placeholder="postDescription "
           ref={input => (this.postDescription = input)}
         />
-        <input
-          type="text"
-          placeholder="postImgPath "
-          ref={input => (this.postImgPath = input)}
-        />
+        <input type="file" name="Photo" accept="image/*" />
 
         <button type="submit">Add Post</button>
       </form>
