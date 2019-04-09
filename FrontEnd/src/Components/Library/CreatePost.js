@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactFilestack from "filestack-react";
 import "./CreatePost.css";
 
-
 export default class CreatePost extends Component {
   onAddPost = () => {
     const post = {
@@ -49,7 +48,7 @@ export default class CreatePost extends Component {
           />
 
           <ReactFilestack
-            apikey={process.env.REACT_APP_API_KEY_AL}
+            apikey={key}
             options={basicOptions}
             onSuccess={this.props.onSuccess}
             onError={this.props.onError}
