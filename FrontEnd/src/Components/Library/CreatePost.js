@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import ReactFilestack from "filestack-react";
 
-
 export default class CreatePost extends Component {
   onAddPost = () => {
     const post = {
@@ -52,9 +51,12 @@ export default class CreatePost extends Component {
           onSuccess={this.props.onSuccess}
           onError={this.props.onError}
         />
-        <button type="submit" onClick={() => this.onAddPost()}>
-          Add Post
-        </button>
+        <div>
+          <button type="submit" onClick={() => this.onAddPost()}>
+            Add Post
+          </button>
+          <button onClick={this.props.closeModal}>Cancel</button>
+        </div>
       </form>
     );
   }

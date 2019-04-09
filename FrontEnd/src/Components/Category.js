@@ -14,7 +14,8 @@ class Category extends Component {
       editPost,
       onSuccess,
       onError,
-      formModal
+      formModal,
+      closeModal
     } = this.props;
 
     const listOfPosts = posts.map(post => (
@@ -28,7 +29,7 @@ class Category extends Component {
             <h2>{categoryName}</h2>
           </div>
           <p id="catDescrip">{categoryDescription}</p>
-          <button onClick={formModal}>Add Post</button>
+          <button onClick={formModal}>Create Post</button>
         </div>
 
         <div className="create-post">
@@ -38,6 +39,7 @@ class Category extends Component {
             addPost={this.props.addPost}
             onSuccess={onSuccess}
             onError={onError}
+            closeModal={closeModal}
           />
         </div>
         <div className="postBody">
