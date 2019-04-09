@@ -2,20 +2,26 @@
     display: grid;
     width: 100vw;
     height: 100vh;
+   
     /* grid-template-columns: 4fr 1fr; */
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
     grid-template-areas:
     "a" 
-    "b"
-      
-     
+    "b";
+    
   }
   .detailBody{
       grid-area: a;
-      
+      justify-content: center;
+  }
+
+  .detailName{
+      color: blue;
+     
   }
   .postBody{
       grid-area: b;
-      font-size: .7em;
+      font-size: 1rem;
+      
      
   }

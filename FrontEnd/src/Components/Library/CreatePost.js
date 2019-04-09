@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import ReactFilestack from "filestack-react";
+
 
 export default class CreatePost extends Component {
   onAddPost = () => {
@@ -43,6 +45,7 @@ export default class CreatePost extends Component {
           placeholder="postDescription "
           ref={input => (this.postDescription = input)}
         />
+
         <ReactFilestack
           apikey={key}
           options={basicOptions}
