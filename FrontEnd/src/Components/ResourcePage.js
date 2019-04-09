@@ -1,11 +1,28 @@
 import React, { Component } from "react";
 import GoogleMaps, { MapContainer } from "./MapContainer";
+import ReactPlayer from "react-player";
+import "./ResourcePage.css";
 
 class ResourcePage extends Component {
   render() {
     return (
-      <div id="Map">
-        <GoogleMaps />
+      <div id="Body">
+        <div className="Map">
+          <h2>Local Places and Links You May Find Helpful</h2>
+        </div>
+        <div className="HelpfulLinks" />
+        <div className="theminimalists">
+          <a href="https://www.theminimalist.com">theminimalists.com</a>
+          <div className="player-wrapper">
+            <ReactPlayer
+              className="react-player"
+              url="https://youtu.be/vLxKGb-_2U4"
+            />
+          </div>
+        </div>
+        <div className="Simplify">
+          <a href="https://simplifyandpursue.com">simplifyandpursue.com</a>
+        </div>
       </div>
     );
   }
