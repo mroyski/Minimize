@@ -4,6 +4,7 @@ import CategoryIndex from "./Components/CategoryIndexPageContainer";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import ProfilePage from "./Components/ProfilePage";
 import ResourcePage from "./Components/ResourcePage";
+import GoalsPage from "./Components/GoalsPage";
 import "./App.css";
 
 function AppRouter() {
@@ -14,7 +15,7 @@ function AppRouter() {
           <img src="/Images/Logo3.png" alt="logo" />
         </Link>
         <div className="nav-links">
-          <Link to={`/`} className="link">
+          <Link to={`/goals`} className="link">
             GOALS
           </Link>
           <Link to={`/`} className="link">
@@ -35,6 +36,7 @@ function AppRouter() {
         <Route path="/" exact component={CategoryIndex} />
         <Route path="/category/:categoryId" component={CatDetailsPage} />
         <Route path="/profile" component={ProfilePage} />
+        <Route path="/goals" component={GoalsPage} />
         <Route path="/resourcepage" component={ResourcePage} />
       </div>
     </Router>
