@@ -10,7 +10,9 @@ function AppRouter() {
   return (
     <Router>
       <nav id="navbar">
-        <img src="/Images/Logo3.png" alt="logo" />
+        <Link to={`/`}>
+          <img src="/Images/Logo3.png" alt="logo" />
+        </Link>
         <div className="nav-links">
           <Link to={`/`} className="link">
             GOALS
