@@ -3,7 +3,6 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Minimize.Models;
 using Minimize.Repositories;
-using System.Linq;
 
 namespace Minimize.Controllers
 {
