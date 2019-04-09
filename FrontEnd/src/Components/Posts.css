@@ -1,4 +1,4 @@
-#postDetails{
+#postDetails {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -14,8 +14,6 @@
   /* margin: 1rem; */
   /* padding: 2rem; */
 }
-#postDetails img{
-     width: 18rem;
-     
-
+#postDetails img {
+  width: 18rem;
 }

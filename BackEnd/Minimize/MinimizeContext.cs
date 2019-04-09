@@ -8,6 +8,7 @@ namespace Minimize
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Badge> Badges { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
