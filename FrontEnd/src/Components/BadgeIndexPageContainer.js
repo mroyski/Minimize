@@ -8,6 +8,9 @@ class BadgeIndexPageContainer extends Component {
         badges = []
     }
   }
+
+
+  
   render() {
     return <div />;
   }

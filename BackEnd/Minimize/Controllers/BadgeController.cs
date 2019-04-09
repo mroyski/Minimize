@@ -13,7 +13,7 @@ namespace Minimize.Controllers
     [ApiController]
     public class BadgeController : ControllerBase
     {
-        IBadgeRepository badgeRepo
+        IBadgeRepository badgeRepo;
 
         public BadgeController(IBadgeRepository badgeRepo)
         {
