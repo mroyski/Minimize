@@ -23,22 +23,21 @@ class Category extends Component {
     return (
       <div id="detailContainer">
         <div className="detailBody">
-
-           <div className="detailName">
+          <div className="detailName">
             <h2>{categoryName}</h2>
-           </div>
-            <p>{categoryDescription}</p>
+          </div>
+          <p id="catDescrip">{categoryDescription}</p>
         </div>
+        <CreatePost
+          categoryId={categoryId}
+          postImgPath={this.props.postImgPath}
+          addPost={this.props.addPost}
+          onSuccess={onSuccess}
+          onError={onError}
+        />
         <div className="postBody">
           <ul>{listOfPosts}</ul>
         </div>
-          <CreatePost
-            categoryId={categoryId}
-            postImgPath={this.props.postImgPath}
-            addPost={this.props.addPost}
-            onSuccess={onSuccess}
-            onError={onError}
-          />
       </div>
     );
   }

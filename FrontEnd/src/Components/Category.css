@@ -1,24 +1,45 @@
-#detailContainer {
+/* #detailContainer {
   display: grid;
   width: 100vw;
   height: 100vh;
 
-  /* grid-template-columns: 4fr 1fr; */
+  /* grid-template-columns: 4fr 1fr;
   grid-template-rows: 2fr 1fr;
   grid-template-areas:
     "a"
     "b";
-}
-.detailBody {
-  width: 500px;
-  grid-area: a;
+} */
+
+#detailContainer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+}
+
+#catDescrip {
+  width: 700px;
+}
+
+.detailBody {
+  margin: auto;
 }
 
 .detailName {
   color: blue;
 }
+.postBody ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.postBody li {
+  margin: 1.5rem;
+}
+
 .postBody {
-  grid-area: b;
-  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
