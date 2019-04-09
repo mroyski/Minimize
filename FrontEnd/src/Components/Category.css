@@ -1,27 +1,24 @@
 #detailContainer {
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-   
-    /* grid-template-columns: 4fr 1fr; */
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas:
-    "a" 
-    "b";
-    
-  }
-  .detailBody{
-      grid-area: a;
-      justify-content: center;
-  }
+  display: grid;
+  width: 100vw;
+  height: 100vh;
 
-  .detailName{
-      color: blue;
-     
-  }
-  .postBody{
-      grid-area: b;
-      font-size: 1rem;
-      
-     
-  }
+  /* grid-template-columns: 4fr 1fr; */
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "a"
+    "b";
+}
+.detailBody {
+  width: 500px;
+  grid-area: a;
+  justify-content: center;
+}
+
+.detailName {
+  color: blue;
+}
+.postBody {
+  grid-area: b;
+  font-size: 1rem;
+}
