@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Post from './Post';
-import CreatePost from './Library/CreatePost';
-import "./Category.css"
+import React, { Component } from "react";
+import Post from "./Post";
+import CreatePost from "./Library/CreatePost";
+import "./Category.css";
 
 class Category extends Component {
   render() {
@@ -10,8 +10,9 @@ class Category extends Component {
       categoryName,
       categoryDescription,
       posts,
-      AddPost,
-      editPost
+      editPost,
+      onSuccess,
+      onError
     } = this.props;
 
     const listOfPosts = posts.map(post => (
@@ -21,15 +22,23 @@ class Category extends Component {
     return (
       <div id="detailContainer">
         <div className="detailBody">
-        <h2>{categoryName}</h2>
-        <p>{categoryDescription}</p>
+
+           <div className="detailName">
+            <h2>{categoryName}</h2>
+           </div>
+            <p>{categoryDescription}</p>
         </div>
         <div className="postBody">
-        <ul>{listOfPosts}</ul>
+          <ul>{listOfPosts}</ul>
         </div>
-        <CreatePost categoryId={categoryId} addPost={this.props.addPost} />
-        
-        </div>
+          <CreatePost
+            categoryId={categoryId}
+            postImgPath={this.props.postImgPath}
+            addPost={this.props.addPost}
+            onSuccess={onSuccess}
+            onError={onError}
+          />
+      </div>
     );
   }
 }
