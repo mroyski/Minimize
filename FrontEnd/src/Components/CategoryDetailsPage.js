@@ -54,6 +54,11 @@ class CatDetails extends Component {
   onError = error => {
     console.error("error", error);
   };
+
+  formModal = () => {
+    document.querySelector(".create-post").classList.add("form-active");
+  };
+
   render() {
     return (
       <Category
@@ -66,6 +71,7 @@ class CatDetails extends Component {
         editPost={this.updatePost}
         onSuccess={this.onSuccess}
         onError={this.onError}
+        formModal={this.formModal}
       />
     );
   }
