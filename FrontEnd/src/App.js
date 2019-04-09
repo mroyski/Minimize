@@ -22,10 +22,10 @@ function AppRouter() {
             BADGES
           </Link>
           <Link to={"/profile"} className="link">
-           PROFILE
+            PROFILE
           </Link>
-          <Link to={"/resource"} className="link">
-           RESOURCES
+          <Link to={"/ResourcePage"} className="link">
+            RESOURCES
           </Link>
         </div>
       </nav>
@@ -33,7 +33,7 @@ function AppRouter() {
         <Route path="/" exact component={CategoryIndex} />
         <Route path="/category/:categoryId" component={CatDetailsPage} />
         <Route path="/profile" component={ProfilePage} />
-        <Route path="/resourcepage" component={ResourcePage}/>
+        <Route path="/resourcepage" component={ResourcePage} />
       </div>
     </Router>
   );
