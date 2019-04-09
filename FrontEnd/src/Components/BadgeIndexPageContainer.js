@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { GetAll } from "./Library/HelperFunctions";
+import { GetAllBadges } from "./Library/HelperFunctions";
+import BadgeIndexPage from "./BadgeIndexPage";
 
 class BadgeIndexPageContainer extends Component {
   constructor() {
@@ -9,10 +10,12 @@ class BadgeIndexPageContainer extends Component {
     }
   }
 
+componentDidMount() {
+    GetAllBadges().then(json => this.setState({ badges: json }));
+}
 
-  
   render() {
-    return <div />;
+    return <BadgeIndexPage badges={this.state.badges} />;
   }
 }
 
