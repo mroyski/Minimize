@@ -17,10 +17,11 @@ class ResourcePage extends Component {
             <ReactPlayer
               className="react-player"
               url="https://youtu.be/vLxKGb-_2U4"
-              width="30%"
-              height="30%"
             />
           </div>
+        </div>
+        <div className="Simplify">
+          <a href="https://simplifyandpursue.com">simplifyandpursue.com</a>
         </div>
       </div>
     );
