@@ -21,7 +21,6 @@ class ProfilePage extends Component {
   }
 
   getChartData() {
-    // FETCH HERE
     this.setState({
       chartData: {
         labels: [
@@ -52,6 +51,7 @@ class ProfilePage extends Component {
     const listOfPosts = this.state.posts.map(post => (
       <Post key={post.postId} post={post} />
     ));
+
     return (
       <div id="ProfileBody">
         <div className="ProgressSection">
