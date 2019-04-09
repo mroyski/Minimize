@@ -47,9 +47,13 @@
 .create-post {
   transform: scale(0);
   transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: 1;
 }
 
 .form-active {
   transform: scale(1);
   transition: all 0.5s ease-in-out;
+  position: unset;
+  z-index: 0;
 }
