@@ -7,21 +7,41 @@ class ResourcePage extends Component {
   render() {
     return (
       <div id="Body">
-        <div className="Map">
-          <h2>Local Places and Links You May Find Helpful</h2>
+        <div className="Title">
+          <p>Local Places and Links You May Find Helpful</p>
         </div>
-        <div className="HelpfulLinks" />
-        <div className="theminimalists">
-          <a href="https://www.theminimalist.com">theminimalists.com</a>
-          <div className="player-wrapper">
-            <ReactPlayer
-              className="react-player"
-              url="https://youtu.be/vLxKGb-_2U4"
-            />
+        <div className="Container">
+          <div className="Map" />
+          <div className="HelpfulLinks" />
+          <div className="theminimalists">
+            <a href="https://www.theminimalist.com" target="_blank">
+              theminimalists.com
+            </a>
+            <div className="video">
+              <iframe
+                src="https://www.youtube.com/embed/iKhQ75DfD2k"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
           </div>
-        </div>
-        <div className="Simplify">
-          <a href="https://simplifyandpursue.com">simplifyandpursue.com</a>
+          <div className="Simplify">
+            <a href="https://simplifyandpursue.com" target="_blank">
+              simplifyandpursue.com
+              <p>
+                <img src="./images/SimpleAndPure.png" />
+              </p>
+            </a>
+          </div>
+          <div className="Uncluttered">
+            <a href="http://www.becomingminimalist.com/" target="_blank">
+              becomingminimalist.com
+              <p>
+                <img src="./images/uncluttered.png" />
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     );

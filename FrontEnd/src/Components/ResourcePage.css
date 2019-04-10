@@ -1,19 +1,84 @@
+#body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 63, 158);
+  font-size: 1.5rem;
+}
+
+.theminimalists,
+.Simplify,
+.Uncluttered {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 63, 158);
+  transition: 0.3s;
+  border: 1px solid rgb(0, 63, 158);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  width: 7rem;
+  height: 7rem;
+  margin: 1rem;
+  padding: 2rem;
+  padding-bottom: 2rem;
+}
+
+.Title p {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(0, 63, 158);
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .Map {
   text-align: center;
 }
 
-.theminimalists .video {
-  height: 10vh;
+.theminimalists {
+  text-align: center;
+}
+
+.theminimalists iframe {
   max-width: 100%;
 }
 
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+.video {
+  width: 300px;
+  padding-top: 1rem;
 }
 
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
+.Simplify {
+  text-align: center;
+  padding-top: 1rem;
+  width: 300px;
+  height: 200px;
+  padding: 0;
+}
+
+.Uncluttered {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+
+.Uncluttered p img {
+  height: 140px;
+  width: 160px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #navbar {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+  }
 }
