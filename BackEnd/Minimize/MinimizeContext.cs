@@ -89,7 +89,115 @@ namespace Minimize
                }
                );
 
+            modelBuilder.Entity<Badge>().HasData(
 
+                new Badge()
+                {
+                    BadgeId = 1,
+                    BadgeName = "Welcome!",
+                    BadgeDescription = "You successfully joined Minimize!"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 2,
+                    BadgeName = "First Timer",
+                    BadgeDescription = "You made your first post"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 3,
+                    BadgeName = "Au Naturel",
+                    BadgeDescription = "You removed your first clothing item"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 4,
+                    BadgeName = "Heavy Load",
+                    BadgeDescription = "You removed your first furniture item"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 5,
+                    BadgeName = "Not-So-Handy",
+                    BadgeDescription = "You removed your first tool item"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 6,
+                    BadgeName = "Overload!",
+                    BadgeDescription = "You removed your first electronic item"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 7,
+                    BadgeName = "Get Serious",
+                    BadgeDescription = "You removed your first toy item"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 8,
+                    BadgeName = "Only Necessities",
+                    BadgeDescription = "You removed your first misc item"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 9,
+                    BadgeName = "Jack of Trades",
+                    BadgeDescription = "You removed an item from each category"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 10,
+                    BadgeName = "Real Minimalist",
+                    BadgeDescription = "You removed a post"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 11,
+                    BadgeName = "First steps",
+                    BadgeDescription = "You removed 5 total items"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 12,
+                    BadgeName = "Novice",
+                    BadgeDescription = "You removed 10 total items"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 13,
+                    BadgeName = "Minimizer",
+                    BadgeDescription = "You removed 20 total items"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 14,
+                    BadgeName = "Tiny World",
+                    BadgeDescription = "You removed 35 total items"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 15,
+                    BadgeName = "Peace",
+                    BadgeDescription = "You removed 50 total items"
+                }
+
+
+                );
         }
     }
 }
