@@ -72,20 +72,40 @@ namespace Minimize
                new Post()
                {
                    PostId = 1,
-                   TotalItems = 32,
-                   RemovedItems = 15,
-                   PostDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum tortor sed metus sollicitudin, ut malesuada quam ultrices. Nullam quis dui fringilla, eleifend mi in, pharetra neque. Sed iaculis, urna quis pulvinar scelerisque, nunc justo fringilla lectus, quis dictum ligula libero et enim. Nunc pharetra, diam ac tristique rutrum, neque ligula lacinia nibh, vehicula lacinia tellus velit quis orci. Phasellus dui enim, pulvinar quis rhoncus eget, elementum finibus risus. Integer bibendum leo ac felis sodales viverra. Aenean tincidunt felis ut orci tristique consequat. In quam elit, blandit non pretium et, feugiat et nisl. Vestibulum ac luctus leo.",
-                   PostImgPath = "/Images/Junk.jpg",
+                   TotalItems = 15,
+                   RemovedItems = 1,
+                   PostDescription = "I have been wanting to get rid of my shoes. I have way to many but it's hard to decide :(",
+                   PostImgPath = "/Images/Shos.jpg",
                    CategoryId = 1
                },
                new Post()
                {
                    PostId = 2,
-                   TotalItems = 15,
-                   RemovedItems = 65,
-                   PostDescription = "Lickies and Chewies",
-                   PostImgPath = "/Images/Junk.jpg",
+                   TotalItems = 1,
+                   RemovedItems = 1,
+                   PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.",
+                   PostImgPath = "/Images/Lamp.jpg",
                    CategoryId = 2
+               },
+
+               new Post()
+               {
+                   PostId = 3,
+                   TotalItems = 1,
+                   RemovedItems = 1,
+                   PostDescription = "Not really sure what this is or how to even use it.",
+                   PostImgPath = "/Images/tool.jpg",
+                   CategoryId = 3
+               },
+
+               new Post()
+               {
+                   PostId = 4,
+                   TotalItems = 1,
+                   RemovedItems = 1,
+                   PostDescription = "I was planning on keeping this ancient thing and hopefully sell it but nobody wants it",
+                   PostImgPath = "/Images/ibm.jpg",
+                   CategoryId = 4
                }
                );
 
