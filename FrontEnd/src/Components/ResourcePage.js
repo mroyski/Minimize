@@ -13,17 +13,28 @@ class ResourcePage extends Component {
         <div className="HelpfulLinks" />
         <div className="theminimalists">
           <a href="https://www.theminimalist.com">theminimalists.com</a>
-          <div className="player-wrapper">
-            <ReactPlayer
-              className="react-player"
-              url="https://youtu.be/vLxKGb-_2U4"
-            />
-          </div>
-        </div>
+          
+         
+      </div>
         <div className="Simplify">
           <a href="https://simplifyandpursue.com">simplifyandpursue.com</a>
         </div>
+        <div className="ReasourceLinks">
+      <a href="https://www.goodwill.org/donate-and-shop/donate-stuff">Goodwill</a>
+      <a href="https://satruck.org/">Salvation Army</a>
+      <a href="https://vva.org/donate/">Vietnam Veterans of America</a>
+      <a href="https://roomtogrow.org/index.php/get-involved#donate-baby-items">Room to Grow</a>
+      <a href="https://soles4souls.org/get-involved/give-shoes/">Soles 4 Souls</a>
+      <a href="http://donationtown.org/donation-pick-up.html">Donation Town</a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+
       </div>
+      </div>
+     
     );
   }
 }
