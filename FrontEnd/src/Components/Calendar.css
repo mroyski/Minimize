@@ -32,11 +32,13 @@
 
 /* GENERAL */
 
-* {
-  box-sizing: border-box;
-}
+/* * {
+   box-sizing: border-box; 
+} */
 
 body {
+  box-sizing: border-box;
+
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
   font-weight: 300;
@@ -47,6 +49,8 @@ body {
 }
 
 header {
+  box-sizing: border-box;
+
   display: block;
   width: 100%;
   padding: 1.75em 0;
@@ -55,6 +59,8 @@ header {
 }
 
 header #logo {
+  box-sizing: border-box;
+
   font-size: 175%;
   text-align: center;
   color: var(--main-color);
@@ -62,10 +68,14 @@ header #logo {
 }
 
 header #logo .icon {
+  box-sizing: border-box;
+
   padding-right: 0.25em;
 }
 
 main {
+  box-sizing: border-box;
+
   display: block;
   margin: 0 auto;
   margin-top: 5em;
@@ -75,6 +85,8 @@ main {
 /* GRID */
 
 .row {
+  box-sizing: border-box;
+
   margin: 0;
   padding: 0;
   display: flex;
@@ -84,10 +96,14 @@ main {
 }
 
 .row-middle {
+  box-sizing: border-box;
+
   align-items: center;
 }
 
 .col {
+  box-sizing: border-box;
+
   flex-grow: 1;
   flex-basis: 0;
   max-width: 100%;
@@ -111,6 +127,7 @@ main {
 /* Calendar */
 
 .calendar {
+  box-sizing: border-box;
   display: block;
   position: relative;
   width: 100%;
@@ -119,6 +136,8 @@ main {
 }
 
 .calendar .header {
+  box-sizing: border-box;
+
   text-transform: uppercase;
   font-weight: 700;
   font-size: 115%;
@@ -127,6 +146,8 @@ main {
 }
 
 .calendar .header .icon {
+  box-sizing: border-box;
+
   cursor: pointer;
   transition: 0.15s ease-out;
 }
@@ -146,6 +167,8 @@ main {
 }
 
 .calendar .days {
+  box-sizing: border-box;
+
   text-transform: uppercase;
   font-weight: 400;
   color: var(--text-color-light);
@@ -155,6 +178,8 @@ main {
 }
 
 .calendar .body .cell {
+  box-sizing: border-box;
+
   position: relative;
   height: 5em;
   border-right: 1px solid var(--border-color);
