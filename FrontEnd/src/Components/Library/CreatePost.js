@@ -49,7 +49,8 @@ export default class CreatePost extends Component {
           />
 
           <ReactFilestack
-            apikey={process.env.REACT_APP_API_KEY_AL}
+            // apikey={process.env.REACT_APP_API_KEY_AL}
+            apikey={key}
             options={basicOptions}
             onSuccess={this.props.onSuccess}
             onError={this.props.onError}
