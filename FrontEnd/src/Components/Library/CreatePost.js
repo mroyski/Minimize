@@ -30,7 +30,7 @@ export default class CreatePost extends Component {
         onSubmit={e => this.onAddPost(e)}
       >
         <div className="post-form">
-          <h1>{this.props.postImgPath}</h1>
+          {/* <h1>{this.props.postImgPath}</h1> */}
           <input
             type="text"
             placeholder="totalItems "
