@@ -50,33 +50,6 @@ class ProfilePage extends Component {
     });
   }
 
-  alfabetagamadelta() {
-    const labels = ['hello', 'world'];
-    fetch(`https://localhost:44387/api/category`)
-      .then(res => res.json())
-      .then(data => {
-        const getCategoryNames = Object.assign([], data);
-
-        // getCategoryNames.map(item => labels.push(item.categoryNames));
-        getCategoryNames.forEach(element => {
-          labels.push(element.categoryName);
-        });
-        console.log(labels);
-
-        this.setState({
-          chartData: {
-            labels: labels,
-            datasets: [
-              {
-                label: 'items',
-                data: [50, 5, 12, 6, 22, 13],
-                backgroundColor: 'rgb(0, 63, 158)'
-              }
-            ]
-          }
-        });
-      });
-  }
   render() {
     const listOfPosts = this.state.posts.map(post => (
       <Post key={post.postId} post={post} />
