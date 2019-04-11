@@ -38,6 +38,25 @@ class CatDetails extends Component {
       }
     });
   };
+  deletePost = postId => {
+    fetch(`https://localhost:44387/api/post/${postId}`, {
+      method: 'DELETE'
+    })
+      .then(res => {
+        if (res.ok) {
+          const currentPosts = this.state.category.posts;
+          const updatedPosts = currentPosts.filter(
+            item => item.postId !== postId
+          );
+          const updatedCategory = Object.assign({}, this.state.category, {
+            posts: updatedPosts
+          });
+          this.setState({ category: updatedCategory }); //all the old stuff, but replace the posts with updatePosts.
+          console.log(updatedCategory);
+        }
+      })
+      .catch(console.error);
+  };
 
   onSuccess = result => {
     this.setState({
