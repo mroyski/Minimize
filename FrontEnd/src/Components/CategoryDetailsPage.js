@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import ReactFilestack from "filestack-react";
-import Category from "./Category";
-import "./CategoryDetailsPage.css";
+import React, { Component } from 'react';
+import ReactFilestack from 'filestack-react';
+import Category from './Category';
+import './CategoryDetailsPage.css';
 
 class CatDetails extends Component {
   constructor() {
@@ -10,8 +10,8 @@ class CatDetails extends Component {
       category: { posts: [{}] },
       totalItems: 0,
       removedItems: 0,
-      postDescription: "",
-      postImgPath: ""
+      postDescription: '',
+      postImgPath: ''
     };
   }
   componentDidMount() {
@@ -22,27 +22,40 @@ class CatDetails extends Component {
   }
 
   addPost = post => {
-    fetch("https://localhost:44387/api/post", {
-      method: "POST",
+    fetch('https://localhost:44387/api/post', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(post)
     }).then(res => {
       if (res.ok) {
         const currentPosts = [...this.state.category.posts, post];
-        const addNewPost = currentPosts;
-        this.setState({ posts: addNewPost });
+        const withNewPost = Object.assign({}, this.state.category, {
+          posts: currentPosts
+        });
+        this.setState({ category: withNewPost });
       }
     });
-    // .then(window.location.reload());
   };
-  updatePost = post => {
-    const currentPosts = [...this.state.category.posts, post];
-    console.log(post);
-  };
-  deletePost = post => {
-    console.log(post);
+  deletePost = postId => {
+    fetch(`https://localhost:44387/api/post/${postId}`, {
+      method: 'DELETE'
+    })
+      .then(res => {
+        if (res.ok) {
+          const currentPosts = this.state.category.posts;
+          const updatedPosts = currentPosts.filter(
+            item => item.postId !== postId
+          );
+          const updatedCategory = Object.assign({}, this.state.category, {
+            posts: updatedPosts
+          });
+          this.setState({ category: updatedCategory }); //all the old stuff, but replace the posts with updatePosts.
+          console.log(updatedCategory);
+        }
+      })
+      .catch(console.error);
   };
 
   onSuccess = result => {
@@ -52,15 +65,15 @@ class CatDetails extends Component {
   };
 
   onError = error => {
-    console.error("error", error);
+    console.error('error', error);
   };
 
   formModal = () => {
-    document.querySelector(".create-post").classList.add("form-active");
+    document.querySelector('.create-post').classList.add('form-active');
   };
 
   closeModal = () => {
-    document.querySelector(".create-post").classList.remove("form-active");
+    document.querySelector('.create-post').classList.remove('form-active');
   };
 
   render() {
@@ -72,6 +85,7 @@ class CatDetails extends Component {
         posts={this.state.category.posts}
         postImgPath={this.state.postImgPath}
         addPost={this.addPost}
+        deletePost={this.deletePost}
         editPost={this.updatePost}
         onSuccess={this.onSuccess}
         onError={this.onError}

@@ -9,8 +9,8 @@ using Minimize;
 namespace Minimize.Migrations
 {
     [DbContext(typeof(MinimizeContext))]
-    [Migration("20190410154420_PostModelData")]
-    partial class PostModelData
+    [Migration("20190411050233_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
