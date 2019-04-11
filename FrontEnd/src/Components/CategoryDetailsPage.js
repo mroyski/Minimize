@@ -31,11 +31,14 @@ class CatDetails extends Component {
     }).then(res => {
       if (res.ok) {
         const currentPosts = [...this.state.category.posts, post];
-        const addNewPost = currentPosts;
-        this.setState({ posts: addNewPost });
+        const withNewPost = Object.assign({}, this.state.category, {
+          posts: currentPosts
+        });
+        this.setState({ category: withNewPost });
       }
     });
   };
+
   onSuccess = result => {
     this.setState({
       postImgPath: result.filesUploaded[0].url
