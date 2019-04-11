@@ -4,6 +4,9 @@ h1 {
 
 #goalForm {
   margin-bottom: 4rem;
+  padding: 1.5rem;
+  border: 2px solid rgb(0, 63, 158);
+  border-radius: 10px;
 }
 
 #goalText {
@@ -11,4 +14,10 @@ h1 {
   padding-bottom: 10px;
   width: 30rem;
   height: 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #goalText {
+    width: 15rem;
+  }
 }

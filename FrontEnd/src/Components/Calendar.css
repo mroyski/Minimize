@@ -35,10 +35,14 @@
 /* * {
    box-sizing: border-box; 
 } */
+#goalBody {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 body {
   box-sizing: border-box;
-
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
   font-weight: 300;
@@ -50,7 +54,6 @@ body {
 
 header {
   box-sizing: border-box;
-
   display: block;
   width: 100%;
   padding: 1.75em 0;
@@ -60,7 +63,6 @@ header {
 
 header #logo {
   box-sizing: border-box;
-
   font-size: 175%;
   text-align: center;
   color: var(--main-color);
@@ -69,13 +71,11 @@ header #logo {
 
 header #logo .icon {
   box-sizing: border-box;
-
   padding-right: 0.25em;
 }
 
 main {
   box-sizing: border-box;
-
   display: block;
   margin: 0 auto;
   margin-top: 5em;
@@ -86,7 +86,6 @@ main {
 
 .row {
   box-sizing: border-box;
-
   margin: 0;
   padding: 0;
   display: flex;
@@ -97,13 +96,11 @@ main {
 
 .row-middle {
   box-sizing: border-box;
-
   align-items: center;
 }
 
 .col {
   box-sizing: border-box;
-
   flex-grow: 1;
   flex-basis: 0;
   max-width: 100%;
@@ -130,14 +127,13 @@ main {
   box-sizing: border-box;
   display: block;
   position: relative;
-  width: 100%;
+  width: 600px;
   background: var(--neutral-color);
   border: 1px solid var(--border-color);
 }
 
 .calendar .header {
   box-sizing: border-box;
-
   text-transform: uppercase;
   font-weight: 700;
   font-size: 115%;
@@ -147,7 +143,6 @@ main {
 
 .calendar .header .icon {
   box-sizing: border-box;
-
   cursor: pointer;
   transition: 0.15s ease-out;
 }

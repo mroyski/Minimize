@@ -4,7 +4,7 @@ import GoalPost from "./GoalPost";
 class GoalsPageContainer extends Component {
   render() {
     return (
-      <div>
+      <div id="container">
         <Calendar />
       </div>
     );

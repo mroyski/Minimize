@@ -121,7 +121,7 @@ class Calendar extends React.Component {
     let pickedYear = yearPicker.toString();
 
     return (
-      <div>
+      <div id="goalBody">
         <div className="calendar" selectedDate={this.state.selectedDate}>
           {this.renderHeader()}
           {this.renderDays()}

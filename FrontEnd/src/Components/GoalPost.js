@@ -6,9 +6,10 @@ class GoalPost extends Component {
     const { pickedDay, pickedMonth, pickedYear } = this.props;
 
     return (
-      <div>
+      <div id="goalContainer">
         <h1>set a goal</h1>
         <div id="goalForm">
+          <p>set a date</p>
           <p>
             {pickedMonth} / {pickedDay} / {pickedYear}
           </p>
