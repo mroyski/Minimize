@@ -6,7 +6,6 @@
 a {
   text-decoration: none;
   color: rgb(0, 63, 158);
-  font-size: 1.5rem;
 }
 
 .theminimalists,
@@ -19,11 +18,10 @@ a {
   border: 1px solid rgb(0, 63, 158);
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  width: 7rem;
-  height: 7rem;
   margin: 1rem;
-  padding: 2rem;
-  padding-bottom: 2rem;
+  padding: 1rem;
+  width: 300px;
+  font-size: 1.5rem;
 }
 
 .Title p {
@@ -42,6 +40,11 @@ a {
   text-align: center;
 }
 
+.MapContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .theminimalists {
   text-align: center;
 }
@@ -58,20 +61,12 @@ a {
 .Simplify {
   text-align: center;
   padding-top: 1rem;
-  width: 300px;
-  height: 200px;
   padding: 0;
 }
 
-.Uncluttered {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-}
-
 .Uncluttered p img {
-  height: 140px;
-  width: 160px;
+  height: auto;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
