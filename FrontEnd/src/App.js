@@ -9,28 +9,29 @@ import "./App.css";
 function AppRouter() {
   return (
     <Router>
-      <nav id="navbar">
-        <Link to={`/`}>
-          <img src="/Images/Logo3.png" alt="logo" />
-        </Link>
-        <div className="nav-links">
-          <Link to={`/`} className="link">
-            GOALS
-          </Link>
-          <Link to={`/`} className="link">
-            HISTORY
-          </Link>
-          <Link to={`/`} className="link">
-            BADGES
-          </Link>
-          <Link to={"/profile"} className="link">
-            PROFILE
-          </Link>
-          <Link to={"/ResourcePage"} className="link">
-            RESOURCES
-          </Link>
-        </div>
-      </nav>
+      <header id="header">
+        <nav className="navbar">
+          <div className="Logo">
+            <Link to={`/`}>
+              <img src="/Images/Logo3.png" alt="logo" />
+            </Link>
+          </div>
+          <div className="nav-links">
+            <Link to={`/`} className="link">
+              GOALS
+            </Link>
+            <Link to={`/`} className="link">
+              BADGES
+            </Link>
+            <Link to={"/profile"} className="link">
+              PROFILE
+            </Link>
+            <Link to={"/ResourcePage"} className="link">
+              RESOURCES
+            </Link>
+          </div>
+        </nav>
+      </header>
       <div>
         <Route path="/" exact component={CategoryIndex} />
         <Route path="/category/:categoryId" component={CatDetailsPage} />
