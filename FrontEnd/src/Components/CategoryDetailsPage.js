@@ -85,6 +85,7 @@ class CatDetails extends Component {
         posts={this.state.category.posts}
         postImgPath={this.state.postImgPath}
         addPost={this.addPost}
+        deletePost={this.deletePost}
         editPost={this.updatePost}
         onSuccess={this.onSuccess}
         onError={this.onError}
