@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { GetAllBadges } from "./Library/HelperFunctions";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
+library.add(faMedal);
 
 class BadgeReward extends Component {
   constructor() {
@@ -14,23 +18,29 @@ class BadgeReward extends Component {
   }
 
   render() {
-    const {itemsCount,
-    clothingCount,
-    furnitureCount,
-    electronicsCount,
-    toolsCount,
-    toysCount,
-    miscCount } = this.props;
+    const {
+      itemsCount,
+      clothingCount,
+      furnitureCount,
+      electronicsCount,
+      toolsCount,
+      toysCount,
+      miscCount
+    } = this.props;
     const reward = this.state.badges.map(item => {
-      <div>
-        <h5>{item.badgeName}</h5>
-        <FontAwesomeIcon icon={item.badgeIcon} />
-        <p>{item.badgeDescription}</p>
-      </div>;
-
-      if 
+      if (clothingCount >= 1 && item.badgeId == 3) {
+        return (
+          <div>
+            <h5>{item.badgeName}</h5>
+            <FontAwesomeIcon icon="medal" />
+            <p>{item.badgeDescription}</p>
+          </div>
+        );
+      } else {
+        console.log("nope");
+      }
     });
-    return <div >{reward}</div>;
+    return <div>{reward}</div>;
   }
 }
 
