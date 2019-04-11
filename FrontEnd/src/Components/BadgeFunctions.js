@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { GetAllPosts } from "./Library/HelperFunctions";
+import BadgeReward from "./BadgeReward";
 
 class BadgeFunctions extends Component {
   constructor() {
@@ -39,9 +40,17 @@ class BadgeFunctions extends Component {
       }
     });
 
-    console.log(toolsCount);
-
-    return <div />;
+    return (
+      <BadgeReward
+        itemsCount={itemsCount}
+        clothingCount={clothingCount}
+        furnitureCount={furnitureCount}
+        electronicsCount={electronicsCount}
+        toolsCount={toolsCount}
+        toysCount={toysCount}
+        miscCount={miscCount}
+      />
+    );
   }
 }
 
