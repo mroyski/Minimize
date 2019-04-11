@@ -16,7 +16,7 @@ h1 {
   height: 5rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #goalText {
     width: 15rem;
   }

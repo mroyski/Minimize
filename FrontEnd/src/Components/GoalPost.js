@@ -9,7 +9,7 @@ class GoalPost extends Component {
       <div id="goalContainer">
         <h1>set a goal</h1>
         <div id="goalForm">
-          <p>set a date</p>
+          <p>set the date</p>
           <p>
             {pickedMonth} / {pickedDay} / {pickedYear}
           </p>
