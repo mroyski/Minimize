@@ -31,7 +31,12 @@ class ResourcePage extends Component {
       <a href="http://indigorescue.org/?page_id=18">Indigo rescue</a>
       <a href="https://new-eyes.org/join-the-vision">New Eyes</a>
       <a href="https://www.burlington.com/warm-coats-warm-hearts-drive.aspx?utm=marketing&_sp=1700a376-0750-4ee3-99d9-43b19620af17.1554691319024">Burlington</a>
-
+      <a href="https://www.habitat.org/support/donate-items">Habitat for Humanity</a>
+      <a href="https://www.toysfortots.org/request_toys/donate-toy.aspx">Toys For Tots</a>
+      <a href="https://ncadv.org/donate-a-phone">NCADV</a>
+      <a href="https://givebackbox.com/works">Give Back Box</a>
+      <a href="https://wish.org/ways-to-help/giving/in-kind">Make A Wish</a>
+     
       </div>
       </div>
      
