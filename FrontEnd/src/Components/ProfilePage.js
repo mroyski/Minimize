@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Post from './Post';
-import Chart from './Chart';
-import './ProfilePage.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMedal } from '@fortawesome/free-solid-svg-icons';
+import React, { Component } from "react";
+import Post from "./Post";
+import Chart from "./Chart";
+import "./ProfilePage.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
 library.add(faMedal);
 
 class ProfilePage extends Component {
@@ -41,9 +41,16 @@ class ProfilePage extends Component {
         labels: labels,
         datasets: [
           {
-            label: 'items',
+            label: "items",
             data: removedItems,
-            backgroundColor: 'rgb(0, 63, 158)'
+            backgroundColor: [
+              "rgb(0, 63, 158)",
+              "rgb(111, 0, 159)",
+              "rgb(214, 0, 65)",
+              "rgb(229, 238, 0)",
+              "rgb(240, 151, 0)",
+              "rgb(97, 213, 0)"
+            ]
           }
         ]
       }
