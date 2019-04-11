@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Post from "./Post";
-import Chart from "./Chart";
-import "./ProfilePage.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import React, { Component } from 'react';
+import Post from './Post';
+import Chart from './Chart';
+import './ProfilePage.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMedal } from '@fortawesome/free-solid-svg-icons';
 library.add(faMedal);
 
 class ProfilePage extends Component {
@@ -20,27 +20,7 @@ class ProfilePage extends Component {
     this.getChartData();
   }
 
-  getChartData() {
-    this.setState({
-      chartData: {
-        labels: [
-          "clothing",
-          "furniture",
-          "tools",
-          "electronics",
-          "toys",
-          "misc"
-        ],
-        datasets: [
-          {
-            label: "items",
-            data: [50, 5, 12, 6, 22, 13],
-            backgroundColor: "rgb(0, 63, 158)"
-          }
-        ]
-      }
-    });
-  }
+  getChartData() {}
 
   componentDidMount() {
     fetch(`https://localhost:44387/api/post`)
