@@ -19,6 +19,8 @@ class BadgeReward extends Component {
 
   render() {
     const {
+      totalPosts,
+      stateTotal,
       itemsCount,
       clothingCount,
       furnitureCount,
@@ -62,7 +64,7 @@ class BadgeReward extends Component {
         item.badgeId == 9
       ) {
         return rewardsHtml;
-      } else if (itemsCount >= 1 && item.badgeId == 10) {
+      } else if (stateTotal > totalPosts && item.badgeId == 10) {
         return rewardsHtml;
       } else if (itemsCount >= 5 && item.badgeId == 11) {
         return rewardsHtml;

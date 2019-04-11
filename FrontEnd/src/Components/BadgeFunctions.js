@@ -15,6 +15,8 @@ class BadgeFunctions extends Component {
   }
 
   render() {
+    const totalPosts = this.state.posts.length;
+
     // Get Total Items Removed
     let itemsCount = 0;
     let clothingCount = 0;
@@ -42,6 +44,8 @@ class BadgeFunctions extends Component {
 
     return (
       <BadgeReward
+        stateTotal={this.state.posts.length}
+        totalPosts={totalPosts}
         itemsCount={itemsCount}
         clothingCount={clothingCount}
         furnitureCount={furnitureCount}
