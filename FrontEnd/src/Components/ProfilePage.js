@@ -22,7 +22,6 @@ class ProfilePage extends Component {
     fetch(`https://localhost:44387/api/category`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         data.map(cat => {
           console.log(cat);
           const total = cat.posts.reduce(
@@ -39,7 +38,6 @@ class ProfilePage extends Component {
             labels: labels,
             datasets: [
               {
-                label: 'mooo',
                 data: removedItems,
                 backgroundColor: [
                   'rgb(0, 63, 158)',
