@@ -1,5 +1,6 @@
 import React from "react";
 import dateFns, { getMonth, getDaysInYear, getDate } from "date-fns";
+import GoalPost from "./GoalPost";
 import "./Calendar.css";
 
 class Calendar extends React.Component {
@@ -114,6 +115,10 @@ class Calendar extends React.Component {
     let fullDate = picker.toString();
     let dayPicker = picker.getDate();
     let pickedDay = dayPicker.toString();
+    let monthPicker = picker.getMonth();
+    let pickedMonth = monthPicker.toString();
+    let yearPicker = picker.getFullYear();
+    let pickedYear = yearPicker.toString();
 
     return (
       <div>
@@ -123,8 +128,11 @@ class Calendar extends React.Component {
           {this.renderCells()}
         </div>
         <div id="goalContainer">
-          <p>{fullDate}</p>
-          <p>{pickedDay}</p>
+          <GoalPost
+            pickedDay={pickedDay}
+            pickedMonth={pickedMonth}
+            pickedYear={pickedYear}
+          />
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Calendar from "./Calendar";
-class GoalsPage extends Component {
+import GoalPost from "./GoalPost";
+class GoalsPageContainer extends Component {
   render() {
     return (
       <div>
@@ -10,4 +11,4 @@ class GoalsPage extends Component {
   }
 }
 
-export default GoalsPage;
+export default GoalsPageContainer;

@@ -4,7 +4,7 @@ import CategoryIndex from "./Components/CategoryIndexPageContainer";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import ProfilePage from "./Components/ProfilePage";
 import ResourcePage from "./Components/ResourcePage";
-import GoalsPage from "./Components/GoalsPage";
+import GoalsPageContainer from "./Components/GoalsPageContainer";
 import "./App.css";
 
 function AppRouter() {
@@ -36,7 +36,7 @@ function AppRouter() {
         <Route path="/" exact component={CategoryIndex} />
         <Route path="/category/:categoryId" component={CatDetailsPage} />
         <Route path="/profile" component={ProfilePage} />
-        <Route path="/goals" component={GoalsPage} />
+        <Route path="/goals" component={GoalsPageContainer} />
         <Route path="/resourcepage" component={ResourcePage} />
       </div>
     </Router>
