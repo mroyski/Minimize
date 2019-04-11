@@ -27,15 +27,51 @@ class BadgeReward extends Component {
       toysCount,
       miscCount
     } = this.props;
+
     const reward = this.state.badges.map(item => {
-      if (clothingCount >= 1 && item.badgeId == 3) {
-        return (
-          <div>
-            <h5>{item.badgeName}</h5>
-            <FontAwesomeIcon icon="medal" />
-            <p>{item.badgeDescription}</p>
-          </div>
-        );
+      const rewardsHtml = (
+        <div>
+          <h5>{item.badgeName}</h5>
+          <FontAwesomeIcon icon="medal" />
+          <p>{item.badgeDescription}</p>
+        </div>
+      );
+      if (item.badgeId == 1) {
+        return rewardsHtml;
+      } else if (item.badgeId == 2 && itemsCount > 0) {
+        return rewardsHtml;
+      } else if (clothingCount >= 1 && item.badgeId == 3) {
+        return rewardsHtml;
+      } else if (furnitureCount >= 1 && item.badgeId == 4) {
+        return rewardsHtml;
+      } else if (toolsCount >= 1 && item.badgeId == 5) {
+        return rewardsHtml;
+      } else if (electronicsCount >= 1 && item.badgeId == 6) {
+        return rewardsHtml;
+      } else if (toysCount >= 1 && item.badgeId == 7) {
+        return rewardsHtml;
+      } else if (miscCount >= 1 && item.badgeId == 8) {
+        return rewardsHtml;
+      } else if (
+        clothingCount >= 1 &&
+        furnitureCount >= 1 &&
+        toolsCount >= 1 &&
+        electronicsCount >= 1 &&
+        toysCount >= 1 &&
+        miscCount >= 1 &&
+        item.badgeId == 9
+      ) {
+        return rewardsHtml;
+      } else if (itemsCount >= 1 && item.badgeId == 10) {
+        return rewardsHtml;
+      } else if (itemsCount >= 5 && item.badgeId == 11) {
+        return rewardsHtml;
+      } else if (itemsCount >= 10 && item.badgeId == 12) {
+        return rewardsHtml;
+      } else if (itemsCount >= 20 && item.badgeId == 13) {
+        return rewardsHtml;
+      } else if (itemsCount >= 35 && item.badgeId == 14) {
+        return rewardsHtml;
       } else {
         console.log("nope");
       }
