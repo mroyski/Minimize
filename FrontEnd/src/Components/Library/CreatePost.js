@@ -32,12 +32,12 @@ export default class CreatePost extends Component {
         <div className="post-form">
           <h1>{this.props.postImgPath}</h1>
           <input
-            type="text"
+            type="number"
             placeholder="totalItems "
             ref={input => (this.totalItems = input)}
           />
           <input
-            type="text"
+            type="number"
             placeholder="removedItems "
             ref={input => (this.removedItems = input)}
           />

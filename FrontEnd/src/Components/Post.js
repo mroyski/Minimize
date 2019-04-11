@@ -5,7 +5,7 @@ class Post extends Component {
   removePost = postId => {
     this.props.deletePost(postId);
   };
-
+ 
   render() {
     const {
       postId,
@@ -14,6 +14,7 @@ class Post extends Component {
       postDescription,
       postImgPath
     } = this.props.post;
+    
     return (
       <li>
         <div id="postDetails">
