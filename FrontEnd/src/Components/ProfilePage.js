@@ -20,12 +20,62 @@ class ProfilePage extends Component {
     this.getChartData();
   }
 
-  getChartData() {}
-
-  componentDidMount() {
-    fetch(`https://localhost:44387/api/post`)
+  getChartData() {
+    const labels = [];
+    const removedItems = [];
+    fetch(`https://localhost:44387/api/category`)
       .then(res => res.json())
-      .then(json => this.setState({ posts: json }));
+      .then(data => {
+        const categoryArray = Object.assign([], data); //
+        categoryArray.forEach(element => {
+          labels.push(element.categoryName);
+        });
+        data.map(item => {
+          const convertposts = Object.assign([], item.posts);
+          convertposts.map(post => removedItems.push(post.removedItems));
+        });
+      });
+
+    this.setState({
+      chartData: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'items',
+            data: removedItems,
+            backgroundColor: 'rgb(0, 63, 158)'
+          }
+        ]
+      }
+    });
+  }
+
+  alfabetagamadelta() {
+    const labels = ['hello', 'world'];
+    fetch(`https://localhost:44387/api/category`)
+      .then(res => res.json())
+      .then(data => {
+        const getCategoryNames = Object.assign([], data);
+
+        // getCategoryNames.map(item => labels.push(item.categoryNames));
+        getCategoryNames.forEach(element => {
+          labels.push(element.categoryName);
+        });
+        console.log(labels);
+
+        this.setState({
+          chartData: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'items',
+                data: [50, 5, 12, 6, 22, 13],
+                backgroundColor: 'rgb(0, 63, 158)'
+              }
+            ]
+          }
+        });
+      });
   }
   render() {
     const listOfPosts = this.state.posts.map(post => (
