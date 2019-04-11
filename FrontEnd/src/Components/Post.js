@@ -4,7 +4,6 @@ import './Posts.css';
 class Post extends Component {
   removePost = postId => {
     this.props.deletePost(postId);
-    console.log('hello world');
   };
 
   render() {
@@ -23,9 +22,7 @@ class Post extends Component {
           <p>Removed Items: {removedItems}</p>
           <p>Description: {postDescription}</p>
           <img src={postImgPath} />
-
-          <button onClick={() => this.deletePost(postId)}>Delete</button>
-          <button onClick={() => this.editPost(postId)}>Edit</button>
+          <button onClick={() => this.removePost(postId)}>Delete</button>
         </div>
       </li>
     );
