@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { GetAllBadges } from "./Library/HelperFunctions";
 import BadgeIndexPage from "./BadgeIndexPage";
-import BadgeFunctions from "./BadgeFunctions";
 
 class BadgeIndexPageContainer extends Component {
   constructor() {
@@ -19,8 +18,7 @@ class BadgeIndexPageContainer extends Component {
     return (
       <div>
         <h1>Badges</h1>
-        {/* <BadgeIndexPage badges={this.state.badges} /> */}
-        <BadgeFunctions />
+        <BadgeIndexPage badges={this.state.badges} />
       </div>
     );
   }
