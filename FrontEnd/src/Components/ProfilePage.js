@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Post from "./Post";
-import Chart from "./Chart";
-import "./ProfilePage.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import React, { Component } from 'react';
+import Post from './Post';
+import Chart from './Chart';
+import './ProfilePage.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMedal } from '@fortawesome/free-solid-svg-icons';
 library.add(faMedal);
 
 class ProfilePage extends Component {
@@ -16,45 +16,44 @@ class ProfilePage extends Component {
     };
   }
 
-  componentWillMount() {
-    this.getChartData();
-  }
-
-  getChartData() {
+  componentDidMount() {
     const labels = [];
     const removedItems = [];
     fetch(`https://localhost:44387/api/category`)
       .then(res => res.json())
       .then(data => {
-        const categoryArray = Object.assign([], data); //
-        categoryArray.forEach(element => {
-          labels.push(element.categoryName);
+        console.log(data);
+        const categoryArray = data.map(cat => {
+          console.log(cat);
+          const total = cat.posts.reduce(
+            (accumulated, currentPost) =>
+              accumulated + currentPost.removedItems,
+            0
+          );
+          removedItems.push(total);
+          labels.push(cat.categoryName);
+          return { name: cat.categoryName, count: total };
         });
-        data.map(item => {
-          const convertposts = Object.assign([], item.posts);
-          convertposts.map(post => removedItems.push(post.removedItems));
-        });
-      });
-
-    this.setState({
-      chartData: {
-        labels: labels,
-        datasets: [
-          {
-            label: "items",
-            data: removedItems,
-            backgroundColor: [
-              "rgb(0, 63, 158)",
-              "rgb(111, 0, 159)",
-              "rgb(214, 0, 65)",
-              "rgb(229, 238, 0)",
-              "rgb(240, 151, 0)",
-              "rgb(97, 213, 0)"
+        this.setState({
+          chartData: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'mooo',
+                data: removedItems,
+                backgroundColor: [
+                  'rgb(0, 63, 158)',
+                  'rgb(111, 0, 159)',
+                  'rgb(214, 0, 65)',
+                  'rgb(229, 238, 0)',
+                  'rgb(240, 151, 0)',
+                  'rgb(97, 213, 0)'
+                ]
+              }
             ]
           }
-        ]
-      }
-    });
+        });
+      });
   }
 
   render() {

@@ -37,7 +37,7 @@ class Chart extends Component {
                 fontSize: 20
               },
               legend: {
-                display: this.props.displayLegend,
+                display: false,
                 position: this.props.legendPosition
               }
             }}
@@ -49,7 +49,7 @@ class Chart extends Component {
         <div className="Chart">
           <button onClick={this.toggleGraphType}>Display</button>
           <Pie
-            data={this.state.chartData}
+            data={this.props.chartData}
             width={1000}
             height={250}
             options={{
