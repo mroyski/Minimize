@@ -9,8 +9,8 @@ using Minimize;
 namespace Minimize.Migrations
 {
     [DbContext(typeof(MinimizeContext))]
-    [Migration("20190408150041_MoreCatDetails")]
-    partial class MoreCatDetails
+    [Migration("20190411050233_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,39 @@ namespace Minimize.Migrations
                 .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Minimize.Models.Badge", b =>
+                {
+                    b.Property<int>("BadgeId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("BadgeDescription");
+
+                    b.Property<string>("BadgeName");
+
+                    b.HasKey("BadgeId");
+
+                    b.ToTable("Badges");
+
+                    b.HasData(
+                        new { BadgeId = 1, BadgeDescription = "You successfully joined Minimize!", BadgeName = "Welcome!" },
+                        new { BadgeId = 2, BadgeDescription = "You made your first post", BadgeName = "First Timer" },
+                        new { BadgeId = 3, BadgeDescription = "You removed your first clothing item", BadgeName = "Au Naturel" },
+                        new { BadgeId = 4, BadgeDescription = "You removed your first furniture item", BadgeName = "Heavy Load" },
+                        new { BadgeId = 5, BadgeDescription = "You removed your first tool item", BadgeName = "Not-So-Handy" },
+                        new { BadgeId = 6, BadgeDescription = "You removed your first electronic item", BadgeName = "Overload!" },
+                        new { BadgeId = 7, BadgeDescription = "You removed your first toy item", BadgeName = "Get Serious" },
+                        new { BadgeId = 8, BadgeDescription = "You removed your first misc item", BadgeName = "Only Necessities" },
+                        new { BadgeId = 9, BadgeDescription = "You removed an item from each category", BadgeName = "Jack of Trades" },
+                        new { BadgeId = 10, BadgeDescription = "You removed a post", BadgeName = "Real Minimalist" },
+                        new { BadgeId = 11, BadgeDescription = "You removed 5 total items", BadgeName = "First steps" },
+                        new { BadgeId = 12, BadgeDescription = "You removed 10 total items", BadgeName = "Novice" },
+                        new { BadgeId = 13, BadgeDescription = "You removed 20 total items", BadgeName = "Minimizer" },
+                        new { BadgeId = 14, BadgeDescription = "You removed 35 total items", BadgeName = "Tiny World" },
+                        new { BadgeId = 15, BadgeDescription = "You removed 50 total items", BadgeName = "Peace" }
+                    );
+                });
 
             modelBuilder.Entity("Minimize.Models.Category", b =>
                 {
@@ -69,8 +102,10 @@ namespace Minimize.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { PostId = 1, CategoryId = 1, PostDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum tortor sed metus sollicitudin, ut malesuada quam ultrices. Nullam quis dui fringilla, eleifend mi in, pharetra neque. Sed iaculis, urna quis pulvinar scelerisque, nunc justo fringilla lectus, quis dictum ligula libero et enim. Nunc pharetra, diam ac tristique rutrum, neque ligula lacinia nibh, vehicula lacinia tellus velit quis orci. Phasellus dui enim, pulvinar quis rhoncus eget, elementum finibus risus. Integer bibendum leo ac felis sodales viverra. Aenean tincidunt felis ut orci tristique consequat. In quam elit, blandit non pretium et, feugiat et nisl. Vestibulum ac luctus leo.", PostImgPath = "/Images/Junk.jpg", RemovedItems = 15, TotalItems = 32 },
-                        new { PostId = 2, CategoryId = 2, PostDescription = "Lickies and Chewies", PostImgPath = "/Images/Junk.jpg", RemovedItems = 65, TotalItems = 15 }
+                        new { PostId = 1, CategoryId = 1, PostDescription = "I have been wanting to get rid of my shoes. I have way to many but it's hard to decide :(", PostImgPath = "/Images/Shos.jpg", RemovedItems = 1, TotalItems = 15 },
+                        new { PostId = 2, CategoryId = 2, PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.", PostImgPath = "/Images/Lamp.jpg", RemovedItems = 1, TotalItems = 1 },
+                        new { PostId = 3, CategoryId = 3, PostDescription = "Not really sure what this is or how to even use it.", PostImgPath = "/Images/tool.jpg", RemovedItems = 1, TotalItems = 1 },
+                        new { PostId = 4, CategoryId = 4, PostDescription = "I was planning on keeping this ancient thing and hopefully sell it but nobody wants it", PostImgPath = "/Images/ibm.jpg", RemovedItems = 1, TotalItems = 1 }
                     );
                 });
 

@@ -21,32 +21,42 @@ class ProfilePage extends Component {
   }
 
   getChartData() {
+    const labels = [];
+    const removedItems = [];
+    fetch(`https://localhost:44387/api/category`)
+      .then(res => res.json())
+      .then(data => {
+        const categoryArray = Object.assign([], data); //
+        categoryArray.forEach(element => {
+          labels.push(element.categoryName);
+        });
+        data.map(item => {
+          const convertposts = Object.assign([], item.posts);
+          convertposts.map(post => removedItems.push(post.removedItems));
+        });
+      });
+
     this.setState({
       chartData: {
-        labels: [
-          "clothing",
-          "furniture",
-          "tools",
-          "electronics",
-          "toys",
-          "misc"
-        ],
+        labels: labels,
         datasets: [
           {
             label: "items",
-            data: [50, 5, 12, 6, 22, 13],
-            backgroundColor: "rgb(0, 63, 158)"
+            data: removedItems,
+            backgroundColor: [
+              "rgb(0, 63, 158)",
+              "rgb(111, 0, 159)",
+              "rgb(214, 0, 65)",
+              "rgb(229, 238, 0)",
+              "rgb(240, 151, 0)",
+              "rgb(97, 213, 0)"
+            ]
           }
         ]
       }
     });
   }
 
-  componentDidMount() {
-    fetch(`https://localhost:44387/api/post`)
-      .then(res => res.json())
-      .then(json => this.setState({ posts: json }));
-  }
   render() {
     const listOfPosts = this.state.posts.map(post => (
       <Post key={post.postId} post={post} />

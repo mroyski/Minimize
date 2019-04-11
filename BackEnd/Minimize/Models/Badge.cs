@@ -12,7 +12,6 @@ namespace Minimize.Models
         public int BadgeId { get; set; }
 
         public string BadgeName { get; set; }
-        public string BadgeIcon { get; set; }
         public string BadgeDescription { get; set; }
     }
 }
