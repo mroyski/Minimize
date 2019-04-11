@@ -23,7 +23,7 @@ class ProfilePage extends Component {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        const categoryArray = data.map(cat => {
+        data.map(cat => {
           console.log(cat);
           const total = cat.posts.reduce(
             (accumulated, currentPost) =>
@@ -55,7 +55,6 @@ class ProfilePage extends Component {
         });
       });
   }
-
   render() {
     const listOfPosts = this.state.posts.map(post => (
       <Post key={post.postId} post={post} />
