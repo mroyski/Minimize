@@ -41,12 +41,12 @@ class ProfilePage extends Component {
               {
                 data: removedItems,
                 backgroundColor: [
-                  'rgb(0, 63, 158)',
-                  'rgb(111, 0, 159)',
-                  'rgb(214, 0, 65)',
-                  'rgb(229, 238, 0)',
-                  'rgb(240, 151, 0)',
-                  'rgb(97, 213, 0)'
+                  "rgb(0, 63, 158)",
+                  "rgb(111, 0, 159)",
+                  "rgb(214, 0, 65)",
+                  "rgb(229, 238, 0)",
+                  "rgb(240, 151, 0)",
+                  "rgb(97, 213, 0)"
                 ]
               }
             ]
