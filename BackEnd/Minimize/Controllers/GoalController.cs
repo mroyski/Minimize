@@ -26,30 +26,28 @@ namespace Minimize.Controllers
             var model = goalRepository.GetAll().ToArray();
             return model;
         }
-
-        // GET: api/Goal/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}")]
+        public ActionResult<Goal> Get(int id)
         {
-            return "value";
+            var model = goalRepository.GetById(id);
+            return model;
+
         }
 
         // POST: api/Goal
         [HttpPost]
         public void Post([FromBody] string value)
         {
-        }
 
-        // PUT: api/Goal/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
         }
+ 
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var model = goalRepository.GetById(id);
+            goalRepository.Delete(model);
         }
     }
 }

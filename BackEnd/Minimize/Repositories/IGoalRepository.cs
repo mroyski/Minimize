@@ -10,6 +10,7 @@ namespace Minimize.Repositories
     {
         IEnumerable<Goal> GetAll();
         Goal GetById(int id);
+        void Add(Goal goal);
         void Delete(Goal goal);
     }
 }

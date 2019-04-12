@@ -19,7 +19,11 @@ namespace Minimize.Repositories
            return db.Goals.Single(goal => goal.GoalId == id);
             
         }
-
+        public void Add(Goal goal)
+        {
+            db.Goals.Add(goal);
+            db.SaveChanges();
+        }
         public void Delete(Goal goal)
         {
             db.Goals.Remove(goal);
