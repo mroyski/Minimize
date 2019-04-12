@@ -1,5 +1,5 @@
 import React from 'react';
-import dateFns, { getMonth, getDaysInYear, getDate } from 'date-fns';
+import dateFns from 'date-fns';
 import GoalPost from './GoalPost';
 import './Calendar.css';
 
@@ -11,7 +11,6 @@ class Calendar extends React.Component {
 
   renderHeader() {
     const dateFormat = 'MMMM YYYY';
-
     return (
       <div className="header row flex-middle">
         <div className="col col-start">
