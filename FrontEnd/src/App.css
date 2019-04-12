@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-#navbar {
+.navbar {
   display: flex;
   margin: 1rem 2rem;
   font-family: "Raleway", sans-serif;
 }
 
-#navbar img {
+.Logo img {
   max-height: 3rem;
 }
 
@@ -24,5 +24,5 @@
 .link:hover {
   padding: 0 0.2rem;
   text-transform: lowercase;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }

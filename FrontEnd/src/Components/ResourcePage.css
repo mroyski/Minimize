@@ -1,19 +1,79 @@
+#body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 63, 158);
+}
+
+.theminimalists,
+.Simplify,
+.Uncluttered {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 63, 158);
+  transition: 0.3s;
+  border: 1px solid rgb(0, 63, 158);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  margin: 1rem;
+  padding: 1rem;
+  width: 300px;
+  font-size: 1.5rem;
+}
+
+.Title p {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(0, 63, 158);
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .Map {
   text-align: center;
 }
 
-.theminimalists .video {
-  height: 10vh;
+.MapContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.theminimalists {
+  text-align: center;
+}
+
+.theminimalists iframe {
   max-width: 100%;
 }
 
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+.video {
+  width: 300px;
+  padding-top: 1rem;
 }
 
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
+.Simplify {
+  text-align: center;
+  padding-top: 1rem;
+  padding: 0;
+}
+
+.Uncluttered p img {
+  height: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #navbar {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+  }
 }
