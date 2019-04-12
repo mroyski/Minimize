@@ -1,0 +1,23 @@
+.side_nav {
+  height: 40%;
+  background: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  top: 20%;
+  left: 0;
+  width: 50%;
+  max-width: 300px;
+  z-index: 2;
+}
+
+.side_nav ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 769px) {
+  .side_nav {
+    display: none;
+  }
+}
