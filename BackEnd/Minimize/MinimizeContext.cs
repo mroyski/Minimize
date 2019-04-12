@@ -9,7 +9,7 @@ namespace Minimize
         public DbSet<Category> Categories { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Badge> Badges { get; set; }
-
+        public DbSet<Goal> Goals { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=minimize;Trusted_Connection=True;";
@@ -216,6 +216,29 @@ namespace Minimize
                     BadgeDescription = "You removed 50 total items"
                 }
 
+
+                );
+            modelBuilder.Entity<Goal>().HasData(
+                new Goal()
+                {
+                    GoalId = 1,
+                    Date ="4/12/2019",
+                    Text ="Dont Go to Steelers Game!!!"
+                   
+                },
+                 new Goal()
+                 {
+                     GoalId = 2,
+                     Date = "4/11/2019",
+                     Text = "Clean up closet"
+
+                 },
+                 new Goal()
+                 {
+                     GoalId = 3,
+                     Date = "4/11/2019",
+                     Text = "Donate kitchen supplies"
+                 }
 
                 );
         }
