@@ -11,15 +11,31 @@ class GoalsPageContainer extends Component {
     }
   }
   componentDidMount() {
-    fetch(`https://localhost:44387/api/goal`)
+    fetch('https://localhost:44387/api/goal')
       .then(res => res.json())
-      .then(json => this.setState({ goals: json }));
+      .then(data => this.setState({ goals: data }));
   }
   createGoal = goal => {
     const currentGoals = [...this.state.goals, goal];
 
     this.setState({ goals: currentGoals });
     console.log(this.state.goals);
+
+    fetch('https://localhost:44387/api/goal', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(goal)
+    }).then(res => {
+      if (res.ok) {
+        const currentGoals = [...this.state.goals, goal];
+        const setNewGoal = Object.assign([], this.state.goals, {
+          goals: currentGoals
+        });
+        this.setState({ goals: setNewGoal });
+      }
+    });
   };
 
   render() {
