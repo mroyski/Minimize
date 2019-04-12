@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Bar, Line, Pie } from "react-chartjs-2";
+import React, { Component } from 'react';
+import { Bar, Line, Pie } from 'react-chartjs-2';
 
 class Chart extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Chart extends Component {
   static defaultProps = {
     displayTitle: true,
     displayLegend: true,
-    legendPosition: "right"
+    legendPosition: 'right'
   };
 
   toggleGraphType = () => {
@@ -27,17 +27,17 @@ class Chart extends Component {
         <div className="Chart">
           <button onClick={this.toggleGraphType}>Display</button>
           <Bar
-            data={this.state.chartData}
+            data={this.props.chartData}
             width={1000}
             height={250}
             options={{
               title: {
                 display: this.props.displayTitle,
-                text: "Items Removed By Category",
+                text: 'Items Removed By Category',
                 fontSize: 20
               },
               legend: {
-                display: this.props.displayLegend,
+                display: false,
                 position: this.props.legendPosition
               }
             }}
@@ -49,18 +49,18 @@ class Chart extends Component {
         <div className="Chart">
           <button onClick={this.toggleGraphType}>Display</button>
           <Pie
-            data={this.state.chartData}
+            data={this.props.chartData}
             width={1000}
             height={250}
             options={{
               title: {
                 display: this.props.displayTitle,
-                text: "Items Removed By Category",
+                text: 'Items Removed By Category',
                 fontSize: 20
               },
               legend: {
                 display: this.props.displayLegend,
-                position: "bottom"
+                position: 'bottom'
               }
             }}
           />

@@ -17,47 +17,43 @@ class ProfilePage extends Component {
     };
   }
 
-  componentWillMount() {
-    this.getChartData();
-  }
-
-  getChartData() {
+  componentDidMount() {
     const labels = [];
     const removedItems = [];
     fetch(`https://localhost:44387/api/category`)
       .then(res => res.json())
       .then(data => {
-        const categoryArray = Object.assign([], data); //
-        categoryArray.forEach(element => {
-          labels.push(element.categoryName);
+        data.map(cat => {
+          console.log(cat);
+          const total = cat.posts.reduce(
+            (accumulated, currentPost) =>
+              accumulated + currentPost.removedItems,
+            0
+          );
+          removedItems.push(total);
+          labels.push(cat.categoryName);
+          return { name: cat.categoryName, count: total };
         });
-        data.map(item => {
-          const convertposts = Object.assign([], item.posts);
-          convertposts.map(post => removedItems.push(post.removedItems));
-        });
-      });
-
-    this.setState({
-      chartData: {
-        labels: labels,
-        datasets: [
-          {
-            label: "items",
-            data: removedItems,
-            backgroundColor: [
-              "rgb(0, 63, 158)",
-              "rgb(111, 0, 159)",
-              "rgb(214, 0, 65)",
-              "rgb(229, 238, 0)",
-              "rgb(240, 151, 0)",
-              "rgb(97, 213, 0)"
+        this.setState({
+          chartData: {
+            labels: labels,
+            datasets: [
+              {
+                data: removedItems,
+                backgroundColor: [
+                  'rgb(0, 63, 158)',
+                  'rgb(111, 0, 159)',
+                  'rgb(214, 0, 65)',
+                  'rgb(229, 238, 0)',
+                  'rgb(240, 151, 0)',
+                  'rgb(97, 213, 0)'
+                ]
+              }
             ]
           }
-        ]
-      }
-    });
+        });
+      });
   }
-
   render() {
     const listOfPosts = this.state.posts.map(post => (
       <Post key={post.postId} post={post} />
