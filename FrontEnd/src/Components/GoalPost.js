@@ -2,39 +2,37 @@ import React, { Component } from 'react';
 import './GoalPost.css';
 
 class GoalPost extends Component {
-  constructor() {
-    super();
-    {
-      const goal = {
-        date: '',
-        goalMessage: ''
-      };
-    }
-  }
-  AddGoal = () => {
+  onAddGoal = e => {
+    e.preventDefault();
+    const { pickedDay, pickedMonth, pickedYear } = this.props;
     const goal = {
-      totalItems: this.totalItems.value,
-      date: ''
+      date: `${pickedMonth} / ${pickedDay} / ${pickedYear}`,
+      goalMessage: this.goalMessage.value
     };
+
+    this.props.createGoal(goal);
+    this.goalForm.reset();
   };
-
   render() {
-    const { pickedDay, pickedMonth, pickedYear, setGoalPost } = this.props;
-
+    const { pickedDay, pickedMonth, pickedYear } = this.props;
     return (
       <div id="goalContainer">
         <h1>set a goal</h1>
         <div id="goalForm">
-          <p>set the date</p>{' '}
-          <form >
-            <p>
-              <label>
-                {pickedMonth} / {pickedDay} / {pickedYear}{' '}
-              </label>
-            </p>
-            <textarea id="goalText" type="text" />
+          <p>set the date</p>
+
+          <p>
+            <h3>
+              {pickedMonth} / {pickedDay} / {pickedYear}
+            </h3>
+          </p>
+          <form
+            ref={input => (this.goalForm = input)}
+            onSubmit={e => this.onAddGoal(e)}
+          >
+            <textarea ref={input => (this.goalMessage = input)} type="text" />
             <br />
-            <button type="submit" onClick={setGoalPost}>
+            <button type="submit" onClick={e => this.onAddGoal(e)}>
               Submit
             </button>
           </form>
