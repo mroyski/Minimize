@@ -10,8 +10,10 @@ class GoalsPageContainer extends Component {
     }
   }
   createGoal = goal => {
-    console.log('CreateGoal');
-    console.log(goal);
+    const currentGoals = [...this.state.goals, goal];
+
+    this.setState({ goals: currentGoals });
+    console.log(this.state.goals);
   };
 
   render() {
