@@ -1,48 +1,48 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CategoryIndex from "./Components/CategoryIndexPageContainer";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import ProfilePage from "./Components/ProfilePage";
 import ResourcePage from "./Components/ResourcePage";
+import GoalsPageContainer from "./Components/GoalsPageContainer";
+import NavBar from "./Components/NavBar/NavBar";
+import SideNav from "./Components/Hamburger/SideNav";
 import BadgeIndexPageContainer from "./Components/BadgeIndexPageContainer";
 import "./App.css";
 
-function AppRouter() {
-  return (
-    <Router>
+class AppRouter extends Component {
+  state = {
+    sideNavOpen: false
+  };
 
-      <header id="header">
-        <nav className="navbar">
-          <div className="Logo">
-            <Link to={`/`}>
-              <img src="/Images/Logo3.png" alt="logo" />
-            </Link>
-          </div>
-          <div className="nav-links">
-            <Link to={`/`} className="link">
-              GOALS
-            </Link>
-            <Link to={`/Badge`} className="link">
-              BADGES
-            </Link>
-            <Link to={"/profile"} className="link">
-              PROFILE
-            </Link>
-            <Link to={"/ResourcePage"} className="link">
-              RESOURCES
-            </Link>
-          </div>
-        </nav>
-      </header>
-      <div>
-        <Route path="/" exact component={CategoryIndex} />
-        <Route path="/category/:categoryId" component={CatDetailsPage} />
-        <Route path="/profile" component={ProfilePage} />
-        <Route path="/Badge" component={BadgeIndexPageContainer} />
-        <Route path="/resourcepage" component={ResourcePage} />
-      </div>
-    </Router>
-  );
+  hamburgerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { sideNavOpen: !prevState.sideNavOpen };
+    });
+  };
+
+  render() {
+    let sideNav;
+    if (this.state.sideNavOpen) {
+      sideNav = <SideNav />;
+    }
+    return (
+      <Router>
+        <div style={{ height: "100%" }}>
+          <NavBar hamburgerClickHandler={this.hamburgerToggleClickHandler} />
+          {sideNav}
+        </div>
+
+        <div>
+          <Route path="/" exact component={CategoryIndex} />
+          <Route path="/category/:categoryId" component={CatDetailsPage} />
+          <Route path="/profile" component={ProfilePage} />
+          <Route path="/goals" component={GoalsPageContainer} />
+          <Route path="/resourcepage" component={ResourcePage} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default AppRouter;
