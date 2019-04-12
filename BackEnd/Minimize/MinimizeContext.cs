@@ -81,6 +81,7 @@ namespace Minimize
                new Post()
                {
                    PostId = 2,
+                   PostTime = new System.DateTime(2019, 11, 20),
                    TotalItems = 1,
                    RemovedItems = 1,
                    PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.",
@@ -91,6 +92,7 @@ namespace Minimize
                new Post()
                {
                    PostId = 3,
+                   PostTime = new System.DateTime(2019, 12, 21),
                    TotalItems = 1,
                    RemovedItems = 1,
                    PostDescription = "Not really sure what this is or how to even use it.",
@@ -101,6 +103,7 @@ namespace Minimize
                new Post()
                {
                    PostId = 4,
+                   PostTime = new System.DateTime(2019, 10, 09),
                    TotalItems = 1,
                    RemovedItems = 1,
                    PostDescription = "I was planning on keeping this ancient thing and hopefully sell it but nobody wants it",

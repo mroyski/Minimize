@@ -29,15 +29,15 @@ class BadgeFunctions extends Component {
     this.state.posts.forEach(item => {
       itemsCount += item.removedItems;
 
-      if (item.categoryId == 1) {
+      if (item.categoryId === 1) {
         clothingCount += item.removedItems;
-      } else if (item.categoryId == 2) {
+      } else if (item.categoryId === 2) {
         furnitureCount += item.removedItems;
-      } else if (item.categoryId == 3) {
+      } else if (item.categoryId === 3) {
         toolsCount += item.removedItems;
-      } else if (item.categoryId == 4) {
+      } else if (item.categoryId === 4) {
         electronicsCount += item.removedItems;
-      } else if (item.categoryId == 5) {
+      } else if (item.categoryId === 5) {
         toysCount += item.toysCount;
       }
     });

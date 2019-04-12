@@ -12,6 +12,7 @@ namespace Minimize.Models
         public int RemovedItems { get; set; }
         public string PostDescription { get; set; }
         public string PostImgPath { get; set; }
+        public DateTime PostTime { get; set; }
         public int CategoryId { get; set; }
     }
 }

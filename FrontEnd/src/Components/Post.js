@@ -9,6 +9,7 @@ class Post extends Component {
   render() {
     const {
       postId,
+      postTime,
       totalItems,
       removedItems,
       postDescription,
@@ -18,6 +19,7 @@ class Post extends Component {
       <li>
         <div id="postDetails">
           {/* <h4>Post Number: {this.props.post.postId}</h4> */}
+          <p>Time: {postTime}</p>
           <p>Total Items: {totalItems}</p>
           <p>Removed Items: {removedItems}</p>
           <p>Description: {postDescription}</p>
