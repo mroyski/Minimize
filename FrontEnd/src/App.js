@@ -22,7 +22,7 @@ function AppRouter() {
             <Link to={`/`} className="link">
               GOALS
             </Link>
-            <Link to={`/`} className="link">
+            <Link to={`/Badge`} className="link">
               BADGES
             </Link>
             <Link to={"/profile"} className="link">

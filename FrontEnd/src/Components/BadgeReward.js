@@ -38,21 +38,21 @@ class BadgeReward extends Component {
           <p>{item.badgeDescription}</p>
         </div>
       );
-      if (item.badgeId == 1) {
+      if (item.badgeId === 1) {
         return rewardsHtml;
-      } else if (item.badgeId == 2 && itemsCount > 0) {
+      } else if (item.badgeId === 2 && itemsCount > 0) {
         return rewardsHtml;
-      } else if (clothingCount >= 1 && item.badgeId == 3) {
+      } else if (clothingCount >= 1 && item.badgeId === 3) {
         return rewardsHtml;
-      } else if (furnitureCount >= 1 && item.badgeId == 4) {
+      } else if (furnitureCount >= 1 && item.badgeId === 4) {
         return rewardsHtml;
-      } else if (toolsCount >= 1 && item.badgeId == 5) {
+      } else if (toolsCount >= 1 && item.badgeId === 5) {
         return rewardsHtml;
-      } else if (electronicsCount >= 1 && item.badgeId == 6) {
+      } else if (electronicsCount >= 1 && item.badgeId === 6) {
         return rewardsHtml;
-      } else if (toysCount >= 1 && item.badgeId == 7) {
+      } else if (toysCount >= 1 && item.badgeId === 7) {
         return rewardsHtml;
-      } else if (miscCount >= 1 && item.badgeId == 8) {
+      } else if (miscCount >= 1 && item.badgeId === 8) {
         return rewardsHtml;
       } else if (
         clothingCount >= 1 &&
@@ -64,15 +64,15 @@ class BadgeReward extends Component {
         item.badgeId == 9
       ) {
         return rewardsHtml;
-      } else if (stateTotal > totalPosts && item.badgeId == 10) {
+      } else if (stateTotal > totalPosts && item.badgeId === 10) {
         return rewardsHtml;
-      } else if (itemsCount >= 5 && item.badgeId == 11) {
+      } else if (itemsCount >= 5 && item.badgeId === 11) {
         return rewardsHtml;
       } else if (itemsCount >= 10 && item.badgeId == 12) {
         return rewardsHtml;
-      } else if (itemsCount >= 20 && item.badgeId == 13) {
+      } else if (itemsCount >= 20 && item.badgeId === 13) {
         return rewardsHtml;
-      } else if (itemsCount >= 35 && item.badgeId == 14) {
+      } else if (itemsCount >= 35 && item.badgeId === 14) {
         return rewardsHtml;
       } else {
         console.log("nope");
