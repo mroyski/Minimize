@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Calendar from './Calendar';
+import Goal from './Goal.js';
 class GoalsPageContainer extends Component {
   constructor() {
     super();
@@ -9,6 +10,11 @@ class GoalsPageContainer extends Component {
       };
     }
   }
+  componentDidMount() {
+    fetch(`https://localhost:44387/api/goal`)
+      .then(res => res.json())
+      .then(json => this.setState({ goals: json }));
+  }
   createGoal = goal => {
     const currentGoals = [...this.state.goals, goal];
 
@@ -17,9 +23,13 @@ class GoalsPageContainer extends Component {
   };
 
   render() {
+    const PrintGoal = this.state.goals.map(goal => (
+      <Goal date={goal.date} text={goal.text} />
+    ));
     return (
       <div id="container">
         <Calendar createGoal={this.createGoal} />
+        {PrintGoal}
       </div>
     );
   }
