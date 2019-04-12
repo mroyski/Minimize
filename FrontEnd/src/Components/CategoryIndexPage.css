@@ -11,6 +11,10 @@
   justify-content: center;
 }
 
+.CatIndexBody h1{
+  padding-top: 60px;
+}
+
 #MiniTitle {
   font-size: 2rem;
   color: rgb(0, 63, 158);
