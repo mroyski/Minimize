@@ -1,7 +1,11 @@
-import React, { Component } from "react";
-import Calendar from "./Calendar";
-import GoalPost from "./GoalPost";
+import React, { Component } from 'react';
+import Calendar from './Calendar';
 class GoalsPageContainer extends Component {
+  constructor(params) {
+    super();
+    {
+    }
+  }
   render() {
     return (
       <div id="container">
