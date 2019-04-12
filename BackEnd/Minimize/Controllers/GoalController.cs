@@ -36,9 +36,9 @@ namespace Minimize.Controllers
 
         // POST: api/Goal
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Goal goal)
         {
-
+            goalRepository.Add(goal);
         }
  
 
