@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./ResourcePage.css";
 
 const mapStyles = {
   map: {
-    position: "absolute",
-    width: "40vw",
-    height: "50vh"
+    width: "80%",
+    height: "55vh"
   }
 };
 export class CurrentLocation extends React.Component {
@@ -104,8 +104,8 @@ export class CurrentLocation extends React.Component {
     const style = Object.assign({}, mapStyles.map);
 
     return (
-      <div>
-        <div style={style} ref="map">
+      <div className="MapContainer">
+        <div className="MapCSS" style={style} ref="map">
           Loading map...
         </div>
         {this.renderChildren()}

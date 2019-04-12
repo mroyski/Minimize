@@ -6,16 +6,21 @@ class BadgeIndexPageContainer extends Component {
   constructor() {
     super();
     this.state = {
-        badges = []
-    }
+      badges: []
+    };
   }
 
-componentDidMount() {
+  componentDidMount() {
     GetAllBadges().then(json => this.setState({ badges: json }));
-}
+  }
 
   render() {
-    return <BadgeIndexPage badges={this.state.badges} />;
+    return (
+      <div>
+        <h1>Badges</h1>
+        <BadgeIndexPage badges={this.state.badges} />
+      </div>
+    );
   }
 }
 

@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import Post from './Post';
-import Chart from './Chart';
-import './ProfilePage.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMedal } from '@fortawesome/free-solid-svg-icons';
+import React, { Component } from "react";
+import Post from "./Post";
+import Chart from "./Chart";
+import "./ProfilePage.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import BadgeFunctions from "./BadgeFunctions";
 library.add(faMedal);
 
 class ProfilePage extends Component {
@@ -57,32 +58,15 @@ class ProfilePage extends Component {
     const listOfPosts = this.state.posts.map(post => (
       <Post key={post.postId} post={post} />
     ));
-
     return (
       <div id="ProfileBody">
         <div className="ProgressSection">
           <h2>Progress</h2>
           <Chart chartData={this.state.chartData} />
         </div>
-        <div className="BadgesSection">
-          <h2>Badges</h2>
-          <div className="BadgesList">
-            <div className="FirstBadge">
-              <p>Welcome!</p>
-              <p>
-                <FontAwesomeIcon icon="medal" id="FABadge" />
-              </p>
-              <p>You successfully joined minimize</p>
-            </div>
-            <div className="SecondBadge">
-              <p>First Timer</p>
-              <p>
-                <FontAwesomeIcon icon="medal" id="FABadge" />
-              </p>
-              <p>You made your first post</p>
-            </div>
-          </div>
-        </div>
+        <div className="BadgesSection" />
+        <h2>Badges</h2>
+        <BadgeFunctions />
         <div className="PostSection">
           <h2>Posts</h2>
         </div>
