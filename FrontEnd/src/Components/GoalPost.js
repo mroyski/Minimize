@@ -2,16 +2,27 @@ import React, { Component } from 'react';
 import './GoalPost.css';
 
 class GoalPost extends Component {
+  constructor() {
+    super();
+    this.state = {
+      text: ''
+    };
+  }
   onAddGoal = e => {
     e.preventDefault();
     const { pickedDay, pickedMonth, pickedYear } = this.props;
+    const currentDate = `${pickedMonth} / ${pickedDay} / ${pickedYear}`;
+    this.setState({ date: currentDate });
     const goal = {
-      date: `${pickedMonth} / ${pickedDay} / ${pickedYear}`,
-      goalMessage: this.goalMessage.value
+      date: currentDate,
+      text: this.state.text
     };
 
     this.props.createGoal(goal);
     this.goalForm.reset();
+  };
+  onTextAdd = event => {
+    this.setState({ text: event.target.value });
   };
   render() {
     const { pickedDay, pickedMonth, pickedYear } = this.props;
@@ -30,7 +41,7 @@ class GoalPost extends Component {
             ref={input => (this.goalForm = input)}
             onSubmit={e => this.onAddGoal(e)}
           >
-            <textarea ref={input => (this.goalMessage = input)} type="text" />
+            <textarea onChange={this.onTextAdd} />
             <br />
             <button type="submit" onClick={e => this.onAddGoal(e)}>
               Submit
