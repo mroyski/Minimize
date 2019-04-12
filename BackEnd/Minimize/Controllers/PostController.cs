@@ -38,6 +38,7 @@ namespace Minimize.Controllers
         [HttpPost]
         public void Post([FromBody] Post post)
         {
+            post.PostTime = DateTime.Now;
             postRepo.Add(post);
             
         }
