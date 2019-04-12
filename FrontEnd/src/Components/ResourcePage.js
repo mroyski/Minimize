@@ -12,7 +12,7 @@ class ResourcePage extends Component {
         <div className="Map">
           <GoogleMaps />
         </div>
-        <div className="Container">
+        <div className="helpContainer">
           <div className="HelpfulLinks" />
           <div className="theminimalists">
             <a
@@ -57,6 +57,28 @@ class ResourcePage extends Component {
                 <img src="./images/uncluttered.png" alt="UnclutteredLogo" />
               </p>
               <p>Help with Minimalist Beginnings</p>
+            </a>
+          </div>
+        </div>
+        <div className="socialContainer">
+          <p>Social Media Interests</p>
+
+          <div className="pintrest">
+            <a
+              href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=minimalist&eq=minim&etslf=8233&term_meta[]=minimalist%7Cautocomplete%7C2"
+              target="-blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/Pintrest-Icon.png" alt="PintrestLogo" />
+            </a>
+          </div>
+          <div className="facebook">
+            <a
+              href="https://www.facebook.com/mnmlstlvng"
+              target="-blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/facebook-logo.png" alt="FacebookLogo" />
             </a>
           </div>
         </div>

@@ -27,6 +27,7 @@
 
 .detailName {
   color: blue;
+  padding-top: 60px;
 }
 .postBody ul {
   list-style: none;
