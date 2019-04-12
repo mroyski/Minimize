@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import ReactFilestack from 'filestack-react';
-import './CreatePost.css';
+import React, { Component } from "react";
+import ReactFilestack from "filestack-react";
+import "./CreatePost.css";
 
 export default class CreatePost extends Component {
   onAddPost = () => {
@@ -17,12 +17,12 @@ export default class CreatePost extends Component {
 
   render() {
     const basicOptions = {
-      accept: 'image/*',
-      fromSources: ['local_file_system'],
+      accept: "image/*",
+      fromSources: ["local_file_system"],
       maxSize: 1024 * 1024,
       maxFiles: 1
     };
-    const key = 'A3wux2cFHQHGgvyu7UcKVz';
+    const key = "A3wux2cFHQHGgvyu7UcKVz";
     return (
       <form
         id="form-container"

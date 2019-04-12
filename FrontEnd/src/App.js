@@ -4,6 +4,7 @@ import CategoryIndex from "./Components/CategoryIndexPageContainer";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import ProfilePage from "./Components/ProfilePage";
 import ResourcePage from "./Components/ResourcePage";
+import GoalsPageContainer from "./Components/GoalsPageContainer";
 import NavBar from "./Components/NavBar/NavBar";
 import SideNav from "./Components/Hamburger/SideNav";
 import BadgeIndexPageContainer from "./Components/BadgeIndexPageContainer";
@@ -35,7 +36,7 @@ class AppRouter extends Component {
           <Route path="/" exact component={CategoryIndex} />
           <Route path="/category/:categoryId" component={CatDetailsPage} />
           <Route path="/profile" component={ProfilePage} />
-          <Route path="/Badge" component={BadgeIndexPageContainer} />
+          <Route path="/goals" component={GoalsPageContainer} />
           <Route path="/resourcepage" component={ResourcePage} />
         </div>
       </Router>

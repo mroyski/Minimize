@@ -22,7 +22,6 @@ class Category extends Component {
     const listOfPosts = posts.map(post => (
       <Post key={post.postId} post={post} deletePost={deletePost} />
     ));
-
     return (
       <div id="detailContainer">
         <div className="detailBody">
@@ -32,7 +31,6 @@ class Category extends Component {
           <p id="catDescrip">{categoryDescription}</p>
           <button onClick={formModal}>Create Post</button>
         </div>
-
         <div className="create-post">
           <CreatePost
             categoryId={categoryId}

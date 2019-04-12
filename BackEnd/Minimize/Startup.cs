@@ -38,6 +38,7 @@ namespace Minimize
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IBadgeRepository, BadgeRepository>();
+            services.AddScoped<IGoalRepository, GoalRepository>();
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
