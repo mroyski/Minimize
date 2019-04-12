@@ -129,6 +129,7 @@ class Calendar extends React.Component {
         </div>
         <div id="goalContainer">
           <GoalPost
+            createGoal={this.props.createGoal}
             pickedDay={pickedDay}
             pickedMonth={pickedMonth}
             pickedYear={pickedYear}
