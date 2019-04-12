@@ -223,7 +223,7 @@ namespace Minimize
                 {
                     GoalId = 1,
                     Date ="4/12/2019",
-                    Text ="Dont Go to Steelers Game!!!"
+                    Text ="Don't Go to Steelers Game!!!"
                    
                 },
                  new Goal()
