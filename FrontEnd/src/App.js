@@ -32,7 +32,6 @@ class AppRouter extends Component {
           <NavBar hamburgerClickHandler={this.hamburgerToggleClickHandler} />
           {sideNav}
         </div>
-
         <div>
           <Route path="/" exact component={CategoryIndex} />
           <Route path="/category/:categoryId" component={CatDetailsPage} />

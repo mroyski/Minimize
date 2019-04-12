@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './Posts.css';
+import React, { Component } from "react";
+import "./Posts.css";
 
 class Post extends Component {
   removePost = postId => {
@@ -21,7 +21,7 @@ class Post extends Component {
           <p>Total Items: {totalItems}</p>
           <p>Removed Items: {removedItems}</p>
           <p>Description: {postDescription}</p>
-          <img src={postImgPath} />
+          <img src={postImgPath} alt="UserPhoto" />
           <button onClick={() => this.removePost(postId)}>Delete</button>
         </div>
       </li>
