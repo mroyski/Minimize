@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 .icon {
-  font-family: 'Material Icons', serif;
+  font-family: "Material Icons", serif;
   font-style: normal;
   display: inline-block;
   vertical-align: middle;
@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
 
 /* VARIABLES */
@@ -36,6 +36,7 @@
    box-sizing: border-box; 
 } */
 #goalBody {
+  margin-top: 5rem;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -43,7 +44,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
   font-weight: 300;
   line-height: 1.5;

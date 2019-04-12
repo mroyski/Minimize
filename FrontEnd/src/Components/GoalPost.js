@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import './GoalPost.css';
+import React, { Component } from "react";
+import "./GoalPost.css";
 
 class GoalPost extends Component {
   constructor() {
     super();
     this.state = {
-      text: ''
+      text: ""
     };
   }
   onAddGoal = e => {
@@ -30,7 +30,7 @@ class GoalPost extends Component {
       <div id="goalContainer">
         <h1>set a goal</h1>
         <div id="goalForm">
-          <p>set the date</p>
+          <p>select date from calendar</p>
 
           <p>
             <h3>
@@ -41,7 +41,7 @@ class GoalPost extends Component {
             ref={input => (this.goalForm = input)}
             onSubmit={e => this.onAddGoal(e)}
           >
-            <textarea onChange={this.onTextAdd} />
+            <textarea id="goalText" onChange={this.onTextAdd} />
             <br />
             <button type="submit" onClick={e => this.onAddGoal(e)}>
               Submit

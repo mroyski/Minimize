@@ -3,10 +3,12 @@ h1 {
 }
 
 #goalForm {
+  background-color: white;
   margin-bottom: 4rem;
   padding: 1.5rem;
   border: 2px solid rgb(0, 63, 158);
   border-radius: 10px;
+  width: 30rem;
 }
 
 #goalText {
@@ -17,6 +19,9 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
+  #goalForm {
+    width: 15rem;
+  }
   #goalText {
     width: 15rem;
   }

@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import Calendar from './Calendar';
-import Goal from './Goal.js';
+import React, { Component } from "react";
+import Calendar from "./Calendar";
+import Goal from "./Goal.js";
+import "./GoalsPageContainer.css";
 class GoalsPageContainer extends Component {
   constructor() {
     super();
@@ -11,7 +12,7 @@ class GoalsPageContainer extends Component {
     }
   }
   componentDidMount() {
-    fetch('https://localhost:44387/api/goal')
+    fetch("https://localhost:44387/api/goal")
       .then(res => res.json())
       .then(data => this.setState({ goals: data }));
   }
@@ -21,10 +22,10 @@ class GoalsPageContainer extends Component {
     this.setState({ goals: currentGoals });
     console.log(this.state.goals);
 
-    fetch('https://localhost:44387/api/goal', {
-      method: 'POST',
+    fetch("https://localhost:44387/api/goal", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(goal)
     }).then(res => {
@@ -45,7 +46,7 @@ class GoalsPageContainer extends Component {
     return (
       <div id="container">
         <Calendar createGoal={this.createGoal} />
-        {PrintGoal}
+        <div id="goalList">{PrintGoal}</div>
       </div>
     );
   }
