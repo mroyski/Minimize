@@ -10,39 +10,37 @@ import BadgeIndexPageContainer from "./Components/BadgeIndexPageContainer";
 import "./App.css";
 
 class AppRouter extends Component {
-state = {
-  sideNavOpen: false
-};
+  state = {
+    sideNavOpen: false
+  };
 
   hamburgerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideNavOpen: !prevState.sideNavOpen};
+    this.setState(prevState => {
+      return { sideNavOpen: !prevState.sideNavOpen };
     });
   };
 
   render() {
-    let sideNav;    
-    if(this.state.sideNavOpen){
-      sideNav = <SideNav/>
+    let sideNav;
+    if (this.state.sideNavOpen) {
+      sideNav = <SideNav />;
     }
-  return (    
-    <Router>
-
-      <div style={{height: '100%'}}>
-     <NavBar hamburgerClickHandler={this.hamburgerToggleClickHandler}/>
-     {sideNav}
-     </div>
-      
-      <div>
-        <Route path="/" exact component={CategoryIndex} />
-        <Route path="/category/:categoryId" component={CatDetailsPage} />
-        <Route path="/profile" component={ProfilePage} />
-        <Route path="/Badge" component={BadgeIndexPageContainer} />
-        <Route path="/resourcepage" component={ResourcePage} />
-      </div>
-    </Router>
-  );
-  };
+    return (
+      <Router>
+        <div style={{ height: "100%" }}>
+          <NavBar hamburgerClickHandler={this.hamburgerToggleClickHandler} />
+          {sideNav}
+        </div>
+        <div>
+          <Route path="/" exact component={CategoryIndex} />
+          <Route path="/category/:categoryId" component={CatDetailsPage} />
+          <Route path="/profile" component={ProfilePage} />
+          <Route path="/Badge" component={BadgeIndexPageContainer} />
+          <Route path="/resourcepage" component={ResourcePage} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default AppRouter;
