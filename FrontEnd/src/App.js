@@ -4,11 +4,13 @@ import CategoryIndex from "./Components/CategoryIndexPageContainer";
 import CatDetailsPage from "./Components/CategoryDetailsPage";
 import ProfilePage from "./Components/ProfilePage";
 import ResourcePage from "./Components/ResourcePage";
+import BadgeIndexPageContainer from "./Components/BadgeIndexPageContainer";
 import "./App.css";
 
 function AppRouter() {
   return (
     <Router>
+
       <header id="header">
         <nav className="navbar">
           <div className="Logo">
@@ -36,6 +38,7 @@ function AppRouter() {
         <Route path="/" exact component={CategoryIndex} />
         <Route path="/category/:categoryId" component={CatDetailsPage} />
         <Route path="/profile" component={ProfilePage} />
+        <Route path="/Badge" component={BadgeIndexPageContainer} />
         <Route path="/resourcepage" component={ResourcePage} />
       </div>
     </Router>
