@@ -6,8 +6,8 @@ library.add(faMedal);
 
 export default props => {
   const listOfBadges = props.badges.map(item => (
-    <div>
-      <FontAwesomeIcon icon="medal" />
+    <div className="badge-container">
+      <FontAwesomeIcon icon="medal" className="badge-index-icon" />
       <div>
         <h5>{item.badgeName}</h5>
         <p>{item.badgeDescription}</p>
