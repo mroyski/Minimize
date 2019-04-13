@@ -15,17 +15,20 @@ library.add(faTshirt, faTruckMonster, faCouch, faLaptop, faQuestion, faTools);
 
 export default props => {
   const categoryLinks = props.categories.map(item => (
-    <Link to={`/category/${item.categoryId}`}>
-      <FontAwesomeIcon icon={item.categoryImg} />
+    <Link to={`/category/${item.categoryId}`} className="category-index-link">
+      <FontAwesomeIcon
+        icon={item.categoryImg}
+        className="category-index-icon"
+      />
       <p className="category-name">{item.categoryName}</p>
     </Link>
   ));
   return (
-    <div id="CatIndexBody">
+    <div id="category-index-container">
       <h1 className="header">Start by picking a category</h1>
-      <ul className="category-links-container">
+      <div className="category-links-container">
         <div className="category-links">{categoryLinks}</div>
-      </ul>
+      </div>
     </div>
   );
 };
