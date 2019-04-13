@@ -85,8 +85,13 @@
   height: 8rem;
   width: 20rem;
   margin: 1rem;
-  border: 1px solid rgb(225, 225, 225);
-  border-radius: 5px;
+  border: 1px solid rgba(225, 225, 225);
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.badge-container:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
 }
 
 .badge-index-icon {
