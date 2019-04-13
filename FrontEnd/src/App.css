@@ -62,12 +62,15 @@
 
 /* Category Details */
 #category-details-page {
+  color: rgb(225, 225, 225);
   background: radial-gradient(#081c38, #030b16);
 }
 
+.detailBody {
+  padding: 1rem 5rem;
+}
 .detailName h2 {
   margin: 0;
-  padding: 1rem 5rem;
 }
 
 /* Badge Index */
