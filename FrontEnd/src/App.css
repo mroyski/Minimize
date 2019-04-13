@@ -58,3 +58,9 @@
 .category-index-link:hover {
   background: #061225;
 }
+
+/* Badge Index */
+#badge-index-container {
+  background: #030b16;
+  color: rgb(225, 225, 225);
+}

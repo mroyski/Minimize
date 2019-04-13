@@ -16,7 +16,7 @@ class BadgeIndexPageContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div id="badge-index-container">
         <h1>Badges</h1>
         <BadgeIndexPage badges={this.state.badges} />
       </div>
