@@ -42,7 +42,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  border-right: 1px solid rgb(61, 61, 61);
+  border-right: 1px solid rgba(61, 61, 61, 0.7);
 }
 
 .category-index-icon {
@@ -70,7 +70,7 @@
 
 #badge-index-container h1 {
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 5rem;
 }
 
 .badge-index {
@@ -87,7 +87,7 @@
   width: 20rem;
   margin: 1rem;
   border: 1px solid rgba(225, 225, 225);
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 

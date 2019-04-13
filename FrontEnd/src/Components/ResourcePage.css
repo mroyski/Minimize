@@ -1,11 +1,12 @@
-#body {
+#Body {
+  background: radial-gradient(#081c38, #030b16);
   margin: 0;
   padding: 0;
 }
 
 a {
   text-decoration: none;
-  color: rgb(0, 63, 158);
+  color: rgb(225, 225, 225);
 }
 
 .theminimalists,
@@ -13,9 +14,9 @@ a {
 .Uncluttered {
   text-align: center;
   text-decoration: none;
-  color: rgb(0, 63, 158);
+  color: rgb(225, 225, 225);
   transition: 0.3s;
-  border: 1px solid rgb(0, 63, 158);
+  border: 1px solid rgb(225, 225, 225);
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   margin: 1rem;
@@ -25,16 +26,18 @@ a {
 }
 
 .Title p {
-  padding-top: 60px;
+  margin: 0;
+  padding: 3rem;
   text-align: center;
   font-size: 2rem;
-  color: rgb(0, 63, 158);
+  color: rgb(225, 225, 225);
 }
 
 .helpContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 2rem;
 }
 
 .Map {
@@ -80,9 +83,9 @@ a {
 .pintrest {
   text-align: center;
   text-decoration: none;
-  color: rgb(0, 63, 158);
+  color: rgb(225, 225, 225);
   transition: 0.3s;
-  border: 1px solid rgb(0, 63, 158);
+  border: 1px solid rgb(225, 225, 225);
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   margin: 1rem;

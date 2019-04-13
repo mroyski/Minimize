@@ -25,7 +25,7 @@ export default props => {
   ));
   return (
     <div id="category-index-container">
-      <h1 className="header">Start by picking a category</h1>
+      {/* <h1 className="header">Start by picking a category</h1> */}
       <div className="category-links-container">
         <div className="category-links">{categoryLinks}</div>
       </div>
