@@ -60,6 +60,16 @@
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.7);
 }
 
+/* Category Details */
+#category-details-page {
+  background: radial-gradient(#081c38, #030b16);
+}
+
+.detailName h2 {
+  margin: 0;
+  padding: 1rem 5rem;
+}
+
 /* Badge Index */
 #badge-index-container {
   background: radial-gradient(#081c38, #030b16);
