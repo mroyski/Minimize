@@ -11,7 +11,7 @@ const navbar = props => (
       </div>
       <div className="logo">
         <Link to={`/`}>
-          <img src="/Images/Logo4.png" alt="logo" />
+          <img src="/Images/Logo5.png" alt="logo" />
         </Link>
       </div>
       <div className="spacer" />
