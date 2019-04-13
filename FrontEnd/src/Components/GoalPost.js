@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./GoalPost.css";
+// import "./GoalPost.css";
 
 class GoalPost extends Component {
   constructor() {

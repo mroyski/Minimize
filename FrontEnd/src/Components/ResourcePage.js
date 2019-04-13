@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import GoogleMaps, { MapContainer } from "./MapContainer";
-import "./ResourcePage.css";
+// import "./ResourcePage.css";
 
 class ResourcePage extends Component {
   render() {

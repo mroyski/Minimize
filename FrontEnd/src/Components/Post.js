@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Posts.css";
+// import "./Posts.css";
 
 class Post extends Component {
   removePost = postId => {

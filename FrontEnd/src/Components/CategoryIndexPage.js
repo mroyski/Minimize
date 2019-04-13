@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "./CategoryIndexPage.css";
+// import "./CategoryIndexPage.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,14 +17,14 @@ export default props => {
   const categoryLinks = props.categories.map(item => (
     <Link to={`/category/${item.categoryId}`}>
       <FontAwesomeIcon icon={item.categoryImg} />
-      <p id="CatName">{item.categoryName}</p>
+      <p className="category-name">{item.categoryName}</p>
     </Link>
   ));
   return (
-    <div className="CatIndexBody">
-      <h1 id="MiniTitle">Start by picking a category</h1>
-      <ul id="CatIndexUl">
-        <div id="CatLists">{categoryLinks}</div>
+    <div id="CatIndexBody">
+      <h1 className="header">Start by picking a category</h1>
+      <ul className="category-links-container">
+        <div className="category-links">{categoryLinks}</div>
       </ul>
     </div>
   );

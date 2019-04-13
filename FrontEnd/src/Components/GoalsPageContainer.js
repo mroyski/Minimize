@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Calendar from "./Calendar";
 import Goal from "./Goal.js";
-import "./GoalsPageContainer.css";
+// import "./GoalsPageContainer.css";
 class GoalsPageContainer extends Component {
   constructor() {
     super();

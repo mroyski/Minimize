@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Post from './Post';
-import CreatePost from './Library/CreatePost';
-import './Category.css';
-import GoogleMaps from './MapContainer';
+import React, { Component } from "react";
+import Post from "./Post";
+import CreatePost from "./Library/CreatePost";
+// import './Category.css';
+import GoogleMaps from "./MapContainer";
 
 class Category extends Component {
   render() {
