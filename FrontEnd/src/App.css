@@ -64,3 +64,8 @@
   background: #030b16;
   color: rgb(225, 225, 225);
 }
+
+#badge-index-container h1 {
+  margin: 0;
+  padding: 1rem;
+}
