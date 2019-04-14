@@ -42,6 +42,13 @@ a {
   justify-content: center;
 }
 
+.helpTitle p,.socialTitle p, .donationTitle p{
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px;  
+  color: rgb(0, 63, 158);
+}
+
 .Map {
   text-align: center;
 }
@@ -53,9 +60,6 @@ a {
 
 .theminimalists {
   text-align: center;
-}
-
-.theminimalists p {
 }
 
 .theminimalists iframe {
@@ -72,32 +76,59 @@ a {
   padding-top: 1rem;
   padding: 0;
 }
-.Uncluttered p{
+
+/*Donation Info Start*/
+.donationTitle{
+  text-align: center;
+  font-size: 2rem;
 }
 
-.Uncluttered p img {
+.donationInfo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bulk {
+  width: 100%;
+  max-width: 375px;
+  padding: 5px;
 }
 
 /*Start of Social Media Stuff*/
+
+
 .socialContainer {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+  padding-bottom: 2rem;
+}
+
+.socialContainer p{
+  text-align: center;
 }
 
 .facebook,
-.pintrest {
+.pintrest,
+.facebook1 {
   text-align: center;
   text-decoration: none;
   color: rgb(0, 63, 158);
-  transition: 0.3s;
   border: 1px solid rgb(0, 63, 158);
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   width: 105px;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
 }
+
+.facebook p,
+.pintrest p{
+  padding: 0;
+}
+
+
 @media only screen and (max-width: 1000px) {
   #navbar {
     display: none;
