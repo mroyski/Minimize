@@ -67,10 +67,43 @@
 }
 
 .detailBody {
-  padding: 1rem 5rem;
+  padding: 2rem 5rem;
 }
 .detailName h2 {
   margin: 0;
+}
+
+/* Form Post */
+#form-container {
+  background: white;
+  max-width: 20rem;
+}
+
+#form-container h4 {
+  color: black;
+  margin: 0;
+  padding: 1rem 0 0 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.form-buttons button {
+  margin: 1rem;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.post-form input,
+.post-form textarea,
+.file-picker {
+  margin: 0.5rem;
 }
 
 /* Badge Index */

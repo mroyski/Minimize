@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import ReactFilestack from 'filestack-react';
-import './CreatePost.css';
+import React, { Component } from "react";
+import ReactFilestack from "filestack-react";
+// import './CreatePost.css';
 
 export default class CreatePost extends Component {
   onAddPost = () => {
@@ -17,43 +17,45 @@ export default class CreatePost extends Component {
 
   render() {
     const basicOptions = {
-      accept: 'image/*',
-      fromSources: ['local_file_system'],
+      accept: "image/*",
+      fromSources: ["local_file_system"],
       maxSize: 1024 * 1024,
       maxFiles: 1
     };
-    const key = 'A3wux2cFHQHGgvyu7UcKVz';
+    const key = "A3wux2cFHQHGgvyu7UcKVz";
     return (
       <form
         id="form-container"
         ref={input => (this.postForm = input)}
         onSubmit={e => this.onAddPost(e)}
       >
+        <h4>Add Post</h4>
         <div className="post-form">
           {/* <h1>{this.props.postImgPath}</h1> */}
           <input
             type="text"
-            placeholder="totalItems "
+            placeholder="Total Items "
             ref={input => (this.totalItems = input)}
           />
           <input
             type="text"
-            placeholder="removedItems "
+            placeholder="Removed Items"
             ref={input => (this.removedItems = input)}
           />
           <textarea
             type="text"
-            placeholder="postDescription "
+            placeholder="Description"
             ref={input => (this.postDescription = input)}
           />
 
           <ReactFilestack
+            className="file-picker"
             apikey={key}
             options={basicOptions}
             onSuccess={this.props.onSuccess}
             onError={this.props.onError}
           />
-          <div>
+          <div className="form-buttons">
             <button type="submit" onClick={() => this.onAddPost()}>
               Add Post
             </button>
