@@ -23,8 +23,12 @@ class Post extends Component {
           <p>Total Items: {totalItems}</p>
           <p>Removed Items: {removedItems}</p>
           <p>Description: {postDescription}</p>
-          <img src={postImgPath} alt="UserPhoto" />
-          <button onClick={() => this.removePost(postId)}>Delete</button>
+          <div className="post-img">
+            <img src={postImgPath} alt="UserPhoto" />
+          </div>
+          <div className="post-button">
+            <button onClick={() => this.removePost(postId)}>Delete</button>
+          </div>
         </div>
       </li>
     );
