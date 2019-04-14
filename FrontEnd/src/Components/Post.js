@@ -16,7 +16,7 @@ class Post extends Component {
       postImgPath
     } = this.props.post;
     return (
-      <li>
+      <li className="post-list">
         <div id="postDetails">
           {/* <h4>Post Number: {this.props.post.postId}</h4> */}
           <p>Time: {postTime}</p>

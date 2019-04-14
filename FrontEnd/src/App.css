@@ -69,6 +69,7 @@
 .detailBody {
   padding: 2rem 5rem;
 }
+
 .detailName h2 {
   margin: 0;
 }
@@ -76,6 +77,7 @@
 /* Form Post */
 #form-container {
   background: white;
+  border-radius: 10px;
   max-width: 20rem;
 }
 
@@ -104,6 +106,21 @@
 .post-form textarea,
 .file-picker {
   margin: 0.5rem;
+}
+
+/* Category Details Post */
+.postBody {
+  margin: 2rem;
+}
+
+.post-list {
+  list-style: none;
+  border: 1px solid rgb(225, 225, 225);
+  border-radius: 10px;
+}
+
+#postDetails {
+  margin: 2rem;
 }
 
 /* Badge Index */
