@@ -28,7 +28,7 @@ class ResourcePage extends Component {
                 src="https://www.youtube.com/embed/iKhQ75DfD2k"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                
               />
             </div>
             <p>Blogs, Videos, Minimalist Help</p>
@@ -41,10 +41,10 @@ class ResourcePage extends Component {
             >
               simplifyandpursue.com
               <p>
-                <img src="./images/SimpleAndPure.png" alt="SimplePureLogo" />
+                <img src="./images/SimpleAndPure1.png" alt="SimplePureLogo" />
               </p>
             </a>
-            <p>Help getting Family and Home Involved</p>
+            <p>Family and Home Involvement</p>
           </div>
           <div className="Uncluttered">
             <a
@@ -54,7 +54,7 @@ class ResourcePage extends Component {
             >
               becomingminimalist.com
               <p>
-                <img src="./images/uncluttered.png" alt="UnclutteredLogo" />
+                <img src="./images/uncluttered1.png" alt="UnclutteredLogo" />
               </p>
               <p>Help with Minimalist Beginnings</p>
             </a>

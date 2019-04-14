@@ -36,9 +36,9 @@
    box-sizing: border-box; 
 } */
 #goalBody {
-  margin-top: 5rem;
   display: flex;
   justify-content: space-around;
+  top: 500px;
   flex-wrap: wrap;
 }
 

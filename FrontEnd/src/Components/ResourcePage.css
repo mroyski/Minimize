@@ -20,9 +20,15 @@ a {
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   margin: 1rem;
-  padding: 1rem;
   width: 300px;
-  font-size: 1.5rem;
+  height: 230px;
+  font-size: 1.15rem;
+}
+
+.theminimalists p,
+.Simplify p,
+.Uncluttered p{
+  margin: 0;
 }
 
 .Title p {
@@ -53,6 +59,9 @@ a {
   text-align: center;
 }
 
+.theminimalists p {
+}
+
 .theminimalists iframe {
   max-width: 100%;
 }
@@ -67,10 +76,10 @@ a {
   padding-top: 1rem;
   padding: 0;
 }
+.Uncluttered p{
+}
 
 .Uncluttered p img {
-  height: auto;
-  width: 100%;
 }
 
 /*Start of Social Media Stuff*/
