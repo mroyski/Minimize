@@ -90,9 +90,15 @@ a {
 }
 
 .bulk {
+  text-align: center;
+  border: 1px solid rgb(0, 63, 158);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   width: 100%;
   max-width: 375px;
   padding: 5px;
+  margin: 15px;
+  font-size: 1rem;
 }
 
 /*Start of Social Media Stuff*/
@@ -127,7 +133,6 @@ a {
 .pintrest p{
   padding: 0;
 }
-
 
 @media only screen and (max-width: 1000px) {
   #navbar {

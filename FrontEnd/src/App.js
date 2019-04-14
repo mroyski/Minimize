@@ -47,6 +47,7 @@ class AppRouter extends Component {
           <Route path="/resourcepage" component={ResourcePage} />
         </div>
       </Router>
+      
     );
   }
 }

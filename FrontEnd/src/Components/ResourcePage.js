@@ -3,7 +3,8 @@ import GoogleMaps, { MapContainer } from "./MapContainer";
 import "./ResourcePage.css";
 
 class ResourcePage extends Component {
-  render() {
+
+  render() {    
     return (
       <div id="Body">
         <div className="Title">
@@ -70,7 +71,7 @@ class ResourcePage extends Component {
             <div className="bulkTitle">
               <a href ="https://www.habitat.org/restores/donate-goods"
               target="-blank"
-              rel="noopener noreferrer"><p>Habitat for Humanity</p></a>
+              rel="noopener noreferrer"><img src="./images/HforH125x57.png" alt="Habitat for Humanity Logo"></img></a>
               <p>Habitat ReStores are home improvement stores that accept small and large donations of new or gently used furniture, appliances, housewares, building materials and more. Proceeds from the sales of these items help Habitat's work in your community and around the world.</p>
             </div>
           </div>
@@ -78,7 +79,7 @@ class ResourcePage extends Component {
             <div className="bulkTitle">
               <a href ="https://www.toysfortots.org/request_toys/donate-toy.aspx"
               target="-blank"
-              rel="noopener noreferrer"><p>Toys for Tots</p></a>
+              rel="noopener noreferrer"><img src="./images/TforT125x57.png" alt="ToysforTots Logo"></img></a>
               <p>Donating a Toy is one of the experiences that makes Marine Toys for Tots different from other programs.</p>
             </div>
           </div>
@@ -86,7 +87,7 @@ class ResourcePage extends Component {
             <div className="bulkTitle">
               <a href ="https://ncadv.org/donate-a-phone"
               target="-blank"
-              rel="noopener noreferrer"><p>NCADV</p></a>
+              rel="noopener noreferrer"><img src="./images/NCADV125x57.png" alt="NCADV Logo"></img></a>
               <p>NCADV partners with Cellular Recycler for the collection of used cell phones and select digital electronics. We receive a portion of the monies that come from the sale of refurbished cell phones to support our programming that helps stop violence in the home.</p>
             </div>
           </div>
@@ -94,7 +95,7 @@ class ResourcePage extends Component {
             <div className="bulkTitla">
               <a href ="https://givebackbox.com/works"
               target="-blank"
-              rel="noopener noreferrer"><p>GiveBackBox</p></a>
+              rel="noopener noreferrer"><img src="./images/GiveBackBox125x57.png" alt="Give Back Box Logo"></img></a>
               <p>Give Back Box® provides vendor services to retailers and charities, giving each and every cardboard box a second life to help people in need. So it is also a 'green' solution! Reuse your online shipping boxes in which you received your purchases, or any other cardboard box you may have, to donate your unwanted household items: such as gently used clothing, shoes etc., to make a major difference in the life of another person.</p>
             </div>
           </div>
@@ -102,11 +103,11 @@ class ResourcePage extends Component {
             <div className="bulkTitla">
               <a href ="https://wish.org/ways-to-help/giving/in-kind"
               target="-blank"
-              rel="noopener noreferrer"><p>Make-A-Wish</p></a>
+              rel="noopener noreferrer"><img src="./images/MAWish125x57.png" alt="Make A Wish Logo"></img></a>
               <p>You can help create life-changing experiences for wish kids by donating goods such as frequent flier miles, hotel loyalty points, building materials, new electronics and more.</p>
             </div>
           </div>
-        </div>
+        </div>        
         <div className="socialTitle">
           <p>Social Media Interests</p>
         </div>
