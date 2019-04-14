@@ -2,8 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './SideNav.css';
 
-const sideNav = props => (
-  <nav className="side_nav">
+const sideNav = props => {
+  let sideNavClasses = 'side-nav';
+  if (props.show) {
+    sideNavClasses = 'side-nav open';
+  }
+  return (
+  <nav className={sideNavClasses}>
     <ul>
       <li>
         <Link to={`/goals`} className="link">
@@ -27,6 +32,7 @@ const sideNav = props => (
       </li>
     </ul>
   </nav>
-);
+  );
+};
 
 export default sideNav;
