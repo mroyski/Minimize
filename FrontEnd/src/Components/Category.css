@@ -18,7 +18,7 @@
 }
 
 #catDescrip {
-  width: 700px;
+  max-width: 700px;
 }
 
 .detailBody {
@@ -27,7 +27,6 @@
 
 .detailName {
   color: blue;
-  padding-top: 60px;
 }
 .postBody ul {
   list-style: none;
