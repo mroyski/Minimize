@@ -9,5 +9,8 @@
         "resourcepage",
         "simplifyandpursue",
         "theminimalists"
+    ],
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
     ]
 }
