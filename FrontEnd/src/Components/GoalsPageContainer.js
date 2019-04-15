@@ -17,6 +17,7 @@ class GoalsPageContainer extends Component {
       .then(res => res.json())
 
       .then(data => this.setState({ goals: data }));
+
     this.getCategory();
   }
   getCategory = () => {
@@ -64,7 +65,12 @@ class GoalsPageContainer extends Component {
   removeGoal = goalId => {};
   render() {
     const PrintGoal = this.state.goals.map(goal => (
-      <Goal date={goal.date} text={goal.text} />
+      <Goal
+        date={goal.date}
+        numberOfItems={goal.numberOfItems}
+        text={goal.text}
+        category={goal.category}
+      />
     ));
     return (
       <div id="container">

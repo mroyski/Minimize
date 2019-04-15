@@ -27,11 +27,9 @@ class GoalPost extends Component {
   };
   handleChange = event => {
     this.setState({ categoryId: event.target.value });
-    console.log(event.target.value);
   };
   DropDownCategory = () => {
     const category = this.props.category;
-    console.log(this.props.category);
     return (
       <select onChange={this.handleChange}>
         {category.map(cat => {

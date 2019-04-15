@@ -4,18 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using Minimize.Models;
+using Minimize.Repositories;
 namespace Minimize.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class TrackerController : ControllerBase
     {
+        IGoalRepository goalRepository;
+        public TrackerController(IGoalRepository goalRepository)
+        {
+            this.goalRepository = goalRepository;
+        }
         // GET: api/Tracker
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Goal> Get()
         {
-            return new string[] { "value1", "value2" };
+            return goalRepository.GetAll().ToArray();
         }
 
         // GET: api/Tracker/5
