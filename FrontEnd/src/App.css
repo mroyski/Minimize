@@ -64,6 +64,8 @@
 #category-details-page {
   color: rgb(225, 225, 225);
   background: radial-gradient(#081c38, #030b16);
+  height: 200vh;
+  width: 100vw;
 }
 
 .detailBody {
@@ -116,7 +118,14 @@
 .post-list {
   list-style: none;
   border: 1px solid rgb(225, 225, 225);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
+  max-width: 50%;
+}
+
+.post-list:hover {
+  background: #0b1e3d;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
 }
 
 #postDetails {
@@ -125,8 +134,39 @@
   margin: 2rem;
 }
 
-#postDetails img {
-  max-height: 5rem;
+#postDetails p {
+  margin: 0.5rem;
+}
+
+.post {
+  display: flex;
+}
+
+.post-img img {
+  max-height: 10rem;
+  max-width: 15rem;
+  margin: 0.5rem;
+}
+.post-button {
+  margin: 0.5rem;
+}
+
+.create-post {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.form-active {
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
 }
 
 /* Badge Index */
