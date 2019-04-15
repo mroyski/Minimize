@@ -12,8 +12,18 @@
   margin: 1rem 1rem;
   border-radius: 10px;
   color: rgb(0, 63, 158);
-  background-color: rgba(0, 63, 158, 0.11);
+  background-image: linear-gradient(
+    to bottom right,
+    white,
+    rgba(0, 63, 158, 0.12)
+  );
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 600px) {
+  #badgeContainer {
+    width: 10rem;
+  }
 }
 
 #badgeContainer p {
