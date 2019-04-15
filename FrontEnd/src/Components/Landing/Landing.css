@@ -1,0 +1,33 @@
+#landing {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+}
+
+#categories {
+  border: 1px solid blue;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#categories h3 {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
+#categoriesImg {
+  margin: auto;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+#categoriesText {
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 2/3;
+}
