@@ -13,7 +13,10 @@ class ProfilePage extends Component {
     super();
     this.state = {
       posts: [],
-      chartData: {}
+      chartData: {},
+      name: "",
+      userName: "",
+      email: ""
     };
   }
 
@@ -60,6 +63,11 @@ class ProfilePage extends Component {
     ));
     return (
       <div id="ProfileBody">
+        <div className="ProfileInfo">
+        <input type="text" placeholder="UserName"/>
+        <input type="text" placeholder="Name"/>
+        <input type="text" placeholder="Email"/>         
+        </div>
         <div className="ProgressSection">
           <h2>Progress</h2>
           <Chart chartData={this.state.chartData} />
