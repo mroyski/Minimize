@@ -10,6 +10,7 @@ namespace Minimize
         public DbSet<Post> Posts { get; set; }
         public DbSet<Badge> Badges { get; set; }
         public DbSet<Goal> Goals { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=minimize;Trusted_Connection=True;";

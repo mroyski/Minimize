@@ -19,6 +19,14 @@ class ProfilePage extends Component {
       email: ""
     };
   }
+ addProfileInfo = () => {
+   const profileName = {
+    userName: this.props.userName,
+    name: this.props.name,
+    email: this.props.email
+   }
+   this.postForm.reset();
+   }
 
   componentDidMount() {
     const labels = [];
@@ -62,12 +70,28 @@ class ProfilePage extends Component {
       <Post key={post.postId} post={post} />
     ));
     return (
+     
       <div id="ProfileBody">
+      <form id="ProfileForm">
         <div className="ProfileInfo">
-        <input type="text" placeholder="UserName"/>
-        <input type="text" placeholder="Name"/>
-        <input type="text" placeholder="Email"/>         
+        <input type="text" 
+         placeholder="UserName" 
+         ref={input => (this.userName = input)}
+         />
+        <input type="text" 
+        placeholder="Name"
+        ref={input => (this.name = input)}
+        />
+        <input type="text" 
+        placeholder="Email"
+        ref={input => (this.email = input)}
+        /> 
+            
+        <button type="submit" onClick={() => this.addProfileInfo()}>
+        Add Profile
+          </button>  
         </div>
+        </form>
         <div className="ProgressSection">
           <h2>Progress</h2>
           <Chart chartData={this.state.chartData} />
