@@ -55,13 +55,14 @@
 }
 
 #categoriesText {
-  text-align: left;
+  padding: 1.5rem;
   grid-column: 2 / 3;
   grid-row: 2/3;
 }
 
 #postsText {
   margin: 0;
+  padding: 1.5rem;
   text-align: left;
   grid-column: 2 / 3;
   grid-row: 3/4;
@@ -74,23 +75,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  #categories,
   #posts {
-    grid-template-rows: 2rem 10rem 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
-  #postsDescription {
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    padding: 0 2rem;
-  }
-  #postsImg {
-    grid-column: 1/-1;
-    grid-row: 3/4;
-  }
+  #categoriesText,
   #postsText {
-    padding: 0 1rem;
-    text-align: left;
-    grid-column: 1 / -1;
-    grid-row: 4/5;
+    padding: 1.5rem;
   }
 }
 
