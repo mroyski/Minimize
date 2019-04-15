@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import "./GoalPost.css";
+import React, { Component } from 'react';
+import './GoalPost.css';
 
 class GoalPost extends Component {
   constructor() {
     super();
     this.state = {
-      text: ""
+      text: ''
     };
   }
   onAddGoal = e => {
@@ -20,6 +20,16 @@ class GoalPost extends Component {
 
     this.props.createGoal(goal);
     this.goalForm.reset();
+  };
+  DropDownCategory = () => {
+    const category = this.props.category;
+    return (
+      <select onChange={this.handleChange}>
+        {category.map(cat => {
+          return <option value={cat.categoryId}>{cat.categoryName}</option>;
+        })}
+      </select>
+    );
   };
   onTextAdd = event => {
     this.setState({ text: event.target.value });
