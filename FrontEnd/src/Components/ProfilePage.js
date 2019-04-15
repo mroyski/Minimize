@@ -62,7 +62,9 @@ class ProfilePage extends Component {
       <div id="ProfileBody">
         <div className="ProgressSection">
           <h2>Progress</h2>
-          <Chart chartData={this.state.chartData} />
+          <div className="chart-container">
+            <Chart chartData={this.state.chartData} />
+          </div>
         </div>
         <div className="BadgesSection" />
         <h2>Badges</h2>

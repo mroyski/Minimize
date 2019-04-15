@@ -32,10 +32,12 @@ class BadgeReward extends Component {
 
     const reward = this.state.badges.map(item => {
       const rewardsHtml = (
-        <div>
-          <h5>{item.badgeName}</h5>
-          <FontAwesomeIcon icon="medal" />
-          <p>{item.badgeDescription}</p>
+        <div className="badge-container">
+          <FontAwesomeIcon icon="medal" className="badge-index-icon" />
+          <div className="badge-index-info">
+            <h5>{item.badgeName}</h5>
+            <p>{item.badgeDescription}</p>
+          </div>
         </div>
       );
       if (item.badgeId === 1) {
@@ -78,7 +80,7 @@ class BadgeReward extends Component {
         console.log("nope");
       }
     });
-    return <div>{reward}</div>;
+    return <div className="badge-function">{reward}</div>;
   }
 }
 
