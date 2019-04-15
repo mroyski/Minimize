@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { GetAllBadges } from "./Library/HelperFunctions";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import { faMedal, faAlignCenter } from "@fortawesome/free-solid-svg-icons";
 library.add(faMedal);
 
 class BadgeReward extends Component {

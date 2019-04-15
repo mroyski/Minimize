@@ -3,7 +3,8 @@ import GoogleMaps, { MapContainer } from "./MapContainer";
 // import "./ResourcePage.css";
 
 class ResourcePage extends Component {
-  render() {
+
+  render() {    
     return (
       <div id="Body">
         <div className="Title">
@@ -12,7 +13,10 @@ class ResourcePage extends Component {
         <div className="Map">
           <GoogleMaps />
         </div>
-        <div className="helpContainer">
+        <div className="helpTitle">
+        <p>Help Getting Started</p>
+        </div>
+          <div className="helpContainer">
           <div className="HelpfulLinks" />
           <div className="theminimalists">
             <a
@@ -28,7 +32,6 @@ class ResourcePage extends Component {
                 src="https://www.youtube.com/embed/iKhQ75DfD2k"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                
               />
             </div>
             <p>Blogs, Videos, Minimalist Help</p>
@@ -60,10 +63,57 @@ class ResourcePage extends Component {
             </a>
           </div>
         </div>
-        <div className="socialContainer">
+        <div className="donationTitle">
+          <p>Donation Opportunities</p>
+        </div>
+        <div className="donationInfo">
+          <div className="bulk">
+            <div className="bulkTitle">
+              <a href ="https://www.habitat.org/restores/donate-goods"
+              target="-blank"
+              rel="noopener noreferrer"><img src="./images/HforH125x57.png" alt="Habitat for Humanity Logo"></img></a>
+              <p>Habitat ReStores are home improvement stores that accept small and large donations of new or gently used furniture, appliances, housewares, building materials and more. Proceeds from the sales of these items help Habitat's work in your community and around the world.</p>
+            </div>
+          </div>
+          <div className="bulk">
+            <div className="bulkTitle">
+              <a href ="https://www.toysfortots.org/request_toys/donate-toy.aspx"
+              target="-blank"
+              rel="noopener noreferrer"><img src="./images/TforT125x57.png" alt="ToysforTots Logo"></img></a>
+              <p>Donating a Toy is one of the experiences that makes Marine Toys for Tots different from other programs.</p>
+            </div>
+          </div>
+          <div className="bulk">
+            <div className="bulkTitle">
+              <a href ="https://ncadv.org/donate-a-phone"
+              target="-blank"
+              rel="noopener noreferrer"><img src="./images/NCADV125x57.png" alt="NCADV Logo"></img></a>
+              <p>NCADV partners with Cellular Recycler for the collection of used cell phones and select digital electronics. We receive a portion of the monies that come from the sale of refurbished cell phones to support our programming that helps stop violence in the home.</p>
+            </div>
+          </div>
+          <div className="bulk">
+            <div className="bulkTitle">
+              <a href ="https://givebackbox.com/works"
+              target="-blank"
+              rel="noopener noreferrer"><img src="./images/GiveBackBox125x57.png" alt="Give Back Box Logo"></img></a>
+              <p>Give Back Box® provides vendor services to retailers and charities, giving each and every cardboard box a second life to help people in need. So it is also a 'green' solution! Reuse your online shipping boxes in which you received your purchases, or any other cardboard box you may have, to donate your unwanted household items: such as gently used clothing, shoes etc., to make a major difference in the life of another person.</p>
+            </div>
+          </div>
+          <div className="bulk">
+            <div className="bulkTitle">
+              <a href ="https://wish.org/ways-to-help/giving/in-kind"
+              target="-blank"
+              rel="noopener noreferrer"><img src="./images/MAWish125x57.png" alt="Make A Wish Logo"></img></a>
+              <p>You can help create life-changing experiences for wish kids by donating goods such as frequent flier miles, hotel loyalty points, building materials, new electronics and more.</p>
+            </div>
+          </div>
+        </div>        
+        <div className="socialTitle">
           <p>Social Media Interests</p>
-
+        </div>
+        <div className="socialContainer">
           <div className="pintrest">
+            <p>Minimalist Tips</p>
             <a
               href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=minimalist&eq=minim&etslf=8233&term_meta[]=minimalist%7Cautocomplete%7C2"
               target="-blank"
@@ -73,8 +123,19 @@ class ResourcePage extends Component {
             </a>
           </div>
           <div className="facebook">
+            <p>Minimalist Living</p>
             <a
               href="https://www.facebook.com/mnmlstlvng"
+              target="-blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/facebook-logo.png" alt="FacebookLogo" />
+            </a>
+          </div>
+          <div className="facebook1">
+            <p>Frugal Minimalist</p>
+            <a
+              href="https://www.facebook.com/groups/1421204557930992/"
               target="-blank"
               rel="noopener noreferrer"
             >
