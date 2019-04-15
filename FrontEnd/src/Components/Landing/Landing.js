@@ -39,6 +39,13 @@ class Landing extends Component {
                 for more information and to post your actions.
               </div>
             </div>
+            <div id="posts">
+              <h3>Posts</h3>
+              <div id="postsImg">
+                <img src="./images/PostLanding.png" alt="category" />
+              </div>
+              <div id="postsText" />
+            </div>
           </div>
           <div className="enterSite">
             <Link to={`/categoryIndex`} className="link">
