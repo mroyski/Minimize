@@ -133,7 +133,7 @@ a {
   border: 1px solid rgb(225, 225, 225);
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  margin: 0.5rem;
+  usamargin: 0.5rem;
   padding: 0.5rem;
   width: 105px;
   font-size: 1.15rem;
