@@ -64,7 +64,7 @@ class ResourcePage extends Component {
           </div>
         </div>
         <div className="donationTitle">
-          <p>Donation/Resell Info</p>
+          <p>Donation Opportunities</p>
         </div>
         <div className="donationInfo">
           <div className="bulk">
@@ -92,7 +92,7 @@ class ResourcePage extends Component {
             </div>
           </div>
           <div className="bulk">
-            <div className="bulkTitla">
+            <div className="bulkTitle">
               <a href ="https://givebackbox.com/works"
               target="-blank"
               rel="noopener noreferrer"><img src="./images/GiveBackBox125x57.png" alt="Give Back Box Logo"></img></a>
@@ -100,7 +100,7 @@ class ResourcePage extends Component {
             </div>
           </div>
           <div className="bulk">
-            <div className="bulkTitla">
+            <div className="bulkTitle">
               <a href ="https://wish.org/ways-to-help/giving/in-kind"
               target="-blank"
               rel="noopener noreferrer"><img src="./images/MAWish125x57.png" alt="Make A Wish Logo"></img></a>
