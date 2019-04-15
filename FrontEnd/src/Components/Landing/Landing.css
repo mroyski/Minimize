@@ -1,11 +1,13 @@
-#landing {
+#landing,
+.howItWorks {
   text-align: center;
   max-width: 50rem;
   margin: auto;
+  padding: 0 1rem;
 }
 
 .sections {
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 #categories {
@@ -74,6 +76,11 @@
   padding: 0 2rem;
 }
 
+.boldText {
+  color: rgb(0, 63, 158);
+  font-weight: bold;
+}
+
 @media screen and (max-width: 600px) {
   #categories,
   #posts {
@@ -84,9 +91,4 @@
   #postsText {
     padding: 1.5rem;
   }
-}
-
-.boldText {
-  color: rgb(0, 63, 158);
-  font-weight: bold;
 }
