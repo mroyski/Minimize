@@ -43,15 +43,15 @@ class Landing extends Component {
             </div>
             <div id="posts">
               <h3>Posts</h3>
+              <p id="postsDescription">
+                After you select a category you have to option to create a post.
+                Posts are a record of your actions and give you a detailed
+                account on the items you discard.
+              </p>
               <div id="postsImg">
                 <img src="./images/PostLanding.png" alt="category" />
               </div>
               <div id="postsText">
-                <p>
-                  After you select a category you have to option to create a
-                  post. Posts are a record of your actions and give you a
-                  detailed account on the items you discard.
-                </p>
                 <p>
                   <span class="boldText">Create Post</span> - Click this button
                   to create a new post.
