@@ -26,7 +26,7 @@ a {
 
 .theminimalists p,
 .Simplify p,
-.Uncluttered p{
+.Uncluttered p {
   margin: 0;
 }
 
@@ -42,10 +42,12 @@ a {
   justify-content: center;
 }
 
-.helpTitle p,.socialTitle p, .donationTitle p{
+.helpTitle p,
+.socialTitle p,
+.donationTitle p {
   font-size: 2rem;
   text-align: center;
-  margin: 10px;  
+  margin: 10px;
   color: rgb(0, 63, 158);
 }
 
@@ -78,12 +80,12 @@ a {
 }
 
 /*Donation Info Start*/
-.donationTitle{
+.donationTitle {
   text-align: center;
   font-size: 2rem;
 }
 
-.donationInfo{
+.donationInfo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -102,25 +104,25 @@ a {
 }
 
 .bulkTitle p {
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 /*Start of Social Media Stuff*/
 
-
 .socialContainer {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   padding-bottom: 2rem;
 }
 
-.socialContainer p{
+.socialContainer p {
   text-align: center;
 }
 
 .facebook,
 .pintrest,
-.facebook1 {
+.facebook1,
+.twitter {
   text-align: center;
   text-decoration: none;
   color: rgb(0, 63, 158);
@@ -134,7 +136,7 @@ a {
 }
 
 .facebook p,
-.pintrest p{
+.pintrest p {
   padding: 0;
 }
 
