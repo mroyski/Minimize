@@ -224,23 +224,28 @@ namespace Minimize
             modelBuilder.Entity<Goal>().HasData(
                 new Goal()
                 {
-                    GoalId = 1,
+                    GoalId = 1, //1 clothing 2 furniture 3 tools
                     Date ="4/12/2019",
-                    Text ="Don't Go to Steelers Game!!!"
-                   
+                    Text ="get rid of Furnitures",
+                    NumberOfItems = 10,
+                    CategoryId = 1                   
                 },
                  new Goal()
                  {
                      GoalId = 2,
                      Date = "4/11/2019",
-                     Text = "Clean up closet"
-
+                     Text = "Clean up closet",
+                     NumberOfItems = 4,
+                     CategoryId = 1
+                     
                  },
                  new Goal()
                  {
                      GoalId = 3,
                      Date = "4/11/2019",
-                     Text = "Donate kitchen supplies"
+                     Text = "Donate tools",
+                     NumberOfItems = 2,
+                     CategoryId = 3
                  }
 
                 );
