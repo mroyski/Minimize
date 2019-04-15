@@ -15,8 +15,11 @@ class BadgeIndexPageContainer extends Component {
   }
 
   render() {
+    const style = {
+      textAlign: "center"
+    };
     return (
-      <div>
+      <div style={style}>
         <h1>Badges</h1>
         <BadgeIndexPage badges={this.state.badges} />
       </div>
