@@ -5,7 +5,9 @@ class GoalPost extends Component {
   constructor() {
     super();
     this.state = {
-      text: ''
+      text: '',
+      numberOfItems: null,
+      categoryId: null
     };
   }
   onAddGoal = e => {
@@ -15,14 +17,21 @@ class GoalPost extends Component {
     this.setState({ date: currentDate });
     const goal = {
       date: currentDate,
-      text: this.state.text
+      text: this.state.text,
+      categoryId: this.state.categoryId,
+      numberOfItems: this.state.numberOfItems
     };
 
     this.props.createGoal(goal);
     this.goalForm.reset();
   };
+  handleChange = event => {
+    this.setState({ categoryId: event.target.value });
+    console.log(event.target.value);
+  };
   DropDownCategory = () => {
     const category = this.props.category;
+    console.log(this.props.category);
     return (
       <select onChange={this.handleChange}>
         {category.map(cat => {
@@ -30,6 +39,9 @@ class GoalPost extends Component {
         })}
       </select>
     );
+  };
+  onsetNumber = event => {
+    this.setState({ numberOfItems: event.target.value });
   };
   onTextAdd = event => {
     this.setState({ text: event.target.value });
@@ -47,10 +59,16 @@ class GoalPost extends Component {
               {pickedMonth} / {pickedDay} / {pickedYear}
             </h3>
           </p>
+          <div> {this.DropDownCategory()}</div>
           <form
             ref={input => (this.goalForm = input)}
             onSubmit={e => this.onAddGoal(e)}
           >
+            <input
+              type="text"
+              placeholder="numberOfItems "
+              onChange={this.onsetNumber}
+            />
             <textarea id="goalText" onChange={this.onTextAdd} />
             <br />
             <button type="submit" onClick={e => this.onAddGoal(e)}>
