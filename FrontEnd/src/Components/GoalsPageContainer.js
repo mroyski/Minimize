@@ -45,7 +45,9 @@ class GoalsPageContainer extends Component {
     ));
     return (
       <div id="container">
-        <Calendar createGoal={this.createGoal} />
+        <div className="calendar-post">
+          <Calendar createGoal={this.createGoal} />
+        </div>
         <div id="goalList">{PrintGoal}</div>
       </div>
     );

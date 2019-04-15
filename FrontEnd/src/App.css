@@ -173,11 +173,36 @@
 #container {
   background: radial-gradient(#081c38, #030b16);
   color: rgb(225, 225, 225);
-  height: 60rem;
+  height: 250vh;
   width: 100vw;
 }
 #goalContainer {
   margin: 5rem;
+}
+
+.calendar {
+  border-radius: 10px;
+}
+.calendar-post {
+  padding: 2rem;
+}
+
+.goal-post {
+  border: 1px solid rgb(225, 225, 225);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  margin: 2rem 5rem;
+  max-width: 50%;
+}
+
+.goal-post:hover {
+  background: #0b1e3d;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+}
+
+.goal-post h2,
+.goal-post p {
+  margin: 1rem;
 }
 
 /* Badge Index */
