@@ -11,10 +11,10 @@ class ProfilePostContainer extends Component {
   }
 
   componentDidMount() {
-    GetAllPosts().then(json => this.setState(posts: json))
+    GetAllPosts().then(json => this.setState({ posts: json }));
   }
-
   render() {
+    console.log(this.state.posts);
     return <ProfilePost posts={this.state.posts} />;
   }
 }

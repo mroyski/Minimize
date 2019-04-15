@@ -12,6 +12,7 @@ class CategoryIndex extends Component {
   componentDidMount() {
     GetAll().then(json => this.setState({ categories: json }));
   }
+
   render() {
     return <CategoryIndexPage categories={this.state.categories} />;
   }

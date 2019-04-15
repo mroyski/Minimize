@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 
 export default props => {
-  const { posts } = this.props;
-  const profilePosts = posts.map(post => (
+  const profilePosts = props.posts.map(post => (
     <div id="postDetails">
       {/* <h4>Post Number: {this.props.post.postId}</h4> */}
-      <p>Time: {postTime}</p>
-      <p>Total Items: {totalItems}</p>
-      <p>Removed Items: {removedItems}</p>
-      <p>Description: {postDescription}</p>
-      <img src={postImgPath} alt="UserPhoto" />
-      <button onClick={() => this.removePost(postId)}>Delete</button>
+      <p>Time: {post.postTime}</p>
+      <p>Total Items: {post.totalItems}</p>
+      <p>Removed Items: {post.removedItems}</p>
+      <p>Description: {post.postDescription}</p>
+      <img src={post.postImgPath} alt="UserPhoto" />
     </div>
   ));
   return <div>{profilePosts}</div>;
