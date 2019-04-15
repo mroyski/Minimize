@@ -31,7 +31,6 @@ class GoalPost extends Component {
         <h1>set a goal</h1>
         <div id="goalForm">
           <p>select date from calendar</p>
-
           <p>
             <h3>
               {pickedMonth} / {pickedDay} / {pickedYear}
@@ -41,7 +40,11 @@ class GoalPost extends Component {
             ref={input => (this.goalForm = input)}
             onSubmit={e => this.onAddGoal(e)}
           >
-            <textarea id="goalText" onChange={this.onTextAdd} />
+            <textarea
+              id="goalText"
+              placeholder="Description"
+              onChange={this.onTextAdd}
+            />
             <br />
             <button type="submit" onClick={e => this.onAddGoal(e)}>
               Submit
