@@ -11,7 +11,7 @@
 #categories,
 #posts {
   margin: 1.5rem 0.5rem;
-  border: 1px solid blue;
+  border: 1px solid rgb(0, 63, 158);
   border-radius: 10px;
   display: grid;
   grid-template-rows: 2rem 1fr;
@@ -43,4 +43,9 @@
   text-align: left;
   grid-column: 2 / 3;
   grid-row: 2/3;
+}
+
+.boldText {
+  color: rgb(0, 63, 158);
+  font-weight: bold;
 }

@@ -34,9 +34,11 @@ class Landing extends Component {
                 <img src="./images/ClothingCategory.png" alt="category" />
               </div>
               <div id="categoriesText">
-                The categories page breaks down your minimalist journey into
-                specific pieces to give you a more clear path. Select a category
-                for more information and to post your actions.
+                <p>
+                  The categories page breaks down your minimalist journey into
+                  specific pieces to give you a more clear path. Select a
+                  category for more information and to post your actions.
+                </p>
               </div>
             </div>
             <div id="posts">
@@ -44,7 +46,32 @@ class Landing extends Component {
               <div id="postsImg">
                 <img src="./images/PostLanding.png" alt="category" />
               </div>
-              <div id="postsText" />
+              <div id="postsText">
+                <p>
+                  After you select a category you have to option to create a
+                  post. Posts are a record of your actions and give you a
+                  detailed account on the items you discard.
+                </p>
+                <p>
+                  <span class="boldText">Create Post</span> - Click this button
+                  to create a new post.
+                </p>
+                <p>
+                  <span class="boldText">Time</span> - This is a timestamp of
+                  your post
+                </p>
+                <p>
+                  <span class="boldText">Removed Items</span> - This number
+                  represents the amount of items you discard.
+                </p>
+                <p>
+                  <span class="boldText">Description</span> - You can add
+                  further detail by entering more information about this post.
+                </p>
+                <p>
+                  <span class="boldText">Delete</span> - Delete this post.
+                </p>
+              </div>
             </div>
           </div>
           <div className="enterSite">
