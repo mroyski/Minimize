@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { GetAllPosts } from "./Library/HelperFunctions";
-
+import ProfilePost from "./ProfilePost";
 
 class ProfilePostContainer extends Component {
   constructor() {
@@ -15,7 +15,7 @@ class ProfilePostContainer extends Component {
   }
 
   render() {
-    return <div />;
+    return <ProfilePost posts={this.state.posts} />;
   }
 }
 
