@@ -62,14 +62,14 @@ class GoalsPageContainer extends Component {
       }
     });
   };
-  removeGoal = goalId => {};
+
   render() {
     const PrintGoal = this.state.goals.map(goal => (
       <Goal
         date={goal.date}
         numberOfItems={goal.numberOfItems}
         text={goal.text}
-        category={goal.category}
+        category={Object.assign([], goal.category)}
       />
     ));
     return (
