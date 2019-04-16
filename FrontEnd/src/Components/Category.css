@@ -19,6 +19,8 @@
 
 #catDescrip {
   max-width: 700px;
+  text-align: justify;
+  padding: 5px;
 }
 
 .detailBody {
