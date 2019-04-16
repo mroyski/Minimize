@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Post from './Post';
 import CreatePost from './Library/CreatePost';
 import './Category.css';
+import Goal from './Goal';
 import GoogleMaps from './MapContainer';
 
 class Category extends Component {
@@ -11,12 +12,12 @@ class Category extends Component {
       categoryName,
       categoryDescription,
       posts,
-      editPost,
       onSuccess,
       onError,
       formModal,
       closeModal,
-      deletePost
+      deletePost,
+      goals
     } = this.props;
 
     const listOfPosts = posts.map(post => (

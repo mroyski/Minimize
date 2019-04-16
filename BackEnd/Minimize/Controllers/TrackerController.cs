@@ -25,13 +25,17 @@ namespace Minimize.Controllers
         {
             //  var goal = goalRepository.GetById(id);
             //desire to remove
-            var goal = db.Goals.Single(g => g.GoalId == id);
+            var goals = db.Goals.Where(g => g.CategoryId == id);
+            
+            
             //var goal = db.Goals.Single(g => g.GoalId == id);
+            
+             
 
-            var posts = goal.Category.Posts;
-
-            var expectedInGoal = goal.NumberOfItems;
-            var currentTotal = posts.Sum(p => p.RemovedItems);
+            var expectedInGoal = goals.Sum(g=> g.NumberOfItems);
+            var category = db.Categories.Single(g => g.CategoryId == id);
+            
+            var currentTotal = category.Posts.Sum(p => p.RemovedItems);
 
 
             var percentageComplete = ((float)currentTotal /expectedInGoal)*100;
