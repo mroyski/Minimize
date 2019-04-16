@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./FirstPage.css";
+// import Header from "../Header";
 class FirstPage extends Component {
     
     render() {
         return (
             <div id="entirePage">
-                <img src="/Images/Logo3.png" alt="logo" />
-                <div className="enterSite">
+            <div className="enterSite">
+              <img src="/Images/Logo3.png" alt="logo" />
+            
             <Link to={`/categoryIndex`} className="logIn">
               {" "}
               <button>Log In</button>
