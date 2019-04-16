@@ -6,14 +6,20 @@
   padding: 0 1rem;
 }
 
+.howItWorks p {
+  text-align: left;
+}
+
 .sections {
   margin: 1rem auto;
 }
 
 #categories,
-#badges {
+#badges,
+#goals {
   margin: 1.5rem 0.5rem;
   border: 1px solid rgb(0, 63, 158);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   display: grid;
   grid-template-rows: 2rem 1fr;
@@ -26,6 +32,7 @@
 #posts {
   margin: 1.5rem 0.5rem;
   border: 1px solid rgb(0, 63, 158);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   display: grid;
   grid-template-rows: 2rem 1fr 3fr;
@@ -37,13 +44,15 @@
 
 #categories h3,
 #posts h3,
-#badges h3 {
+#badges h3,
+#goals h3 {
   grid-column: 1/-1;
   grid-row: 1/2;
 }
 
 #categoriesImg,
-#badgesImg {
+#badgesImg,
+#goalsImg {
   margin: auto;
   grid-column: 1/2;
   grid-row: 2/3;
@@ -56,12 +65,19 @@
 }
 
 #postsImg img,
-#badgesImg img {
+#badgesImg img,
+#goalsImg img {
   width: 200px;
 }
 
+#badgesImg img,
+#goalsImg img {
+  padding-bottom: 1rem;
+}
+
 #categoriesText,
-#badgesText {
+#badgesText,
+#goalsText {
   padding: 1.5rem;
   grid-column: 2 / 3;
   grid-row: 2/3;
@@ -86,16 +102,27 @@
   font-weight: bold;
 }
 
+.enterSite {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
 @media screen and (max-width: 600px) {
   #categories,
   #posts,
-  #badges {
+  #badges,
+  #goals {
     display: flex;
     flex-direction: column;
   }
   #categoriesText,
   #postsText,
-  #badgesText {
-    padding: 1.5rem;
+  #badgesText,
+  #goalsText {
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  h3 {
+    margin: 0;
   }
 }

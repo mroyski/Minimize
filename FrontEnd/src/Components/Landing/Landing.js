@@ -18,15 +18,25 @@ class Landing extends Component {
           <div className="howItWorks">
             <h2>The Purpose of This App</h2>
             <p>
-              {" "}
-              Assist users in approaching minimalism for the first time by
-              making the process easy to manage. Educate users on what
-              minimalism is all about, why it is beneficial, and how to start
-              Show users their progress throughout their journey and give them a
-              way to set goals Give suggestions on what to do with the items
-              they remove from their life Keep users updated on the latest
-              trends Inspire people to better their life by shedding their
-              possessions rather than obtaining new ones
+              •Assist users in approaching minimalism for the first time by
+              making the process easy to manage
+            </p>
+            <p>
+              •Educate users on what minimalism is all about, why it is
+              beneficial, and how to start
+            </p>
+            <p>
+              •Show users their progress throughout their journey and give them
+              a way to set goals
+            </p>
+            <p>
+              •Give suggestions on what to do with the items they remove from
+              their life
+            </p>
+            <p>•Keep users updated on the latest trends</p>
+            <p>
+              •Inspire people to better their life by shedding their possessions
+              rather than obtaining new ones
             </p>
           </div>
           <h2>Getting Started</h2>
@@ -79,21 +89,33 @@ class Landing extends Component {
             <div id="badges">
               <h3>Badges</h3>
               <div id="badgesText">
-                Badges are earned when you complete a milestone. You can view
-                the badges you have earned on the profile page, and for a full
-                list check out the badges page.
+                <p>
+                  Badges are earned when you complete a milestone. You can view
+                  the badges you have earned on the profile page, and for a full
+                  list check out the badges page.
+                </p>
               </div>
               <div id="badgesImg">
                 <img src="./images/BadgeLanding.png" alt="badge" />
               </div>
             </div>
+            <div id="goals">
+              <h3>Goals</h3>
+              <div id="goalsText">
+                <p>
+                  To make planning easier you have the ability to set goals.
+                </p>
+              </div>
+              <div id="goalsImg">
+                <img src="./images/GoalsLanding.png" alt="goals" />
+              </div>
+            </div>
           </div>
-          <div className="enterSite">
-            <Link to={`/categoryIndex`} className="link">
-              {" "}
-              Push Me Hard
-            </Link>
-          </div>
+        </div>
+        <div className="enterSite">
+          <Link to={`/categoryIndex`} className="link">
+            Enter the site
+          </Link>
         </div>
       </div>
     );
