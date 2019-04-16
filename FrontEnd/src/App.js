@@ -9,7 +9,8 @@ import NavBar from "./Components/NavBar/NavBar";
 import SideNav from "./Components/Hamburger/SideNav";
 import BadgeIndexPageContainer from "./Components/BadgeIndexPageContainer";
 import Backdrop from "./Components/Backdrop/Backdrop";
-import Landing from "./Components/Landing/Landing";
+import Landing from "./Components/BeginningPage/Landing";
+import FirstPage from "./Components/BeginningPage/FirstPage";
 import "./App.css";
 
 class AppRouter extends Component {
@@ -40,7 +41,8 @@ class AppRouter extends Component {
           {backdrop}
         </div>
         <div>
-          <Route path="/" exact component={Landing} />
+          <Route path="/" exact component={FirstPage} />
+          <Route path="/landing" component={Landing} />
           <Route path="/categoryIndex" component={CategoryIndex} />
           <Route path="/category/:categoryId" component={CatDetailsPage} />
           <Route path="/profile" component={ProfilePage} />
