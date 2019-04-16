@@ -38,12 +38,12 @@ export default class CreatePost extends Component {
           /> */}
           <input
             type="text"
-            placeholder="removedItems "
+            placeholder="# of items to remove"
             ref={input => (this.removedItems = input)}
           />
           <textarea
             type="text"
-            placeholder="postDescription "
+            placeholder="Item(s) description"
             ref={input => (this.postDescription = input)}
           />
 
