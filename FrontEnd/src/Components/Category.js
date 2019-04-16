@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Post from './Post';
 import CreatePost from './Library/CreatePost';
 import './Category.css';
+
 import Goal from './Goal';
 import GoogleMaps from './MapContainer';
 import Tracker from './Tracker';
+
 class Category extends Component {
   constructor() {
     super();

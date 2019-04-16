@@ -15,18 +15,23 @@ class Post extends Component {
       postDescription,
       postImgPath
     } = this.props.post;
-    return (
-      <li>
-        <div id="postDetails">
-          {/* <h4>Post Number: {this.props.post.postId}</h4> */}
-          <p>Time: {postTime}</p>
-          <p>Total Items: {totalItems}</p>
-          <p>Removed Items: {removedItems}</p>
-          <p>Description: {postDescription}</p>
-          <img src={postImgPath} alt="UserPhoto" />
-          <button onClick={() => this.removePost(postId)}>Delete</button>
+    return (      
+        <div id="postBody">
+          <div className="postEntire">
+            <div className="postItems">
+              <p>Time: {postTime}</p>
+              <p>Total Items: {totalItems}</p>
+              <p>Removed Items: {removedItems}</p>
+              <p>Description: {postDescription}</p>
+            </div>
+            <div className="postImg">
+              <img src={postImgPath} alt="UserPhoto" height={190} width={190} />              
+            </div>
+            <div className="button">
+            <button onClick={() => this.removePost(postId)}>Delete</button>
+          </div>
+          </div>
         </div>
-      </li>
     );
   }
 }
