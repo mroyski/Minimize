@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import "./Goal.css";
 
 export class Goal extends Component {
   render() {
     const { date, text, numberOfItems, category } = this.props;
     return (
-      <div>
-        <p>Date : {date}</p>
-        <h2>Text : {text}</h2>
-        <h3> CategoryName : {category.categoryName}</h3>
-        <h1> Total items to be removed : {numberOfItems}</h1>
+      <div id="goalWrap">
+        <p id="date">{date}</p>
+        <p id="catName">{category.categoryName}</p>
+        <p id="totalItems">
+          Total items to be removed :{" "}
+          <span className="blueText">{numberOfItems}</span>
+        </p>
+        <p>Comment :</p>
+        <p id="text">{text}</p>
       </div>
     );
   }

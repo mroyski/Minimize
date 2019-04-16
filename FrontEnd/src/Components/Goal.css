@@ -1,0 +1,23 @@
+#goalWrap {
+  border: 2px solid rgb(255, 170, 25);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 30rem;
+  margin-top: 1rem;
+  background-image: linear-gradient(to top, white, rgba(255, 171, 25, 0.253));
+}
+
+#date {
+  border-radius: 10px;
+  margin-top: 0;
+  background-color: white;
+}
+
+.blueText {
+  color: rgb(0, 63, 158);
+  font-weight: bold;
+}
+
+#text {
+  color: black;
+}
