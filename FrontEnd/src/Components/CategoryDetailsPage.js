@@ -11,9 +11,7 @@ class CatDetails extends Component {
       totalItems: 0,
       removedItems: 0,
       postDescription: '',
-      postImgPath: '',
-      goals: [],
-      tracker: []
+      postImgPath: ''
     };
   }
   componentDidMount() {
@@ -21,33 +19,7 @@ class CatDetails extends Component {
     fetch(`https://localhost:44387/api/category/${params.categoryId}`)
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
-    this.getGoalById(params.categoryId);
   }
-  getGoalById = catId => {
-    fetch(`https://localhost:44387/api/tracker/${catId}`)
-      .then(res => res.json())
-      .then(data => {
-        const obj = data.filter(function(cat) {
-          return cat.categoryId == catId;
-        });
-        this.setState({ goals: obj });
-        obj.map(item => this.getTracker(item.goalId));
-      });
-  };
-  getTracker = goalId => {
-    fetch(`https://localhost:44387/api/tracker/${goalId}`)
-      .then(res => res.json())
-      .then(data => {
-        const assignTracker = Object.assign([], data);
-        this.setState({ tracker: assignTracker });
-        const track = this.state.tracker;
-        console.log(track);
-        // assignTracker.map(item => {});
-        // const goalTotalItemsActuallyRemoved = null;
-        // const goalTotalItemsToRemov = null;
-        // const percentageComplet = 0;
-      });
-  };
 
   addPost = post => {
     fetch('https://localhost:44387/api/post', {
@@ -120,7 +92,7 @@ class CatDetails extends Component {
         onError={this.onError}
         formModal={this.formModal}
         closeModal={this.closeModal}
-        goals={this.state.goals}
+        tracker={this.state.tracker}
       />
     );
   }

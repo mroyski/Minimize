@@ -9,9 +9,12 @@ export class Tracker extends Component {
     } = this.props;
     return (
       <dov>
-        <h1>{percentageComplete}</h1>
-        <h1>{goalTotalItemsToRemove}</h1>
-        <h1>{goalTotalItemsActuallyRemoved}</h1>
+        <h1>
+          {percentageComplete} % {goalTotalItemsToRemove} |
+          {goalTotalItemsActuallyRemoved}{' '}
+        </h1>
+        <h1 />
+        <h1 />
       </dov>
     );
   }
