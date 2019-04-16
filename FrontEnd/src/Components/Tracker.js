@@ -13,8 +13,6 @@ export class Tracker extends Component {
           {percentageComplete} % {goalTotalItemsToRemove} |
           {goalTotalItemsActuallyRemoved}{' '}
         </h1>
-        <h1 />
-        <h1 />
       </dov>
     );
   }
