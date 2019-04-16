@@ -73,7 +73,7 @@ namespace Minimize
                {
                    PostId = 1,
                    TotalItems = 15,
-                   RemovedItems = 1,
+                   RemovedItems = 2,
                    PostDescription = "I have been wanting to get rid of my shoes. I have way to many but it's hard to decide :(",
                    PostImgPath = "/Images/Shos.jpg",
                    CategoryId = 1
@@ -181,7 +181,7 @@ namespace Minimize
                 {
                     BadgeId = 10,
                     BadgeName = "Real Minimalist",
-                    BadgeDescription = "You removed a post"
+                    BadgeDescription = "You have no posts"
                 },
 
                 new Badge()
@@ -226,7 +226,7 @@ namespace Minimize
                 {
                     GoalId = 1,
                     Date ="4/12/2019",
-                    Text ="Don't Go to Steelers Game!!!"
+                    Text ="Remove some old shoes"
                    
                 },
                  new Goal()
