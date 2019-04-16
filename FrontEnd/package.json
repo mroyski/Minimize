@@ -11,6 +11,7 @@
     "filestack-js": "^2.0.4",
     "filestack-react": "^2.0.2",
     "google-maps-react": "^2.0.2",
+    "rc-progress": "^2.3.0",
     "react": "^16.8.6",
     "react-calendar": "^2.18.1",
     "react-chartjs-2": "^2.7.6",
