@@ -20,7 +20,7 @@ class Post extends Component {
         <div className="postEntire">
           <div className="postItems">
             <p>Time: {postTime}</p>
-            <p>Total Items: {totalItems}</p>
+            {/* <p>Total Items: {totalItems}</p> */}
             <p>Removed Items: {removedItems}</p>
             <p>Description: {postDescription}</p>
           </div>
