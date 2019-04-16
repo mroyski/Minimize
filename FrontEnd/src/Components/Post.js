@@ -25,7 +25,7 @@ class Post extends Component {
               <p>Description: {postDescription}</p>
             </div>
             <div className="postImg">
-              <img src={postImgPath} alt="UserPhoto" height={190} />              
+              <img src={postImgPath} alt="UserPhoto" height={190} width={190} />              
             </div>
             <div className="button">
             <button onClick={() => this.removePost(postId)}>Delete</button>
