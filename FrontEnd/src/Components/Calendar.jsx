@@ -1,7 +1,7 @@
-import React from 'react';
-import dateFns from 'date-fns';
-import GoalPost from './GoalPost';
-import './Calendar.css';
+import React from "react";
+import dateFns from "date-fns";
+import GoalPost from "./GoalPost";
+import "./Calendar.css";
 
 class Calendar extends React.Component {
   state = {
@@ -10,7 +10,7 @@ class Calendar extends React.Component {
   };
 
   renderHeader() {
-    const dateFormat = 'MMMM YYYY';
+    const dateFormat = "MMMM YYYY";
     return (
       <div className="header row flex-middle">
         <div className="col col-start">
@@ -29,7 +29,7 @@ class Calendar extends React.Component {
   }
 
   renderDays() {
-    const dateFormat = 'dddd';
+    const dateFormat = "dddd";
     const days = [];
 
     let startDate = dateFns.startOfWeek(this.state.currentMonth);
@@ -52,12 +52,12 @@ class Calendar extends React.Component {
     const startDate = dateFns.startOfWeek(monthStart);
     const endDate = dateFns.endOfWeek(monthEnd);
 
-    const dateFormat = 'D';
+    const dateFormat = "D";
     const rows = [];
 
     let days = [];
     let day = startDate;
-    let formattedDate = '';
+    let formattedDate = "";
 
     while (day <= endDate) {
       for (let i = 0; i < 7; i++) {
@@ -67,10 +67,10 @@ class Calendar extends React.Component {
           <div
             className={`col cell ${
               !dateFns.isSameMonth(day, monthStart)
-                ? 'disabled'
+                ? "disabled"
                 : dateFns.isSameDay(day, selectedDate)
-                ? 'selected'
-                : ''
+                ? "selected"
+                : ""
             }`}
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
@@ -111,7 +111,7 @@ class Calendar extends React.Component {
 
   render() {
     let picker = this.state.selectedDate;
-    let fullDate = picker.toString();
+    /*let fullDate = picker.toString(); not currently using*/
     let dayPicker = picker.getDate();
     let pickedDay = dayPicker.toString();
     let monthPicker = picker.getMonth();

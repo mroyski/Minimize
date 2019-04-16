@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import ReactFilestack from 'filestack-react';
-import './CreatePost.css';
+import React, { Component } from "react";
+import ReactFilestack from "filestack-react";
+import "./CreatePost.css";
 
 export default class CreatePost extends Component {
   onAddPost = () => {
     const post = {
-      totalItems: this.totalItems.value,
+      totalItems: 1 /*this.totalItems.value*/,
       removedItems: this.removedItems.value,
       postDescription: this.postDescription.value,
       postImgPath: this.props.postImgPath,
@@ -17,12 +17,12 @@ export default class CreatePost extends Component {
 
   render() {
     const basicOptions = {
-      accept: 'image/*',
-      fromSources: ['local_file_system'],
+      accept: "image/*",
+      fromSources: ["local_file_system"],
       maxSize: 1024 * 1024,
       maxFiles: 1
     };
-    const key = 'A3wux2cFHQHGgvyu7UcKVz';
+    const key = "A3wux2cFHQHGgvyu7UcKVz";
     return (
       <form
         id="form-container"
@@ -31,11 +31,11 @@ export default class CreatePost extends Component {
       >
         <div className="post-form">
           {/* <h1>{this.props.postImgPath}</h1> */}
-          <input
+          {/* <input
             type="text"
             placeholder="totalItems "
             ref={input => (this.totalItems = input)}
-          />
+          /> */}
           <input
             type="text"
             placeholder="removedItems "
@@ -49,11 +49,13 @@ export default class CreatePost extends Component {
 
           <ReactFilestack
             apikey={key}
+            buttonText="Upload Photo"
+            buttonClass="ui medium button gray"
             options={basicOptions}
-            onSuccess={this.props.onSuccess}
-            onError={this.props.onError}
+            onSuccess={this.onSuccess}
+            onError={this.onError}
           />
-          <div>
+          <div className="submitCancel">
             <button type="submit" onClick={() => this.onAddPost()}>
               Add Post
             </button>
