@@ -132,6 +132,7 @@ class Calendar extends React.Component {
             pickedDay={pickedDay}
             pickedMonth={pickedMonth}
             pickedYear={pickedYear}
+            category={this.props.category}
           />
         </div>
       </div>
