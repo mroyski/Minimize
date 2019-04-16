@@ -17,14 +17,17 @@ class Landing extends Component {
           </div>
           <div className="howItWorks">
             <h2>The Purpose of This App</h2>
-            <br /> Assist users in approaching minimalism for the first time by
-            making the process easy to manage. Educate users on what minimalism
-            is all about, why it is beneficial, and how to start Show users
-            their progress throughout their journey and give them a way to set
-            goals Give suggestions on what to do with the items they remove from
-            their life Keep users updated on the latest trends Inspire people to
-            better their life by shedding their possessions rather than
-            obtaining new ones
+            <p>
+              {" "}
+              Assist users in approaching minimalism for the first time by
+              making the process easy to manage. Educate users on what
+              minimalism is all about, why it is beneficial, and how to start
+              Show users their progress throughout their journey and give them a
+              way to set goals Give suggestions on what to do with the items
+              they remove from their life Keep users updated on the latest
+              trends Inspire people to better their life by shedding their
+              possessions rather than obtaining new ones
+            </p>
           </div>
           <h2>Getting Started</h2>
           <div className="sections">
@@ -49,7 +52,7 @@ class Landing extends Component {
                 account on the items you discard.
               </p>
               <div id="postsImg">
-                <img src="./images/PostLanding.png" alt="category" />
+                <img src="./images/PostLanding.png" alt="post" />
               </div>
               <div id="postsText">
                 <p>
@@ -71,6 +74,17 @@ class Landing extends Component {
                 <p>
                   <span class="boldText">Delete</span> - Delete this post.
                 </p>
+              </div>
+            </div>
+            <div id="badges">
+              <h3>Badges</h3>
+              <div id="badgesText">
+                Badges are earned when you complete a milestone. You can view
+                the badges you have earned on the profile page, and for a full
+                list check out the badges page.
+              </div>
+              <div id="badgesImg">
+                <img src="./images/BadgeLanding.png" alt="badge" />
               </div>
             </div>
           </div>

@@ -10,7 +10,8 @@
   margin: 1rem auto;
 }
 
-#categories {
+#categories,
+#badges {
   margin: 1.5rem 0.5rem;
   border: 1px solid rgb(0, 63, 158);
   border-radius: 10px;
@@ -35,12 +36,14 @@
 }
 
 #categories h3,
-#posts h3 {
+#posts h3,
+#badges h3 {
   grid-column: 1/-1;
   grid-row: 1/2;
 }
 
-#categoriesImg {
+#categoriesImg,
+#badgesImg {
   margin: auto;
   grid-column: 1/2;
   grid-row: 2/3;
@@ -52,11 +55,13 @@
   grid-row: 3/4;
 }
 
-#postsImg img {
+#postsImg img,
+#badgesImg img {
   width: 200px;
 }
 
-#categoriesText {
+#categoriesText,
+#badgesText {
   padding: 1.5rem;
   grid-column: 2 / 3;
   grid-row: 2/3;
@@ -83,12 +88,14 @@
 
 @media screen and (max-width: 600px) {
   #categories,
-  #posts {
+  #posts,
+  #badges {
     display: flex;
     flex-direction: column;
   }
   #categoriesText,
-  #postsText {
+  #postsText,
+  #badgesText {
     padding: 1.5rem;
   }
 }
