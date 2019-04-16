@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Minimize.Models;
 namespace Minimize.Repositories
 {
     public class TrackerRepository
@@ -13,9 +13,20 @@ namespace Minimize.Repositories
         {
             this.db = db;
         }
-        public   void GetAll()
+        public   Tracker  Get(int id)
         {
-            var list = db.
+            //desire to remove
+            var goal = db.Goals.Single(g => g.GoalId == id);
+            var posts = goal.Category.Posts;
+
+            var expectedInGoal = goal.NumberOfItems;
+            var currentTotal = posts.Sum(p => p.RemovedItems);
+
+
+            var PercentageComplete = ((float)expectedInGoal / currentTotal) * 100;
+
+
+            return null;
         }
 
     }

@@ -11,7 +11,8 @@ class CatDetails extends Component {
       totalItems: 0,
       removedItems: 0,
       postDescription: '',
-      postImgPath: ''
+      postImgPath: '',
+      goal: []
     };
   }
   componentDidMount() {
@@ -19,8 +20,18 @@ class CatDetails extends Component {
     fetch(`https://localhost:44387/api/category/${params.categoryId}`)
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
+    this.getGoalById(params.categoryId);
   }
-
+  getGoalById = catId => {
+    fetch(`https://localhost:44387/api/goal`)
+      .then(res => res.json())
+      .then(data => {
+        var obj = data.filter(function(cat) {
+          return cat.categoryId == catId;
+        });
+        this.setState({ goal: obj });
+      });
+  };
   addPost = post => {
     fetch('https://localhost:44387/api/post', {
       method: 'POST',
@@ -84,7 +95,7 @@ class CatDetails extends Component {
         categoryDescription={this.state.category.categoryDescription}
         posts={this.state.category.posts}
         postTime={this.state.postTime}
-        postImgPath={this.state.postImgPath}  
+        postImgPath={this.state.postImgPath}
         addPost={this.addPost}
         deletePost={this.deletePost}
         editPost={this.updatePost}
@@ -92,6 +103,7 @@ class CatDetails extends Component {
         onError={this.onError}
         formModal={this.formModal}
         closeModal={this.closeModal}
+        goal={this.state.goal}
       />
     );
   }

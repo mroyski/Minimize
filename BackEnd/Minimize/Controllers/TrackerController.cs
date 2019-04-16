@@ -1,52 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Minimize.Models;
 using Minimize.Repositories;
+using System.Diagnostics;
+using System.Linq;
+
 namespace Minimize.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class TrackerController : ControllerBase
     {
-        IGoalRepository goalRepository;
+        private readonly IGoalRepository goalRepository;
+        private MinimizeContext db;
         public TrackerController(IGoalRepository goalRepository)
         {
             this.goalRepository = goalRepository;
+            db = new MinimizeContext();
         }
-        // GET: api/Tracker
-        [HttpGet]
-        public IEnumerable<Goal> Get()
-        {
-            return goalRepository.GetAll().ToArray();
-        }
+
 
         // GET: api/Tracker/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Tracker Get(int id)
         {
-            return "value";
+            //  var goal = goalRepository.GetById(id);
+            //desire to remove
+            var goal = db.Goals.Single(g => g.GoalId == id);
+            //var goal = db.Goals.Single(g => g.GoalId == id);
+
+            var posts = goal.Category.Posts;
+
+            var expectedInGoal = goal.NumberOfItems;
+            var currentTotal = posts.Sum(p => p.RemovedItems);
+
+
+            var percentageComplete = ((float)currentTotal /expectedInGoal)*100;
+
+
+            return new Tracker()
+            {             
+                PercentageComplete = percentageComplete,
+                GoalTotalItemsToRemove = expectedInGoal,
+                GoalTotalItemsActuallyRemoved = currentTotal
+            };
         }
 
-        // POST: api/Tracker
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Tracker/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
+
+
 }
