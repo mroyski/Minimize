@@ -84,7 +84,7 @@ class CatDetails extends Component {
         categoryDescription={this.state.category.categoryDescription}
         posts={this.state.category.posts}
         postTime={this.state.postTime}
-        postImgPath={this.state.postImgPath}  
+        postImgPath={this.state.postImgPath}
         addPost={this.addPost}
         deletePost={this.deletePost}
         editPost={this.updatePost}
@@ -92,6 +92,7 @@ class CatDetails extends Component {
         onError={this.onError}
         formModal={this.formModal}
         closeModal={this.closeModal}
+        tracker={this.state.tracker}
       />
     );
   }
