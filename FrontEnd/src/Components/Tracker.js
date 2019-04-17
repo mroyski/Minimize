@@ -8,7 +8,6 @@ export class Tracker extends Component {
       goalTotalItemsToRemove,
       goalTotalItemsActuallyRemoved
     } = this.props;
-
     return (
       <dov>
         <h1>

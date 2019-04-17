@@ -59,7 +59,7 @@ class CatDetails extends Component {
           const updatedCategory = Object.assign({}, this.state.category, {
             posts: updatedPosts
           });
-          this.setState({ category: updatedCategory }); //all the old stuff, but replace the posts with updatePosts.
+          this.setState({ category: updatedCategory });
           this.trackGoal(this.props.match.params.categoryId);
         }
       })
