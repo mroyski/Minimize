@@ -17,6 +17,7 @@
 .buttons{
   display: flex;
   flex-direction: row;
+  
   }
   .logIn button{
     background-color:greenyellow;
