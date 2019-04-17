@@ -17,4 +17,16 @@
 .buttons{
   display: flex;
   flex-direction: row;
-}
+  }
+  .logIn button{
+    background-color:greenyellow;
+    border-radius: 2px;
+    height: 2rem;
+    width: 6rem;
+  }
+  .create button{
+    background-color:orange;
+    border-radius: 2px;
+    height: 2rem;
+    width: 8rem;
+  }

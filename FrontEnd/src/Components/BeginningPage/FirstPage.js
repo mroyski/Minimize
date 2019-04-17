@@ -11,14 +11,18 @@ class FirstPage extends Component {
             
                <img src="/Images/Logo3.png" alt="logo" />
               <div className="buttons">
-            <Link to={`/categoryIndex`} className="logIn">
-              {" "}
-              <button>Log In</button>
-            </Link>
-            <Link to={`/Landing`} className="CreateAccount">
-              {" "}
-              <button>Create Account</button>
-            </Link>
+                 <div className="logIn">
+                <Link to={`/categoryIndex`} className="logIn">
+                  {" "}
+                  <button>Log In</button>      
+                </Link>
+                </div>
+                <div className="create">
+                <Link to={`/Landing`} className="CreateAccount">
+                  {" "}
+                  <button>Create Account</button>
+                </Link>
+                </div>
             </div>
           </div>
             </div>
