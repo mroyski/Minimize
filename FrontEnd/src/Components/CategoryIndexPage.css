@@ -13,6 +13,7 @@
 #MiniTitle {
   font-size: 2rem;
   color: rgb(0, 63, 158);
+  margin: 2px;
 }
 
 #CatName {
