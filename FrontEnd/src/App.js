@@ -13,20 +13,6 @@ import "./App.css";
 import Header from "./Components/Header";
 
 class AppRouter extends Component {
-  // state = {
-  //   sideNavOpen: false
-  // };
-
-  // hamburgerToggleClickHandler = () => {
-  //   this.setState(prevState => {
-  //     return { sideNavOpen: !prevState.sideNavOpen };
-  //   });
-  // };
-
-  // backdropClickHandler = () => {
-  //   this.setState({ sideNavOpen: false });
-  // };
-
   render() {   
     return (      
       <Router>
