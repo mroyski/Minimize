@@ -12,5 +12,7 @@
     ],
     "appService.zipIgnorePattern": [
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/822db1ff-b9c2-4188-a691-bf3660e70ed1/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/minimize",
+    "appService.deploySubpath": ""
 }
