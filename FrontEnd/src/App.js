@@ -27,10 +27,8 @@ class AppRouter extends Component {
     this.setState({ sideNavOpen: false });
   };
 
-  render() {
-   
-    
-    return (
+  render() {   
+    return (      
       <Router>
        <Route path="/" component={Header} />
         <div>
