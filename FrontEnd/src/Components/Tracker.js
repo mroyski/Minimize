@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Line, Circle } from "rc-progress";
+import React, { Component } from 'react';
+import { Line } from 'rc-progress';
 
 export class Tracker extends Component {
   render() {
@@ -8,11 +8,12 @@ export class Tracker extends Component {
       goalTotalItemsToRemove,
       goalTotalItemsActuallyRemoved
     } = this.props;
+
     return (
       <dov>
         <h1>
           {percentageComplete} % {goalTotalItemsToRemove} |
-          {goalTotalItemsActuallyRemoved}{" "}
+          {goalTotalItemsActuallyRemoved}
         </h1>
         <Line
           percent={percentageComplete}
