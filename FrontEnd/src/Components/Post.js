@@ -21,7 +21,7 @@ class Post extends Component {
       <div id="postBody">
         <div className="postEntire">
           <div className="postItems">
-            <p>{moment().format("L")};</p>
+            <p>{moment(postTime).format("L")}</p>
             {/* <p>Total Items: {totalItems}</p> */}
             <p>Removed Items: {removedItems}</p>
             <p>Description: {postDescription}</p>
