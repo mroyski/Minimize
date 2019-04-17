@@ -8,8 +8,9 @@ class FirstPage extends Component {
         return (
             <div id="entirePage">
             <div className="enterSite">
-              <img src="/Images/Logo3.png" alt="logo" />
             
+               <img src="/Images/Logo3.png" alt="logo" />
+              <div className="buttons">
             <Link to={`/categoryIndex`} className="logIn">
               {" "}
               <button>Log In</button>
@@ -18,6 +19,7 @@ class FirstPage extends Component {
               {" "}
               <button>Create Account</button>
             </Link>
+            </div>
           </div>
             </div>
         );

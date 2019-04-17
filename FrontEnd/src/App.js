@@ -13,26 +13,26 @@ import "./App.css";
 import Header from "./Components/Header";
 
 class AppRouter extends Component {
-  state = {
-    sideNavOpen: false
-  };
+  // state = {
+  //   sideNavOpen: false
+  // };
 
-  hamburgerToggleClickHandler = () => {
-    this.setState(prevState => {
-      return { sideNavOpen: !prevState.sideNavOpen };
-    });
-  };
+  // hamburgerToggleClickHandler = () => {
+  //   this.setState(prevState => {
+  //     return { sideNavOpen: !prevState.sideNavOpen };
+  //   });
+  // };
 
-  backdropClickHandler = () => {
-    this.setState({ sideNavOpen: false });
-  };
+  // backdropClickHandler = () => {
+  //   this.setState({ sideNavOpen: false });
+  // };
 
   render() {   
     return (      
       <Router>
        <Route path="/" component={Header} />
         <div>
-         <Route path="/" exact component={FirstPage} />
+          <Route path="/" exact component={FirstPage} />
           <Route path="/landing" component={Landing} />
           <Route path="/categoryIndex" component={CategoryIndex} />
           <Route path="/category/:categoryId" component={CatDetailsPage} />
