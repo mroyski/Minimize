@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import { Line } from 'rc-progress';
 
 export class Tracker extends Component {
-  changeNan = number => {
-    if (isNaN(parseFloat(number))) {
-      return 0;
-    } else {
-      return number;
-    }
-  };
   render() {
     const {
       percentageComplete,
