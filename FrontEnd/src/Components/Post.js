@@ -35,7 +35,7 @@ class Post extends Component {
             <button onClick={() => this.removePost(postId)}>Delete</button>
           </div>
         </div>
-      </div>
+      </li>
     );
   }
 }
