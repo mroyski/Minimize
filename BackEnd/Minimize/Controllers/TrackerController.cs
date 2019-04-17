@@ -23,8 +23,7 @@ namespace Minimize.Controllers
         [HttpGet("{id}", Name = "Get")]
         public Tracker Get(int id)
         {
- 
-            var goals = db.Goals.Where(g => g.CategoryId == id);
+             var goals = db.Goals.Where(g => g.CategoryId == id);
 
             var expectedInGoal = goals.Sum(g=> g.NumberOfItems);
 
@@ -33,22 +32,11 @@ namespace Minimize.Controllers
             var currentTotal = category.Posts.Sum(p => p.RemovedItems);
 
 
-            var _percentageComplete = ((float)currentTotal /expectedInGoal)*100;
-
-              float percentageDetector( float number)
-            {
-                if (number == 0)
-                { return 0; }
-                else
-                {
-                    return number;
-                }
-                
-            }
+            var percentageComplete = ((float)currentTotal /expectedInGoal)*100; 
 
             return new Tracker()
             {             
-                PercentageComplete = percentageDetector(_percentageComplete),
+                PercentageComplete = percentageComplete,
                 GoalTotalItemsToRemove = expectedInGoal,
                 GoalTotalItemsActuallyRemoved = currentTotal
             };
