@@ -21,7 +21,7 @@ class ProfilePage extends Component {
   componentDidMount() {
     const labels = [];
     const removedItems = [];
-    fetch(`https://localhost:44387/api/category`)
+    fetch(`https://minimize.azurewebsites.net/category`)
       .then(res => res.json())
       .then(data => {
         data.map(cat => {
@@ -65,7 +65,7 @@ class ProfilePage extends Component {
           <Chart chartData={this.state.chartData} />
         </div>
         <div className="BadgesSection" />
-        <h2>Badges Earned</h2>      
+        <h2>Badges Earned</h2>
         <BadgeFunctions />
         <div className="PostSection">
           <h2>Submitted Posts</h2>

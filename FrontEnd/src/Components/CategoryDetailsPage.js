@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import ReactFilestack from 'filestack-react';
-import Category from './Category';
-import './CategoryDetailsPage.css';
+import React, { Component } from "react";
+import ReactFilestack from "filestack-react";
+import Category from "./Category";
+import "./CategoryDetailsPage.css";
 
 class CatDetails extends Component {
   constructor() {
@@ -10,8 +10,8 @@ class CatDetails extends Component {
       category: { posts: [{}] },
       totalItems: 0,
       removedItems: 0,
-      postDescription: '',
-      postImgPath: '',
+      postDescription: "",
+      postImgPath: "",
       tracker: {}
     };
   }
@@ -30,10 +30,10 @@ class CatDetails extends Component {
       });
   };
   addPost = post => {
-    fetch('https://localhost:44387/api/post', {
-      method: 'POST',
+    fetch("https://minimize.azurewebsites.net/post", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(post)
     }).then(res => {
@@ -47,8 +47,8 @@ class CatDetails extends Component {
     });
   };
   deletePost = postId => {
-    fetch(`https://localhost:44387/api/post/${postId}`, {
-      method: 'DELETE'
+    fetch(`https://minimize.azurewebsites.net/post/${postId}`, {
+      method: "DELETE"
     })
       .then(res => {
         if (res.ok) {
@@ -73,15 +73,15 @@ class CatDetails extends Component {
   };
 
   onError = error => {
-    console.error('error', error);
+    console.error("error", error);
   };
 
   formModal = () => {
-    document.querySelector('.create-post').classList.add('form-active');
+    document.querySelector(".create-post").classList.add("form-active");
   };
 
   closeModal = () => {
-    document.querySelector('.create-post').classList.remove('form-active');
+    document.querySelector(".create-post").classList.remove("form-active");
   };
 
   render() {
