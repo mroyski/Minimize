@@ -182,44 +182,43 @@ class ResourcePage extends Component {
           <p>Social Media Interests</p>
         </div>
         <div className="socialContainer">
-          <div className="pintrest">
-            <p>Minimalist Tips</p>
+          <div className="pintrest">            
             <a
               href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=minimalist&eq=minim&etslf=8233&term_meta[]=minimalist%7Cautocomplete%7C2"
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/Pintrest-Icon.png" alt="PintrestLogo" />
+            <p>Minimalist Tips</p>
+              <img src="./images/pintrest-logo-web.png" alt="PintrestLogo" />
             </a>
           </div>
-          <div className="facebook">
-            <p>Minimalist Living</p>
+          <div className="facebook">           
             <a
               href="https://www.facebook.com/mnmlstlvng"
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/facebook-logo.png" alt="FacebookLogo" />
+             <p>Minimalist Living</p>
+              <img src="./images/facebook-logo-web.png" alt="FacebookLogo" />
             </a>
           </div>
-          <div className="facebook1">
-            <p>Frugal Minimalist</p>
+          <div className="facebook1">            
             <a
               href="https://www.facebook.com/groups/1421204557930992/"
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/facebook-logo.png" alt="FacebookLogo" />
+            <p>Frugal Minimalist</p>
+              <img src="./images/facebook-logo-web.png" alt="FacebookLogo" />
             </a>
           </div>
-          <div className="facebook1">
-            <p>Twitter #Minimalism</p>
+          <div className="facebook1">            
             <a
               href="https://twitter.com/search?q=minimalism&src=tyah"
               target="-blank"
               rel="noopener noreferrer"
-            >
-              <img src="./images/twitter_logo.jpg" alt="Twitter Logo" />
+            > <p>Twitter #Minimalism</p>
+              <img src="./images/twitter-logo-web.png" alt="Twitter Logo" />
             </a>
           </div>
         </div>

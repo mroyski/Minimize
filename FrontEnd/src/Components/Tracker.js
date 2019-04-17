@@ -19,8 +19,8 @@ export class Tracker extends Component {
     return (
       <dov>
         <h1>
-          {this.changeNan(percentageComplete)} % {goalTotalItemsToRemove} |
-          {goalTotalItemsActuallyRemoved}
+          Removed: {goalTotalItemsActuallyRemoved} | Goal:{' '}
+          {goalTotalItemsToRemove}
         </h1>
         <Line
           percent={percentageComplete}

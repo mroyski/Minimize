@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import "./Goal.css";
 
 export class Goal extends Component {
   render() {
     const { date, text, numberOfItems, category } = this.props;
     return (
       <div>
+       
+      <div className="newGoalContainer">          
+        <div className="newGoals">
         <p>Date : {date}</p>
-        <h2>Text : {text}</h2>
-        <h3> CategoryName : {category.categoryName}</h3>
-        <h1> Total items to be removed : {numberOfItems}</h1>
+        <p>Text : {text}</p>
+        <p> CategoryName : {category.categoryName}</p>
+        <p> Total items to be removed : {numberOfItems}</p>
+      </div>
+      </div>
       </div>
     );
   }

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import './GoalPost.css';
+import React, { Component } from "react";
+import "./GoalPost.css";
 
 class GoalPost extends Component {
   constructor() {
     super();
     this.state = {
-      text: '',
+      text: "",
       numberOfItems: null,
       categoryId: null
     };
@@ -59,15 +59,22 @@ class GoalPost extends Component {
           </p>
           <div> {this.DropDownCategory()}</div>
           <form
+            className="forms"
             ref={input => (this.goalForm = input)}
             onSubmit={e => this.onAddGoal(e)}
           >
             <input
+              className="numberOfItems"
               type="text"
-              placeholder="numberOfItems "
+              placeholder="# of items to remove "
               onChange={this.onsetNumber}
             />
-            <textarea id="goalText" onChange={this.onTextAdd} />
+
+            <textarea
+              id="goalText"
+              placeholder="Item(s) description"
+              onChange={this.onTextAdd}
+            />
             <br />
             <button type="submit" onClick={e => this.onAddGoal(e)}>
               Submit
