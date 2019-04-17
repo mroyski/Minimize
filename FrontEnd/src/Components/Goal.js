@@ -2,11 +2,13 @@ import React, { Component } from "react";
 
 export class Goal extends Component {
   render() {
-    const { date, text } = this.props;
+    const { date, text, numberOfItems, category } = this.props;
     return (
       <div className="goal-post">
-        <p>{date}</p>
-        <h2>{text}</h2>
+        <p>Date : {date}</p>
+        <p>Text : {text}</p>
+        <p> CategoryName : {category.categoryName}</p>
+        <p> Total items to be removed : {numberOfItems}</p>
       </div>
     );
   }

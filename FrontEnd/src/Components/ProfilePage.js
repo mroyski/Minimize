@@ -6,6 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import BadgeFunctions from "./BadgeFunctions";
+import ProfilePostContainer from "./ProfilePostContainer";
 library.add(faMedal);
 
 class ProfilePage extends Component {
@@ -24,7 +25,6 @@ class ProfilePage extends Component {
       .then(res => res.json())
       .then(data => {
         data.map(cat => {
-          console.log(cat);
           const total = cat.posts.reduce(
             (accumulated, currentPost) =>
               accumulated + currentPost.removedItems,
@@ -67,10 +67,11 @@ class ProfilePage extends Component {
           </div>
         </div>
         <div className="BadgesSection" />
-        <h2>Badges</h2>
+        <h2>Badges Earned</h2>      
         <BadgeFunctions />
         <div className="PostSection">
-          <h2>Posts</h2>
+          <h2>Submitted Posts</h2>
+          <ProfilePostContainer />
         </div>
         <ul id="PostList">{listOfPosts}</ul>
       </div>

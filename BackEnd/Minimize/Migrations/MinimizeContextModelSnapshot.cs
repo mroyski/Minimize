@@ -48,7 +48,10 @@ namespace Minimize.Migrations
                         new { BadgeId = 12, BadgeDescription = "You removed 10 total items", BadgeName = "Novice" },
                         new { BadgeId = 13, BadgeDescription = "You removed 20 total items", BadgeName = "Minimizer" },
                         new { BadgeId = 14, BadgeDescription = "You removed 35 total items", BadgeName = "Tiny World" },
-                        new { BadgeId = 15, BadgeDescription = "You removed 50 total items", BadgeName = "Peace" }
+                        new { BadgeId = 15, BadgeDescription = "You removed 50 total items", BadgeName = "Peace" },
+                        new { BadgeId = 16, BadgeDescription = "You have removed 1,000 items!", BadgeName = "It's getting serious" },
+                        new { BadgeId = 17, BadgeDescription = "You have removed 100,000 items!", BadgeName = "Wild Thang" },
+                        new { BadgeId = 18, BadgeDescription = "Congratulations! You have removed 1,000,000 items!", BadgeName = "Millionaire" }
                     );
                 });
 
@@ -84,18 +87,24 @@ namespace Minimize.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CategoryId");
+
                     b.Property<string>("Date");
+
+                    b.Property<int>("NumberOfItems");
 
                     b.Property<string>("Text");
 
                     b.HasKey("GoalId");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Goals");
 
                     b.HasData(
-                        new { GoalId = 1, Date = "4/12/2019", Text = "Don't Go to Steelers Game!!!" },
-                        new { GoalId = 2, Date = "4/11/2019", Text = "Clean up closet" },
-                        new { GoalId = 3, Date = "4/11/2019", Text = "Donate kitchen supplies" }
+                        new { GoalId = 1, CategoryId = 1, Date = "4/12/2019", NumberOfItems = 10, Text = "get rid of Furnitures" },
+                        new { GoalId = 2, CategoryId = 1, Date = "4/11/2019", NumberOfItems = 4, Text = "Clean up closet" },
+                        new { GoalId = 3, CategoryId = 3, Date = "4/11/2019", NumberOfItems = 2, Text = "Donate tools" }
                     );
                 });
 
@@ -122,13 +131,14 @@ namespace Minimize.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Posts");
+                });
 
-                    b.HasData(
-                        new { PostId = 1, CategoryId = 1, PostDescription = "I have been wanting to get rid of my shoes. I have way to many but it's hard to decide :(", PostImgPath = "/Images/Shos.jpg", PostTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 15 },
-                        new { PostId = 2, CategoryId = 2, PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.", PostImgPath = "/Images/Lamp.jpg", PostTime = new DateTime(2019, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 },
-                        new { PostId = 3, CategoryId = 3, PostDescription = "Not really sure what this is or how to even use it.", PostImgPath = "/Images/tool.jpg", PostTime = new DateTime(2019, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 },
-                        new { PostId = 4, CategoryId = 4, PostDescription = "I was planning on keeping this ancient thing and hopefully sell it but nobody wants it", PostImgPath = "/Images/ibm.jpg", PostTime = new DateTime(2019, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 }
-                    );
+            modelBuilder.Entity("Minimize.Models.Goal", b =>
+                {
+                    b.HasOne("Minimize.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Minimize.Models.Post", b =>

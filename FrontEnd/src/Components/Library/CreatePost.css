@@ -13,3 +13,7 @@
 .post-form textarea {
   margin-bottom: 1rem;
 }
+
+.submitCancel button {
+  margin: 3px;
+}

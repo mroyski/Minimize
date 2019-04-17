@@ -5,7 +5,7 @@ import ReactFilestack from "filestack-react";
 export default class CreatePost extends Component {
   onAddPost = () => {
     const post = {
-      totalItems: this.totalItems.value,
+      totalItems: 1 /*this.totalItems.value*/,
       removedItems: this.removedItems.value,
       postDescription: this.postDescription.value,
       postImgPath: this.props.postImgPath,
@@ -32,28 +32,30 @@ export default class CreatePost extends Component {
         <h4>Add Post</h4>
         <div className="post-form">
           {/* <h1>{this.props.postImgPath}</h1> */}
-          <input
+          {/* <input
             type="text"
             placeholder="Total Items "
             ref={input => (this.totalItems = input)}
-          />
+          /> */}
           <input
             type="text"
-            placeholder="Removed Items"
+            placeholder="# of items to remove"
             ref={input => (this.removedItems = input)}
           />
           <textarea
             type="text"
-            placeholder="Description"
+            placeholder="Item(s) description"
             ref={input => (this.postDescription = input)}
           />
 
           <ReactFilestack
             className="file-picker"
             apikey={key}
+            buttonText="Upload Photo"
+            buttonClass="ui medium button gray"
             options={basicOptions}
-            onSuccess={this.props.onSuccess}
-            onError={this.props.onError}
+            onSuccess={this.onSuccess}
+            onError={this.onError}
           />
           <div className="form-buttons">
             <button type="submit" onClick={() => this.onAddPost()}>

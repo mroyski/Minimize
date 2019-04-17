@@ -41,6 +41,10 @@ h2 {
   list-style: none;
 }
 
+#badgeList{
+  padding: 0;
+}
+
 #PostList li {
   margin: 0.75rem;
 }

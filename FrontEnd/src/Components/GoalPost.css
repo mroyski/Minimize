@@ -18,6 +18,10 @@ h1 {
   height: 5rem;
 }
 
+.numberOfItems{
+  margin: 5px;
+}
+
 @media screen and (max-width: 600px) {
   #goalForm {
     width: 15rem;

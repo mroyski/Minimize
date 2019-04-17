@@ -111,10 +111,10 @@ class Calendar extends React.Component {
 
   render() {
     let picker = this.state.selectedDate;
-    let fullDate = picker.toString();
+    /*let fullDate = picker.toString(); not currently using*/
     let dayPicker = picker.getDate();
     let pickedDay = dayPicker.toString();
-    let monthPicker = picker.getMonth();
+    let monthPicker = picker.getMonth() + 1;
     let pickedMonth = monthPicker.toString();
     let yearPicker = picker.getFullYear();
     let pickedYear = yearPicker.toString();
@@ -132,6 +132,7 @@ class Calendar extends React.Component {
             pickedDay={pickedDay}
             pickedMonth={pickedMonth}
             pickedYear={pickedYear}
+            category={this.props.category}
           />
         </div>
       </div>

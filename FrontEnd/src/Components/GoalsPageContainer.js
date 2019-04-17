@@ -7,25 +7,49 @@ class GoalsPageContainer extends Component {
     super();
     {
       this.state = {
-        goals: [{}]
+        goals: [{}],
+        category: []
       };
     }
   }
   componentDidMount() {
-    fetch("https://localhost:44387/api/goal")
+    fetch('https://localhost:44387/api/goal')
       .then(res => res.json())
+
       .then(data => this.setState({ goals: data }));
+
+    this.getCategory();
   }
+  getCategory = () => {
+    fetch('https://localhost:44387/api/category')
+      .then(res => res.json())
+      .then(data =>
+        data.map(cat => {
+          const totalPosts = cat.posts.reduce(
+            (accumulated, currentPost) =>
+              accumulated + currentPost.removedItems,
+            0
+          );
+          const test = {
+            categoryId: cat.categoryId,
+            categoryName: cat.categoryName,
+            removedItem: totalPosts
+          };
+          const spreadCategory = [...this.state.category, test];
+          this.setState({ category: spreadCategory });
+        })
+      );
+  };
   createGoal = goal => {
     const currentGoals = [...this.state.goals, goal];
 
     this.setState({ goals: currentGoals });
     console.log(this.state.goals);
 
-    fetch("https://localhost:44387/api/goal", {
-      method: "POST",
+    fetch('https://localhost:44387/api/goal', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(goal)
     }).then(res => {
@@ -38,10 +62,15 @@ class GoalsPageContainer extends Component {
       }
     });
   };
-  removeGoal = goalId => {};
+
   render() {
     const PrintGoal = this.state.goals.map(goal => (
-      <Goal date={goal.date} text={goal.text} />
+      <Goal
+        date={goal.date}
+        numberOfItems={goal.numberOfItems}
+        text={goal.text}
+        category={Object.assign([], goal.category)}
+      />
     ));
     return (
       <div id="container">
@@ -49,6 +78,7 @@ class GoalsPageContainer extends Component {
           <Calendar createGoal={this.createGoal} />
         </div>
         <div id="goalList">{PrintGoal}</div>
+      </div>
       </div>
     );
   }

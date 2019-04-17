@@ -16,8 +16,8 @@ namespace Minimize.Repositories
         }
         public Goal GetById(int id)
         {
-           return db.Goals.Single(goal => goal.GoalId == id);
-            
+            return db.Goals.Single(goal => goal.GoalId == id);
+
         }
         public void Add(Goal goal)
         {

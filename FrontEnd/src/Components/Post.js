@@ -15,14 +15,15 @@ class Post extends Component {
       postDescription,
       postImgPath
     } = this.props.post;
+
+    var moment = require("moment");
     return (
       <li className="post-list">
         <div id="postDetails">
           <div className="post">
             <div className="post-info">
               {/* <h4>Post Number: {this.props.post.postId}</h4> */}
-              <p>Time: {postTime}</p>
-              <p>Total Items: {totalItems}</p>
+              <p>{moment().format("L")}</p>
               <p>Removed Items: {removedItems}</p>
               <p>Description: {postDescription}</p>
             </div>
@@ -34,7 +35,7 @@ class Post extends Component {
             <button onClick={() => this.removePost(postId)}>Delete</button>
           </div>
         </div>
-      </li>
+      </div>
     );
   }
 }

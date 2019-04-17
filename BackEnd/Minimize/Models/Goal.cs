@@ -10,5 +10,8 @@ namespace Minimize.Models
         public int GoalId { get; set; }
         public  string Date { get; set; }
         public string Text { get; set; }
+        public int NumberOfItems { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

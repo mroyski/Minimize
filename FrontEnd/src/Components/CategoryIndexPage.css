@@ -1,6 +1,4 @@
-.CatIndexBody {
-  text-align: center;
-  font-family: "Raleway", sans-serif;
+.CatIndexBody { 
   font-size: 4rem;
   color: black;
   margin: 0;
@@ -9,11 +7,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 #MiniTitle {
   font-size: 2rem;
   color: rgb(0, 63, 158);
+  margin: 2px;
 }
 
 #CatName {

@@ -115,6 +115,7 @@ a {
 
 .socialContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 2rem;
 }
@@ -125,7 +126,8 @@ a {
 
 .facebook,
 .pintrest,
-.facebook1 {
+.facebook1,
+.twitter {
   text-align: center;
   text-decoration: none;
   color: rgb(225, 225, 225);
