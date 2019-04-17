@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import ReactFilestack from "filestack-react";
-import Category from "./Category";
-import "./CategoryDetailsPage.css";
+import React, { Component } from 'react';
+import ReactFilestack from 'filestack-react';
+import Category from './Category';
+import './CategoryDetailsPage.css';
 
 class CatDetails extends Component {
   constructor() {
@@ -10,8 +10,9 @@ class CatDetails extends Component {
       category: { posts: [{}] },
       totalItems: 0,
       removedItems: 0,
-      postDescription: "",
-      postImgPath: ""
+      postDescription: '',
+      postImgPath: '',
+      tracker: {}
     };
   }
   componentDidMount() {
@@ -19,13 +20,20 @@ class CatDetails extends Component {
     fetch(`https://localhost:44387/api/category/${params.categoryId}`)
       .then(res => res.json())
       .then(json => this.setState({ category: json }));
+    this.trackGoal(params.categoryId);
   }
-
+  trackGoal = categoryId => {
+    fetch(`https://localhost:44387/api/tracker/${categoryId}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ tracker: data });
+      });
+  };
   addPost = post => {
-    fetch("https://localhost:44387/api/post", {
-      method: "POST",
+    fetch('https://localhost:44387/api/post', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(post)
     }).then(res => {
@@ -40,7 +48,7 @@ class CatDetails extends Component {
   };
   deletePost = postId => {
     fetch(`https://localhost:44387/api/post/${postId}`, {
-      method: "DELETE"
+      method: 'DELETE'
     })
       .then(res => {
         if (res.ok) {
@@ -51,8 +59,8 @@ class CatDetails extends Component {
           const updatedCategory = Object.assign({}, this.state.category, {
             posts: updatedPosts
           });
-          this.setState({ category: updatedCategory }); //all the old stuff, but replace the posts with updatePosts.
-          console.log(updatedCategory);
+          this.setState({ category: updatedCategory });
+          this.trackGoal(this.props.match.params.categoryId);
         }
       })
       .catch(console.error);
@@ -65,15 +73,15 @@ class CatDetails extends Component {
   };
 
   onError = error => {
-    console.error("error", error);
+    console.error('error', error);
   };
 
   formModal = () => {
-    document.querySelector(".create-post").classList.add("form-active");
+    document.querySelector('.create-post').classList.add('form-active');
   };
 
   closeModal = () => {
-    document.querySelector(".create-post").classList.remove("form-active");
+    document.querySelector('.create-post').classList.remove('form-active');
   };
 
   render() {
