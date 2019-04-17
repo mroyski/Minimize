@@ -1,9 +1,10 @@
-#entirePage{
-    display: flex;
-    justify-content: center;
+#entirePage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
-.enterSite{
-    display: flex;
-    align-content: center;
-    flex-direction: column;
+.enterSite {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
 }

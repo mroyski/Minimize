@@ -23,23 +23,16 @@ namespace Minimize.Controllers
         [HttpGet("{id}", Name = "Get")]
         public Tracker Get(int id)
         {
-            //  var goal = goalRepository.GetById(id);
-            //desire to remove
-            var goals = db.Goals.Where(g => g.CategoryId == id);
-            
-            
-            //var goal = db.Goals.Single(g => g.GoalId == id);
-            
-             
+             var goals = db.Goals.Where(g => g.CategoryId == id);
 
             var expectedInGoal = goals.Sum(g=> g.NumberOfItems);
+
             var category = db.Categories.Single(g => g.CategoryId == id);
             
             var currentTotal = category.Posts.Sum(p => p.RemovedItems);
 
 
-            var percentageComplete = ((float)currentTotal /expectedInGoal)*100;
-
+            var percentageComplete = ((float)currentTotal /expectedInGoal)*100; 
 
             return new Tracker()
             {             
