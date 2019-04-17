@@ -189,7 +189,7 @@ class ResourcePage extends Component {
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/Pintrest-Icon.png" alt="PintrestLogo" />
+              <img src="./images/pintrest-logo-web.png" alt="PintrestLogo" />
             </a>
           </div>
           <div className="facebook">
@@ -199,7 +199,7 @@ class ResourcePage extends Component {
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/facebook-logo.png" alt="FacebookLogo" />
+              <img src="./images/facebook-logo-web.png" alt="FacebookLogo" />
             </a>
           </div>
           <div className="facebook1">
@@ -209,7 +209,7 @@ class ResourcePage extends Component {
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/facebook-logo.png" alt="FacebookLogo" />
+              <img src="./images/facebook-logo-web.png" alt="FacebookLogo" />
             </a>
           </div>
           <div className="facebook1">
@@ -219,7 +219,7 @@ class ResourcePage extends Component {
               target="-blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/twitter_logo.jpg" alt="Twitter Logo" />
+              <img src="./images/twitter-logo-web.png" alt="Twitter Logo" />
             </a>
           </div>
         </div>
