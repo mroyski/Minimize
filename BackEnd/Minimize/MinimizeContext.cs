@@ -68,49 +68,6 @@ namespace Minimize
             }
             );
 
-            modelBuilder.Entity<Post>().HasData(
-               new Post()
-               {
-                   PostId = 1,
-                   TotalItems = 15,
-                   RemovedItems = 1,
-                   PostDescription = "I have been wanting to get rid of my shoes. I have way to many but it's hard to decide :(",
-                   PostImgPath = "/Images/Shos.jpg",
-                   CategoryId = 1
-               },
-               new Post()
-               {
-                   PostId = 2,
-                   PostTime = new System.DateTime(2019, 11, 20),
-                   TotalItems = 1,
-                   RemovedItems = 1,
-                   PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.",
-                   PostImgPath = "/Images/Lamp.jpg",
-                   CategoryId = 2
-               },
-
-               new Post()
-               {
-                   PostId = 3,
-                   PostTime = new System.DateTime(2019, 12, 21),
-                   TotalItems = 1,
-                   RemovedItems = 1,
-                   PostDescription = "Not really sure what this is or how to even use it.",
-                   PostImgPath = "/Images/tool.jpg",
-                   CategoryId = 3
-               },
-
-               new Post()
-               {
-                   PostId = 4,
-                   PostTime = new System.DateTime(2019, 10, 09),
-                   TotalItems = 1,
-                   RemovedItems = 1,
-                   PostDescription = "I was planning on keeping this ancient thing and hopefully sell it but nobody wants it",
-                   PostImgPath = "/Images/ibm.jpg",
-                   CategoryId = 4
-               }
-               );
 
             modelBuilder.Entity<Badge>().HasData(
 
@@ -217,9 +174,30 @@ namespace Minimize
                     BadgeId = 15,
                     BadgeName = "Peace",
                     BadgeDescription = "You removed 50 total items"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 16,
+                    BadgeName = "It's getting serious",
+                    BadgeDescription = "You have removed 1,000 items!"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 17,
+                    BadgeName = "Wild Thang",
+                    BadgeDescription = "You have removed 100,000 items!"
+                },
+
+                new Badge()
+                {
+                    BadgeId = 18,
+                    BadgeName = "Millionaire",
+                    BadgeDescription = "Congratulations! You have removed 1,000,000 items!"
                 }
 
-
+                
                 );
             modelBuilder.Entity<Goal>().HasData(
                 new Goal()
@@ -239,6 +217,7 @@ namespace Minimize
                      CategoryId = 1
                      
                  },
+
                  new Goal()
                  {
                      GoalId = 3,
