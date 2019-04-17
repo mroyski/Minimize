@@ -132,10 +132,7 @@ namespace Minimize.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { PostId = 1, CategoryId = 1, PostDescription = "I have been wanting to get rid of my shoes. I have way to many but it's hard to decide :(", PostImgPath = "/Images/Shos.jpg", PostTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 15 },
-                        new { PostId = 2, CategoryId = 2, PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.", PostImgPath = "/Images/Lamp.jpg", PostTime = new DateTime(2019, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 },
-                        new { PostId = 3, CategoryId = 3, PostDescription = "Not really sure what this is or how to even use it.", PostImgPath = "/Images/tool.jpg", PostTime = new DateTime(2019, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 },
-                        new { PostId = 4, CategoryId = 4, PostDescription = "I was planning on keeping this ancient thing and hopefully sell it but nobody wants it", PostImgPath = "/Images/ibm.jpg", PostTime = new DateTime(2019, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 }
+                        new { PostId = 2, CategoryId = 2, PostDescription = "I have had this Christmas Story Leg Lamp for eternity. It feels like I only have it because I live in Cleveland. I don't really see any other reason to have it.", PostImgPath = "/Images/Lamp.jpg", PostTime = new DateTime(2019, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), RemovedItems = 1, TotalItems = 1 }
                     );
                 });
 
