@@ -33,7 +33,6 @@ class Category extends Component {
       deletePost
     } = this.props;
 
-    console.log(this.state.tracker);
     const listOfPosts = posts.map(post => (
       <Post key={post.postId} post={post} deletePost={deletePost} />
     ));

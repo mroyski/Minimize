@@ -23,6 +23,7 @@ export default class CreatePost extends Component {
       maxFiles: 1
     };
     const key = "A3wux2cFHQHGgvyu7UcKVz";
+
     return (
       <form
         id="form-container"
@@ -52,8 +53,8 @@ export default class CreatePost extends Component {
             buttonText="Upload Photo"
             buttonClass="ui medium button gray"
             options={basicOptions}
-            onSuccess={this.onSuccess}
-            onError={this.onError}
+            onSuccess={this.props.onSuccess}
+            onError={this.props.onError}
           />
           <div className="submitCancel">
             <button type="submit" onClick={() => this.onAddPost()}>

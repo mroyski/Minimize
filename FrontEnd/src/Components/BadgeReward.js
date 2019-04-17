@@ -74,6 +74,14 @@ class BadgeReward extends Component {
         return rewardsHtml;
       } else if (itemsCount >= 35 && item.badgeId === 14) {
         return rewardsHtml;
+      } else if (itemsCount >= 50 && item.badgeId === 15) {
+        return rewardsHtml;
+      } else if (itemsCount >= 1000 && item.badgeId === 16) {
+        return rewardsHtml;
+      } else if (itemsCount >= 100000 && item.badgeId === 17) {
+        return rewardsHtml;
+      } else if (itemsCount >= 1000000 && item.badgeId === 18) {
+        return rewardsHtml;
       } else {
         console.log("nope");
       }
