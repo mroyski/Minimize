@@ -16,13 +16,14 @@ class Post extends Component {
       postImgPath
     } = this.props.post;
 
-    var moment = require("moment");
+    // var moment = require("moment");
     return (
       <div id="postBody">
         <div className="postEntire">
           <div className="postItems">
-            <p>{moment().format("L")};</p>
+            {/* <p>{moment().format("L")};</p> */}
             {/* <p>Total Items: {totalItems}</p> */}
+            <p>Post Date: {postTime}</p>
             <p>Removed Items: {removedItems}</p>
             <p>Description: {postDescription}</p>
           </div>

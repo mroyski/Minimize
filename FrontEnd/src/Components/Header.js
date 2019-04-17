@@ -25,7 +25,7 @@ class Header extends Component{
     }
     const showHeader = this.props.location.pathname != "/";
     if (!showHeader) return <></>;
-    console.log(this.props.location.pathname )
+    // console.log(this.props.location.pathname )
     return (
     <div style={{ height: "100%" }}>
         <NavBar hamburgerClickHandler={this.hamburgerToggleClickHandler} />
