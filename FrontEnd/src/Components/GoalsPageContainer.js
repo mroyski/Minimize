@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Calendar from './Calendar';
 import Goal from './Goal.js';
 import './GoalsPageContainer.css';
+
 class GoalsPageContainer extends Component {
   constructor() {
     super();
@@ -75,7 +76,9 @@ class GoalsPageContainer extends Component {
     return (
       <div id="container">
         <Calendar createGoal={this.createGoal} category={this.state.category} />
+        <div className="goalListContainer">
         <div id="goalList">{PrintGoal}</div>
+      </div>
       </div>
     );
   }

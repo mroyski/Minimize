@@ -58,16 +58,18 @@ class GoalPost extends Component {
             </h3>
           </p>
           <div> {this.DropDownCategory()}</div>
-          <form
+          <form className="forms"
             ref={input => (this.goalForm = input)}
             onSubmit={e => this.onAddGoal(e)}
           >
-            <input
+            <input className="numberOfItems"
               type="text"
-              placeholder="numberOfItems "
+              placeholder="# of items to remove "
               onChange={this.onsetNumber}
             />
-            <textarea id="goalText" onChange={this.onTextAdd} />
+            <textarea id="goalText" 
+            placeholder="Item(s) description"
+            onChange={this.onTextAdd} />
             <br />
             <button type="submit" onClick={e => this.onAddGoal(e)}>
               Submit
