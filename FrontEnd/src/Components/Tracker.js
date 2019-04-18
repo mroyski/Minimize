@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'rc-progress';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class Tracker extends Component {
   render() {
@@ -30,7 +31,13 @@ export class Tracker extends Component {
             {showProgress ? progressBar : ' '}
           </div>
         ) : (
+          <div>
           <div>You should add a goal!</div>
+          <Link to={`/goals`} className="link">
+          <button>Add Goal</button>
+            </Link>
+          
+          </div>
         )}
       </div>
     );
