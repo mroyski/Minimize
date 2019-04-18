@@ -1,6 +1,5 @@
 .CatIndexBody {
   font-size: 4rem;
-  color: black;
   margin: 0;
   padding: 0;
   text-transform: lowercase;
@@ -31,7 +30,7 @@
   text-decoration: none;
   color: rgb(0, 63, 158);
   transition: 0.3s;
-  border: 1px solid rgb(0, 63, 158);
+  background: white;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   width: 7rem;
@@ -43,6 +42,7 @@
 
 #CatLists a:hover {
   color: rgb(185, 0, 161);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
   margin-top: -1rem;
 }
 
