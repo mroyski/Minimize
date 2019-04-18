@@ -21,7 +21,7 @@ class ProfilePage extends Component {
   componentDidMount() {
     const labels = [];
     const removedItems = [];
-    fetch(`https://minimize.azurewebsites.net/category`)
+    fetch(`https://localhost:44387/api/category`)
       .then(res => res.json())
       .then(data => {
         data.map(cat => {

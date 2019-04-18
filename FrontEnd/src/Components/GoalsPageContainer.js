@@ -14,7 +14,7 @@ class GoalsPageContainer extends Component {
     }
   }
   componentDidMount() {
-    fetch('https://minimize.azurewebsites.net/goal')
+    fetch('https://localhost:44387/api/goal')
       .then(res => res.json())
 
       .then(data => this.setState({ goals: data }));
@@ -22,7 +22,7 @@ class GoalsPageContainer extends Component {
     this.getCategory();
   }
   getCategory = () => {
-    fetch('https://minimize.azurewebsites.net/category')
+    fetch('https://localhost:44387/api/category')
       .then(res => res.json())
       .then(data =>
         data.map(cat => {
@@ -47,7 +47,7 @@ class GoalsPageContainer extends Component {
     this.setState({ goals: currentGoals });
     console.log(this.state.goals);
 
-    fetch('https://minimize.azurewebsites.net/goal', {
+    fetch('https://localhost:44387/api/goal', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

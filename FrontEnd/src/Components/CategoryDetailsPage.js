@@ -30,7 +30,7 @@ class CatDetails extends Component {
       });
   };
   addPost = post => {
-    fetch("https://minimize.azurewebsites.net/post", {
+    fetch("https://localhost:44387/api/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -47,7 +47,7 @@ class CatDetails extends Component {
     });
   };
   deletePost = postId => {
-    fetch(`https://minimize.azurewebsites.net/post/${postId}`, {
+    fetch(`https://localhost:44387/api/post/${postId}`, {
       method: "DELETE"
     })
       .then(res => {
