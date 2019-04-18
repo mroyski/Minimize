@@ -8,10 +8,10 @@ export class Goal extends Component {
       <div>
         <div className="newGoalContainer">
           <div className="newGoals">
-            <p1>Date : {date}</p1>
-            <p2>Category : {category.categoryName}</p2>
-            <p>Description : {text}</p>   
-            <p># of items to be removed : {numberOfItems}</p>
+            <p>Date: {date}</p>
+            <p>{category.categoryName}</p>
+            <p>Description: {text}</p>   
+            <p># of items: {numberOfItems}</p>
           </div>
         </div>
       </div>

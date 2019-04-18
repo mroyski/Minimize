@@ -1,4 +1,6 @@
 .newGoals{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -17,9 +19,9 @@
 h1{
     text-align: center;
 }
-.newGoals p1{
+.newGoals p{
     font-size: .8rem;
 }
 /* .newGoals p2{
     font-size: 1rem;
-} */
+}  */
