@@ -113,6 +113,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  #landing {
+    margin: 0 1rem;
+  }
   #categories,
   #posts,
   #badges,
@@ -129,5 +132,9 @@
   }
   h3 {
     margin: 0;
+  }
+
+  .enterSite {
+    margin: 1rem auto;
   }
 }
