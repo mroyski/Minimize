@@ -8,13 +8,13 @@
   align-content: center;
   flex-direction: column;
 }
-.enterSite img {
-  
+.enterSite img {  
   align-items: center;
-  width: 75%;
+  width: 100%;
   padding-top: 30%;
 }
 .buttons{
+  justify-content: space-evenly;
   display: flex;
   flex-direction: row;
   

@@ -1,11 +1,6 @@
 html body {
-  background: rgb(176, 219, 247);
-  background: linear-gradient(
-    180deg,
-    rgba(176, 219, 247, 0.311659698058911) 1%,
-    rgba(82, 172, 245, 0.13967083415397408) 69%,
-    rgba(81, 148, 128, 0.558158297498687) 100%
-  );
+  background: rgb(176,219,247);
+background: linear-gradient(180deg, rgba(176,219,247,0.311659698058911) 37%, rgba(82,172,245,0.3368697820925245) 79%);
   height: 100%;
   width: 100%;
 }
