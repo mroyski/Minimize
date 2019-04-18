@@ -101,10 +101,17 @@
 
 .enterSite {
   text-align: center;
+  background: white;
   width: 8rem;
   margin: auto;
+  margin-bottom: 2rem;
   transform: scale(1);
   transition: all 0.3s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.link {
+  color: rgb(71, 71, 71);
 }
 
 .enterSite:hover {
