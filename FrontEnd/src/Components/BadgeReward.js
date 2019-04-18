@@ -33,9 +33,11 @@ class BadgeReward extends Component {
     const reward = this.state.badges.map(item => {
       const rewardsHtml = (
         <div id="badgeContainer">
-          <h5>{item.badgeName}</h5>
-          <FontAwesomeIcon icon="medal" />
-          <p>{item.badgeDescription}</p>
+          <FontAwesomeIcon icon="medal" className="medal" />
+          <div className="badge-info">
+            <h5>{item.badgeName}</h5>
+            <p>{item.badgeDescription}</p>
+          </div>
         </div>
       );
       if (item.badgeId === 1) {
