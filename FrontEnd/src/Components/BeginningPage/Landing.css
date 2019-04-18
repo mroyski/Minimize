@@ -101,7 +101,15 @@
 
 .enterSite {
   text-align: center;
-  padding-bottom: 3rem;
+  width: 8rem;
+  margin: auto;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.enterSite:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 600px) {
