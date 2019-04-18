@@ -29,8 +29,9 @@ class Category extends Component {
           <div className="detailName">
             <h2>{categoryName}</h2>
           </div>
+          <div className="tracker">
           <Tracker {...tracker} />
-
+          </div>
           <p id="catDescrip">{categoryDescription}</p>
           <button onClick={formModal}>Create Post</button>
         </div>

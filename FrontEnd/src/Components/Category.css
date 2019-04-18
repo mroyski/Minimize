@@ -29,6 +29,10 @@
 
 .detailName {
   color: blue;
+  font-size: 1.75rem;
+}
+.tracker{
+  font-size: .7rem;
 }
 .postBody ul {
   list-style: none;
