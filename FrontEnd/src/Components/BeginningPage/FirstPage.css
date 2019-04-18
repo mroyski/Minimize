@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
 }
-.enterSite {
+.enter-site {
   display: flex;
   align-content: center;
   flex-direction: column;
@@ -12,7 +12,7 @@
   margin-bottom: 5rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
-.enterSite img {
+.enter-site img {
   align-items: center;
   width: 100%;
   padding-top: 30%;
@@ -49,13 +49,13 @@
 }
 
 @media screen and (max-width: 600px) {
-  .enterSite {
+  .enter-site {
     max-height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .enterSite img {
+  .enter-site img {
     width: unset;
     max-width: 10rem;
   }
