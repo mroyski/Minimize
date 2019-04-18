@@ -47,3 +47,25 @@
   background: rgb(255, 181, 43);
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .enterSite {
+    max-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .enterSite img {
+    width: unset;
+    max-width: 10rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logIn button {
+    margin: 1rem;
+  }
+}
