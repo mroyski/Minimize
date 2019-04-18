@@ -1,9 +1,10 @@
-#landing,
-.howItWorks {
+#landing {
   text-align: center;
   max-width: 50rem;
-  margin: auto;
-  padding: 0 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .howItWorks p {
@@ -18,9 +19,7 @@
 #badges,
 #goals {
   margin: 1.5rem 0.5rem;
-  border: 1px solid rgb(0, 63, 158);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-top: 1px dotted rgb(0, 63, 158);
   display: grid;
   grid-template-rows: 2rem 1fr;
   grid-template-columns: 1fr 1fr;
@@ -31,9 +30,7 @@
 
 #posts {
   margin: 1.5rem 0.5rem;
-  border: 1px solid rgb(0, 63, 158);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-top: 1px dotted rgb(0, 63, 158);
   display: grid;
   grid-template-rows: 2rem 1fr 3fr;
   grid-template-columns: 1fr 1fr;
