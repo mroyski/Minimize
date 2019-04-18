@@ -1,9 +1,10 @@
-#landing,
-.howItWorks {
+#landing {
   text-align: center;
   max-width: 50rem;
-  margin: auto;
-  padding: 0 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .howItWorks p {
@@ -18,9 +19,7 @@
 #badges,
 #goals {
   margin: 1.5rem 0.5rem;
-  border: 1px solid rgb(0, 63, 158);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-top: 1px dotted rgb(0, 63, 158);
   display: grid;
   grid-template-rows: 2rem 1fr;
   grid-template-columns: 1fr 1fr;
@@ -31,9 +30,7 @@
 
 #posts {
   margin: 1.5rem 0.5rem;
-  border: 1px solid rgb(0, 63, 158);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+  border-top: 1px dotted rgb(0, 63, 158);
   display: grid;
   grid-template-rows: 2rem 1fr 3fr;
   grid-template-columns: 1fr 1fr;
@@ -104,10 +101,28 @@
 
 .enterSite {
   text-align: center;
-  padding-bottom: 3rem;
+  background: white;
+  width: 8rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.link {
+  color: rgb(71, 71, 71);
+}
+
+.enterSite:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 600px) {
+  #landing {
+    margin: 0 1rem;
+  }
   #categories,
   #posts,
   #badges,
@@ -124,5 +139,9 @@
   }
   h3 {
     margin: 0;
+  }
+
+  .enterSite {
+    margin: 1rem auto;
   }
 }
