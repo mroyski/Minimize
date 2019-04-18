@@ -20,6 +20,10 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
+#badgeContainer:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
 @media screen and (max-width: 600px) {
   #badgeContainer {
     width: 10rem;
