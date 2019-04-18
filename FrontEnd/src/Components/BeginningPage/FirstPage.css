@@ -8,26 +8,37 @@
   align-content: center;
   flex-direction: column;
 }
-.enterSite img {  
+.enterSite img {
   align-items: center;
   width: 100%;
   padding-top: 30%;
 }
-.buttons{
+.buttons {
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
-  
-  }
-  .logIn button{
-    background-color:greenyellow;
-    border-radius: 2px;
-    height: 2rem;
-    width: 6rem;
-  }
-  .create button{
-    background-color:orange;
-    border-radius: 2px;
-    height: 2rem;
-    width: 8rem;
-  }
+}
+.logIn button {
+  background-color: orange;
+  border: unset;
+  border-radius: 2px;
+  height: 2rem;
+  width: 6rem;
+}
+
+.logIn button:hover {
+  background: rgb(255, 181, 43);
+  cursor: pointer;
+}
+.create button {
+  background-color: orange;
+  border: unset;
+  border-radius: 2px;
+  height: 2rem;
+  width: 8rem;
+}
+
+.create button:hover {
+  background: rgb(255, 181, 43);
+  cursor: pointer;
+}
