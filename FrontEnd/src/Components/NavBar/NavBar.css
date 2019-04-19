@@ -21,6 +21,12 @@
 .logo img {
   max-height: 3rem;
   margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logo img:hover {
+  max-height: 2.5rem;
+  transition: all 0.3s ease;
 }
 
 .spacer {
